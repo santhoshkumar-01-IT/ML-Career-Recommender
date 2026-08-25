@@ -18,11 +18,21 @@ from dotenv import load_dotenv
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(base_dir, ".env"))
 
-DB_HOST = os.getenv("DB_HOST", "localhost")
-DB_PORT = int(os.getenv("DB_PORT", "3306"))
-DB_NAME = os.getenv("DB_NAME", "career_recommendation_db")
-DB_USER = os.getenv("DB_USER", "root")
-DB_PASSWORD = os.getenv("DB_PASSWORD", "")
+# Helper to read from Streamlit secrets or OS environment
+def get_config_val(key: str, default_val: str = "") -> str:
+    try:
+        import streamlit as st
+        if hasattr(st, "secrets") and key in st.secrets:
+            return str(st.secrets[key])
+    except Exception:
+        pass
+    return os.getenv(key, default_val)
+
+DB_HOST = get_config_val("DB_HOST", "localhost")
+DB_PORT = int(get_config_val("DB_PORT", "3306"))
+DB_NAME = get_config_val("DB_NAME", "career_recommendation_db")
+DB_USER = get_config_val("DB_USER", "root")
+DB_PASSWORD = get_config_val("DB_PASSWORD", "")
 
 SQLITE_PATH = os.path.join(base_dir, "data", "career_recommendations.db")
 

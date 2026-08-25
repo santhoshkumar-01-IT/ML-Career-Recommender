@@ -664,7 +664,7 @@ elif nav_choice == "?? Assessment History & DB (Admin)":
     st.markdown('<div class="main-header">?? Admin Portal & Database Explorer</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Restricted administrative access for faculty and project reviewers.</div>', unsafe_allow_html=True)
     
-    ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123")
+    ADMIN_PASSWORD = str(st.secrets.get("ADMIN_PASSWORD", os.getenv("ADMIN_PASSWORD", "admin123")) if hasattr(st, "secrets") else os.getenv("ADMIN_PASSWORD", "admin123"))
     
     if "admin_authenticated" not in st.session_state:
         st.session_state.admin_authenticated = False
