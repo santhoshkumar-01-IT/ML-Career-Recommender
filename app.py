@@ -123,8 +123,8 @@ st.sidebar.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=7
 st.sidebar.title("\U0001F393 Career Navigator")
 st.sidebar.markdown("**B.Sc. Information Technology**\nDecision Support & Skill Gap Engine")
 
-# If accessed via Admin URL but not yet authenticated, render Admin Login Modal/Gate directly
-if is_admin_query and not st.session_state.admin_authenticated:
+# If accessed via Admin URL or button click, route to Admin Gate
+if (is_admin_query or st.session_state.get("show_admin_login", False)) and not st.session_state.admin_authenticated:
     nav_choice = PAGE_ADMIN_DB
 else:
     nav_choice = st.sidebar.radio("Navigation Menu", PAGES_LIST)
@@ -149,6 +149,8 @@ else:
     with col_f2:
         if st.button("\U0001F510 Faculty/Admin", key="faculty_login_btn", help="Faculty & Administrator Portal"):
             st.session_state["show_admin_login"] = True
+            if hasattr(st, "query_params"):
+                st.query_params["role"] = "admin"
             st.rerun()
 
 # ==============================================================================
@@ -673,7 +675,7 @@ elif nav_choice == PAGE_ADMIN_DB or st.session_state.get("show_admin_login", Fal
                     else:
                         st.error("\u274C Access Denied: Invalid credentials.")
             with btn_col2:
-                if st.button("? Student Mode", use_container_width=True):
+                if st.button("\u2190 Student Mode", use_container_width=True):
                     st.session_state["show_admin_login"] = False
                     if hasattr(st, "query_params") and "role" in st.query_params:
                         del st.query_params["role"]
