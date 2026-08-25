@@ -1,0 +1,321 @@
+degree,specialization,cgpa,academic_performance,Python,Java,C_CPP,SQL,HTML_CSS,JavaScript,Excel,Power_BI,Statistics,Machine_Learning,Deep_Learning,Cloud_Computing,Networking,Cybersecurity,Git_GitHub,Communication,Problem_Solving,Teamwork,Leadership,Analytical_Thinking,interests,career_label
+B.Sc Information Technology,Information Technology,6.64,Second Class,5,0,2,4,1,1,3,3,5,5,5,4,1,0,4,4,5,4,3,5,Data Science; Artificial Intelligence; Machine Learning,Data Scientist
+B.Sc Information Technology,Data Science,7.89,First Class,5,2,1,5,1,1,3,2,3,3,4,3,1,1,2,4,5,3,2,4,Data Science; Artificial Intelligence; Machine Learning; Data Analysis; Web Development,Data Scientist
+B.Sc Computer Science,Data Science,7.31,First Class,4,1,0,4,5,4,1,0,1,1,0,2,2,1,2,4,4,4,2,4,Web Development; Software Development; Artificial Intelligence,Web Developer
+B.Sc Information Technology,Cloud & Security,6.99,Second Class,3,2,1,3,5,5,0,2,0,0,0,2,2,2,5,2,3,4,2,3,Web Development; Software Development; Machine Learning,Web Developer
+B.Sc Computer Science,Web Technologies,6.73,Second Class,4,1,0,5,0,2,4,3,4,2,0,3,1,1,2,5,4,2,1,4,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Web Technologies,7.44,First Class,2,3,1,2,1,2,1,1,2,1,1,3,5,3,3,3,4,3,3,4,Cloud Computing; Database Management,Cloud Engineer
+B.Sc Information Technology,Cloud & Security,9.9,Distinction,5,3,1,3,1,1,2,2,5,3,4,2,1,0,3,4,5,3,3,5,Data Science; Artificial Intelligence; Machine Learning; Web Development; Database Management,Data Scientist
+B.Sc Information Technology,Cloud & Security,7.52,First Class,2,2,2,3,2,1,0,0,2,0,0,3,5,4,4,3,5,3,3,5,Cybersecurity; Cloud Computing; Artificial Intelligence,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,6.81,Second Class,3,2,0,3,5,5,2,1,1,1,0,3,3,3,3,4,5,4,2,3,Web Development; Software Development; Cloud Computing,Web Developer
+B.Sc Information Technology,Software Engineering,7.68,First Class,4,3,3,2,3,2,1,1,2,2,0,3,3,5,3,3,4,3,3,5,Cybersecurity; Cloud Computing; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Software Engineering,7.62,First Class,3,2,0,5,0,0,3,3,1,1,1,2,2,3,3,3,3,3,3,4,Database Management,Database Administrator
+B.Sc Information Technology,Software Engineering,8.72,Distinction,5,1,1,3,1,0,3,4,5,5,5,2,0,1,5,5,4,3,3,5,Data Science; Artificial Intelligence; Machine Learning; Software Development,Data Scientist
+B.Sc Information Technology,Web Technologies,8.18,First Class,3,3,4,2,1,3,2,0,1,1,0,1,3,2,4,2,5,5,3,4,Software Development,Software Developer
+B.Sc Information Technology,Information Technology,7.36,First Class,3,2,1,3,5,5,1,1,0,1,0,0,2,3,4,3,5,3,3,3,Web Development; Software Development,Web Developer
+B.Sc Information Technology,Data Science,6.55,Second Class,3,1,0,4,1,0,4,3,4,1,0,2,0,1,2,3,4,2,2,5,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Data Science,7.32,First Class,3,3,1,2,2,2,0,0,0,1,0,5,4,4,3,4,3,4,3,4,Cloud Computing; Web Development,Cloud Engineer
+B.Sc Computer Science,Software Engineering,9.2,Distinction,1,2,0,5,1,2,3,1,3,1,0,2,4,4,3,4,4,4,3,3,Database Management; Web Development,Database Administrator
+B.Sc Information Technology,Web Technologies,8.19,First Class,4,0,1,4,1,1,5,2,4,2,0,2,0,0,2,5,4,3,3,4,Data Analysis; Database Management; Cybersecurity; Software Development,Data Analyst
+B.Sc Information Technology,Information Technology,6.58,Second Class,4,2,1,3,5,4,0,0,1,1,0,1,2,2,4,4,4,4,1,3,Web Development; Software Development; Database Management; Artificial Intelligence,Web Developer
+B.Sc Information Technology,Data Science,6.61,Second Class,3,1,2,3,5,5,0,0,0,1,0,2,2,3,3,3,4,4,2,3,Web Development; Software Development; Machine Learning,Web Developer
+B.Sc Information Technology,Data Science,7.64,First Class,3,4,4,2,2,3,2,1,2,1,0,2,2,0,4,2,5,4,4,3,Software Development; Web Development,Software Developer
+B.Sc Information Technology,Web Technologies,8.94,Distinction,3,3,1,2,1,3,0,1,1,0,0,3,3,4,3,3,4,4,3,4,Cloud Computing; Web Development; Cybersecurity,Cloud Engineer
+BCA,Information Technology,7.75,First Class,1,2,3,2,1,3,1,1,1,1,0,2,5,5,3,2,4,4,4,5,Cybersecurity; Cloud Computing; Artificial Intelligence; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Software Engineering,6.67,Second Class,3,2,2,3,1,2,0,1,1,1,0,5,5,1,4,3,4,4,2,4,Cloud Computing,Cloud Engineer
+B.Sc Computer Science,Cloud & Security,7.7,First Class,4,1,0,0,1,3,0,0,1,1,0,5,3,3,5,4,4,4,4,4,Cloud Computing,Cloud Engineer
+B.Sc Information Technology,Web Technologies,8.46,First Class,5,0,1,2,0,1,4,2,5,5,4,3,1,1,3,3,4,3,4,5,Data Science; Artificial Intelligence; Machine Learning; Cybersecurity,Data Scientist
+B.Sc Computer Science,Information Technology,7.52,First Class,3,2,1,5,1,2,3,2,2,1,0,3,3,3,2,4,4,3,3,4,Database Management; Software Development,Database Administrator
+B.Sc Information Technology,Cloud & Security,7.63,First Class,2,1,0,1,2,2,1,2,0,0,0,5,4,1,4,3,4,4,3,4,Cloud Computing; Machine Learning,Cloud Engineer
+BCA,Information Technology,7.41,First Class,5,2,1,4,1,1,3,1,5,5,4,3,1,0,5,4,5,2,3,5,Data Science; Artificial Intelligence; Machine Learning; Software Development,Data Scientist
+B.Sc Computer Science,Data Science,8.72,Distinction,5,2,0,5,1,1,3,3,5,5,3,3,0,1,2,4,5,4,3,5,Data Science; Artificial Intelligence; Machine Learning,Data Scientist
+B.Sc Information Technology,Cloud & Security,6.49,Second Class,3,2,4,4,1,1,2,0,2,2,0,2,5,5,4,3,5,3,3,4,Cybersecurity; Cloud Computing,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,7.33,First Class,4,3,4,4,2,3,0,0,2,1,0,2,2,2,3,3,5,4,3,4,Software Development; Cloud Computing; Cybersecurity,Software Developer
+B.Sc Information Technology,Web Technologies,8.87,Distinction,5,3,2,5,1,1,3,1,5,5,4,3,1,0,3,3,4,4,2,5,Data Science; Artificial Intelligence; Machine Learning; Cloud Computing,Data Scientist
+B.Sc Information Technology,Cloud & Security,5.96,Pass,3,2,2,4,2,1,1,1,1,0,1,3,4,5,4,3,4,3,3,5,Cybersecurity; Cloud Computing; Data Analysis,Cybersecurity Analyst
+B.Sc Computer Science,Web Technologies,6.84,Second Class,2,2,1,5,1,1,3,2,2,1,0,3,3,3,3,3,4,3,3,4,Database Management,Database Administrator
+B.Sc Information Technology,Data Science,7.13,First Class,3,2,3,5,1,1,2,3,4,5,5,5,2,2,3,3,5,4,4,5,Machine Learning; Artificial Intelligence; Data Science; Data Analysis,Machine Learning Engineer
+B.Sc Computer Science,Data Science,7.39,First Class,3,3,1,2,1,2,0,1,1,0,0,4,2,3,3,2,4,5,2,4,Cloud Computing; Machine Learning; Data Analysis,Cloud Engineer
+B.Sc Information Technology,Web Technologies,6.81,Second Class,5,3,3,4,0,0,2,2,4,5,5,4,1,2,4,3,5,3,3,5,Machine Learning; Artificial Intelligence; Data Science; Data Analysis; Software Development,Machine Learning Engineer
+B.Sc Information Technology,Data Science,8.16,First Class,4,1,0,4,2,2,4,3,4,2,0,2,1,1,3,4,4,3,2,4,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Information Technology,8.39,First Class,3,2,1,2,0,3,0,1,1,1,0,4,5,2,2,3,4,4,3,5,Cloud Computing; Cybersecurity; Web Development,Cloud Engineer
+B.Sc Information Technology,Software Engineering,6.68,Second Class,2,3,1,5,0,2,3,3,2,1,0,3,4,1,3,4,4,3,3,4,Database Management; Machine Learning; Web Development,Database Administrator
+B.Sc Computer Science,Cloud & Security,7.97,First Class,4,3,4,5,1,2,2,2,2,4,5,2,3,2,3,3,5,5,2,5,Machine Learning; Artificial Intelligence; Data Science; Web Development,Machine Learning Engineer
+B.Sc Information Technology,Web Technologies,7.97,First Class,3,3,3,4,1,3,1,1,4,5,5,5,3,1,4,2,5,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Database Management,Machine Learning Engineer
+B.Sc Information Technology,Information Technology,8.24,First Class,3,3,1,4,0,2,3,1,3,0,0,3,2,3,2,3,4,2,4,4,Database Management; Data Analysis,Database Administrator
+B.Sc Information Technology,Information Technology,6.85,Second Class,4,3,4,2,2,4,0,1,2,0,0,2,2,2,4,2,5,3,3,4,Software Development,Software Developer
+B.Sc Computer Science,Software Engineering,6.92,Second Class,2,2,1,2,2,2,1,1,1,2,0,5,4,3,4,4,5,4,3,4,Cloud Computing; Cybersecurity,Cloud Engineer
+B.Sc Computer Science,Web Technologies,6.88,Second Class,5,1,4,2,1,1,0,2,4,5,5,2,2,2,2,3,5,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Cybersecurity; Data Analysis,Machine Learning Engineer
+BCA,Software Engineering,6.88,Second Class,3,2,2,1,1,2,1,2,1,0,0,5,3,2,3,3,3,5,4,4,Cloud Computing; Cybersecurity,Cloud Engineer
+B.Sc Information Technology,Software Engineering,8.3,First Class,1,2,0,4,2,0,2,3,2,0,1,2,3,1,3,3,4,3,3,4,Database Management; Cloud Computing; Software Development,Database Administrator
+BCA,Software Engineering,7.6,First Class,3,2,0,3,5,4,0,0,1,0,0,2,2,2,4,3,4,4,3,3,Web Development; Software Development; Database Management,Web Developer
+B.Sc Information Technology,Software Engineering,6.7,Second Class,4,5,4,3,1,1,1,1,2,0,1,2,2,2,3,3,5,4,3,3,Software Development; Cybersecurity,Software Developer
+B.Sc Information Technology,Data Science,8.42,First Class,3,2,0,2,1,2,1,0,1,0,0,5,4,3,4,3,3,4,3,5,Cloud Computing,Cloud Engineer
+B.Sc Information Technology,Web Technologies,8.4,First Class,5,1,1,4,2,1,3,4,5,3,3,3,0,2,4,4,5,3,4,5,Data Science; Artificial Intelligence; Machine Learning; Web Development,Data Scientist
+B.Sc Information Technology,Information Technology,7.17,First Class,5,2,1,4,0,2,3,3,5,5,3,3,1,1,4,4,5,4,2,5,Data Science; Artificial Intelligence; Machine Learning,Data Scientist
+B.Sc Information Technology,Web Technologies,6.53,Second Class,3,2,0,5,1,1,2,4,4,1,0,3,1,1,0,4,3,3,3,5,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Software Engineering,6.88,Second Class,5,2,1,3,2,1,2,3,5,5,4,2,1,2,3,4,5,4,3,5,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+B.Sc Information Technology,Data Science,7.14,First Class,4,2,2,4,0,2,2,3,4,5,3,4,0,2,4,3,5,3,3,5,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+BCA,Information Technology,7.34,First Class,3,2,1,3,1,0,2,2,5,5,4,3,2,0,2,3,4,3,3,5,Data Science; Artificial Intelligence; Machine Learning,Data Scientist
+B.Sc Information Technology,Cloud & Security,8.27,First Class,4,1,1,1,0,2,1,0,0,2,0,5,4,2,4,2,3,3,3,3,Cloud Computing,Cloud Engineer
+B.Sc Information Technology,Web Technologies,7.04,First Class,5,3,3,4,1,3,2,2,4,5,4,4,2,2,3,3,5,5,3,5,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+B.Sc Information Technology,Software Engineering,7.63,First Class,2,2,0,5,2,1,3,3,3,1,0,3,3,2,3,4,5,3,3,4,Database Management; Data Analysis; Cloud Computing,Database Administrator
+B.Sc Computer Science,Cloud & Security,6.19,Second Class,4,3,4,3,2,2,0,0,1,1,0,1,0,2,4,2,5,4,3,4,Software Development,Software Developer
+B.Sc Information Technology,Web Technologies,7.51,First Class,2,2,0,2,2,2,0,1,1,0,0,4,4,3,3,2,4,5,3,3,Cloud Computing; Software Development,Cloud Engineer
+B.Sc Information Technology,Data Science,8.36,First Class,5,3,3,4,1,2,3,1,5,5,3,4,1,2,3,2,4,3,3,5,Machine Learning; Artificial Intelligence; Data Science; Data Analysis; Web Development,Machine Learning Engineer
+B.Sc Information Technology,Web Technologies,6.76,Second Class,4,1,0,5,1,1,4,4,4,2,1,3,1,1,2,3,3,3,2,4,Data Analysis; Database Management; Data Science; Software Development,Data Analyst
+B.Sc Information Technology,Information Technology,7.61,First Class,5,1,0,4,1,1,2,1,5,4,5,4,1,0,4,4,5,3,3,4,Data Science; Artificial Intelligence; Machine Learning; Data Analysis,Data Scientist
+B.Sc Information Technology,Information Technology,9.9,Distinction,4,3,3,2,1,2,3,2,3,5,5,4,3,1,4,2,5,3,3,5,Machine Learning; Artificial Intelligence; Data Science; Web Development,Machine Learning Engineer
+B.Sc Computer Science,Data Science,6.13,Second Class,2,2,0,4,0,1,3,4,5,2,0,2,2,1,2,4,3,2,2,4,Data Analysis; Database Management; Machine Learning,Data Analyst
+B.Sc Information Technology,Software Engineering,6.9,Second Class,3,0,0,2,2,2,0,0,2,1,1,4,5,3,5,2,4,4,3,4,Cloud Computing; Web Development,Cloud Engineer
+B.Sc Information Technology,Data Science,7.49,First Class,3,0,1,5,0,1,2,2,2,0,0,4,4,4,4,2,3,2,4,4,Database Management; Data Analysis,Database Administrator
+B.Sc Information Technology,Software Engineering,7.05,First Class,3,2,1,4,5,4,0,2,1,1,0,2,3,0,4,3,3,4,2,3,Web Development; Software Development; Database Management,Web Developer
+B.Sc Information Technology,Information Technology,7.73,First Class,5,2,1,4,0,0,3,3,4,4,5,1,1,1,3,3,4,3,3,5,Data Science; Artificial Intelligence; Machine Learning; Database Management; Cybersecurity,Data Scientist
+B.Sc Information Technology,Software Engineering,7.35,First Class,2,3,1,3,1,0,3,2,3,1,0,3,3,3,3,2,5,3,3,5,Database Management,Database Administrator
+B.Sc Information Technology,Information Technology,8.13,First Class,3,3,3,3,2,2,1,2,3,1,0,3,4,3,4,3,5,3,3,4,Cybersecurity; Cloud Computing; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Software Engineering,7.38,First Class,4,2,5,2,1,1,2,2,3,1,0,3,3,2,3,3,5,5,4,5,Software Development; Web Development; Database Management,Software Developer
+B.Sc Information Technology,Software Engineering,7.66,First Class,4,2,4,2,2,2,0,1,2,1,0,2,2,2,2,3,5,3,2,3,Software Development; Artificial Intelligence,Software Developer
+B.Sc Information Technology,Software Engineering,7.6,First Class,4,3,3,3,2,2,1,2,0,1,0,3,5,5,1,3,5,3,4,5,Cybersecurity; Cloud Computing,Cybersecurity Analyst
+B.Sc Information Technology,Software Engineering,6.82,Second Class,5,2,2,5,1,2,2,3,4,4,5,4,0,2,4,3,5,4,3,4,Machine Learning; Artificial Intelligence; Data Science; Data Analysis; Cybersecurity,Machine Learning Engineer
+B.Sc Information Technology,Data Science,5.53,Pass,3,0,1,1,4,5,1,0,1,1,0,1,2,2,2,4,5,5,3,3,Web Development; Software Development; Machine Learning,Web Developer
+B.Sc Information Technology,Data Science,8.0,First Class,4,3,4,3,2,3,1,1,3,1,0,2,1,2,5,4,5,4,3,4,Software Development,Software Developer
+BCA,Data Science,7.54,First Class,3,3,4,3,2,2,0,0,2,2,1,2,3,5,3,3,5,3,4,5,Cybersecurity; Cloud Computing; Software Development; Artificial Intelligence,Cybersecurity Analyst
+B.Sc Information Technology,Software Engineering,6.93,Second Class,2,1,1,3,5,4,1,0,1,0,0,2,2,2,4,2,4,4,2,3,Web Development; Software Development; Data Science; Cybersecurity,Web Developer
+B.Sc Information Technology,Cloud & Security,7.0,First Class,3,1,3,3,2,2,0,0,1,1,0,1,5,5,3,2,5,4,3,5,Cybersecurity; Cloud Computing; Software Development; Database Management,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,7.36,First Class,2,1,0,4,1,2,3,3,3,3,0,1,1,2,2,5,4,3,2,5,Data Analysis; Database Management; Data Science,Data Analyst
+B.Sc Information Technology,Data Science,7.35,First Class,5,4,4,3,2,3,1,2,1,0,0,1,2,0,3,3,5,3,3,3,Software Development; Artificial Intelligence,Software Developer
+B.Sc Computer Science,Data Science,7.07,First Class,3,1,1,3,5,5,1,1,0,0,0,3,2,1,5,2,3,5,2,3,Web Development; Software Development; Data Analysis; Artificial Intelligence,Web Developer
+B.Sc Information Technology,Web Technologies,8.04,First Class,5,2,1,4,0,1,3,3,5,5,2,4,0,2,4,4,5,2,3,4,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+B.Sc Information Technology,Data Science,6.69,Second Class,4,4,4,3,1,2,0,1,1,1,0,1,2,2,4,3,5,4,3,4,Software Development,Software Developer
+B.Sc Information Technology,Cloud & Security,8.68,Distinction,5,3,3,4,0,2,3,2,4,4,4,4,1,1,4,3,4,3,2,5,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+B.Sc Information Technology,Cloud & Security,7.22,First Class,3,3,0,3,5,5,0,0,1,2,0,2,2,1,5,3,4,4,2,3,Web Development; Software Development; Data Analysis; Cloud Computing,Web Developer
+B.Sc Information Technology,Information Technology,6.46,Second Class,2,0,1,2,5,3,1,2,1,1,1,1,3,2,4,3,4,4,2,3,Web Development; Software Development,Web Developer
+B.Sc Information Technology,Information Technology,7.28,First Class,3,0,1,5,2,2,3,3,2,0,0,3,3,3,3,4,4,4,4,4,Database Management; Cybersecurity,Database Administrator
+B.Sc Information Technology,Cloud & Security,5.9,Pass,1,2,1,1,0,2,1,1,2,1,0,5,3,3,5,4,4,4,3,3,Cloud Computing; Data Science; Web Development,Cloud Engineer
+B.Sc Information Technology,Cloud & Security,6.02,Second Class,1,0,1,3,4,5,1,2,0,1,0,2,2,2,4,2,4,4,2,2,Web Development; Software Development; Cloud Computing; Data Science,Web Developer
+B.Sc Information Technology,Cloud & Security,7.55,First Class,5,2,1,4,2,0,0,2,3,5,5,3,2,2,5,4,5,4,3,5,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+B.Sc Computer Science,Software Engineering,8.08,First Class,3,1,2,4,1,1,3,2,3,1,0,2,1,2,4,3,5,2,3,3,Database Management; Artificial Intelligence; Software Development,Database Administrator
+B.Sc Information Technology,Cloud & Security,9.14,Distinction,4,2,0,3,5,5,1,2,2,1,1,3,2,2,4,2,4,4,1,4,Web Development; Software Development; Machine Learning,Web Developer
+B.Sc Information Technology,Cloud & Security,7.09,First Class,2,2,3,1,1,2,1,1,3,0,0,3,3,4,3,2,5,4,3,5,Cybersecurity; Cloud Computing,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,8.61,Distinction,4,2,1,4,1,1,3,3,5,4,2,3,1,0,4,3,5,3,3,5,Data Science; Artificial Intelligence; Machine Learning; Web Development,Data Scientist
+B.Sc Computer Science,Software Engineering,7.91,First Class,3,2,1,2,1,2,2,1,0,2,0,4,2,3,4,3,4,4,3,3,Cloud Computing; Data Science,Cloud Engineer
+B.Sc Information Technology,Information Technology,7.15,First Class,3,1,1,5,2,1,1,2,2,1,0,2,4,3,3,3,4,3,2,4,Database Management; Cloud Computing,Database Administrator
+B.Sc Information Technology,Data Science,7.2,First Class,5,3,4,2,2,4,1,1,2,0,0,2,3,3,4,3,5,4,3,4,Software Development; Cybersecurity; Cloud Computing,Software Developer
+B.Sc Information Technology,Web Technologies,8.76,Distinction,5,3,1,4,1,0,2,3,5,5,4,4,0,1,4,4,5,3,3,4,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+B.Sc Information Technology,Web Technologies,7.24,First Class,3,2,3,1,1,1,1,2,2,2,1,3,4,5,4,3,5,2,3,5,Cybersecurity; Cloud Computing; Data Science,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,7.26,First Class,3,1,1,1,1,2,0,2,2,1,0,1,5,5,2,2,5,3,3,5,Cybersecurity; Cloud Computing; Software Development,Cybersecurity Analyst
+B.Sc Information Technology,Cloud & Security,7.41,First Class,4,2,0,5,0,0,4,4,4,2,0,1,1,1,2,4,4,2,1,5,Data Analysis; Database Management; Software Development,Data Analyst
+BCA,Web Technologies,6.8,Second Class,3,2,2,4,1,2,3,3,1,2,0,1,4,2,1,2,4,4,2,4,Database Management,Database Administrator
+B.Sc Computer Science,Cloud & Security,7.3,First Class,4,2,1,3,4,5,1,1,0,1,0,2,2,2,4,4,3,5,2,4,Web Development; Software Development; Machine Learning,Web Developer
+B.Sc Information Technology,Information Technology,6.6,Second Class,4,1,0,2,1,0,4,5,4,2,0,1,1,0,1,4,4,3,1,5,Data Analysis; Database Management; Software Development,Data Analyst
+B.Sc Computer Science,Information Technology,6.65,Second Class,3,1,0,5,0,1,4,2,4,3,0,3,1,1,2,4,5,4,2,5,Data Analysis; Database Management; Data Science,Data Analyst
+B.Sc Information Technology,Data Science,7.27,First Class,4,4,4,3,2,1,1,0,2,0,0,2,2,2,4,2,5,4,2,4,Software Development; Cybersecurity,Software Developer
+B.Sc Information Technology,Data Science,7.62,First Class,3,2,0,4,2,1,3,3,3,4,5,3,0,1,3,4,5,4,3,5,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+B.Sc Information Technology,Cloud & Security,6.72,Second Class,3,0,1,3,0,2,0,0,1,1,1,5,4,2,2,4,3,5,2,4,Cloud Computing; Artificial Intelligence; Machine Learning,Cloud Engineer
+B.Sc Information Technology,Web Technologies,6.49,Second Class,3,0,0,4,3,5,1,1,1,1,0,2,2,2,4,3,5,4,2,4,Web Development; Software Development; Database Management,Web Developer
+B.Sc Information Technology,Information Technology,6.25,Second Class,2,1,0,4,1,1,5,4,2,2,0,1,1,1,0,3,3,4,1,5,Data Analysis; Database Management; Machine Learning,Data Analyst
+B.Sc Information Technology,Software Engineering,7.84,First Class,5,3,4,3,0,2,1,0,5,5,4,4,2,3,4,3,5,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Web Development,Machine Learning Engineer
+B.Sc Information Technology,Information Technology,6.36,Second Class,3,2,3,2,3,2,0,1,2,1,0,3,5,5,1,2,5,3,3,5,Cybersecurity; Cloud Computing,Cybersecurity Analyst
+B.Sc Information Technology,Information Technology,8.09,First Class,3,2,4,4,1,0,3,2,5,5,3,5,2,2,4,3,5,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Web Development; Data Analysis,Machine Learning Engineer
+B.Sc Information Technology,Information Technology,8.19,First Class,5,3,3,4,0,1,3,1,2,5,5,4,1,3,5,2,5,4,4,5,Machine Learning; Artificial Intelligence; Data Science; Cybersecurity,Machine Learning Engineer
+B.Sc Information Technology,Software Engineering,7.04,First Class,2,2,1,5,1,1,3,1,1,2,0,1,4,1,3,2,5,4,3,4,Database Management; Data Science,Database Administrator
+B.Sc Information Technology,Cloud & Security,8.04,First Class,3,3,1,3,4,5,2,0,0,0,0,2,0,3,4,3,4,4,2,3,Web Development; Software Development; Machine Learning,Web Developer
+BCA,Software Engineering,5.5,Pass,3,1,0,4,0,1,4,5,4,2,0,2,0,1,1,4,4,3,3,5,Data Analysis; Database Management; Web Development,Data Analyst
+B.Sc Information Technology,Data Science,7.32,First Class,2,3,1,5,1,0,1,2,2,0,0,3,3,1,3,2,3,2,3,3,Database Management,Database Administrator
+B.Sc Information Technology,Cloud & Security,7.36,First Class,3,2,3,4,2,1,1,1,2,1,0,1,4,5,3,2,4,3,4,4,Cybersecurity; Cloud Computing; Machine Learning,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,6.5,Second Class,3,4,3,4,2,3,0,1,2,1,0,2,2,1,3,3,5,4,3,3,Software Development; Data Science,Software Developer
+B.Sc Computer Science,Data Science,5.69,Pass,2,2,1,5,0,1,3,1,2,1,0,4,4,4,3,3,4,3,3,4,Database Management; Cloud Computing,Database Administrator
+B.Sc Information Technology,Data Science,5.5,Pass,3,1,1,2,5,5,1,2,1,1,1,2,2,2,5,2,4,4,3,4,Web Development; Software Development,Web Developer
+B.Sc Computer Science,Web Technologies,6.45,Second Class,3,2,3,2,1,2,1,1,2,0,0,4,4,4,2,3,5,3,4,4,Cybersecurity; Cloud Computing; Web Development; Data Science,Cybersecurity Analyst
+B.Sc Information Technology,Information Technology,6.89,Second Class,1,2,1,5,0,1,2,2,2,2,0,3,3,4,3,2,4,3,3,5,Database Management,Database Administrator
+B.Sc Computer Science,Data Science,7.61,First Class,2,0,3,2,1,2,2,1,3,1,0,3,5,4,3,4,4,3,3,5,Cybersecurity; Cloud Computing,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,7.93,First Class,4,4,5,3,2,3,1,0,2,2,0,2,2,0,4,2,5,3,4,4,Software Development,Software Developer
+B.Sc Information Technology,Cloud & Security,6.88,Second Class,4,4,5,4,3,2,0,1,2,0,0,3,3,2,5,3,5,4,2,4,Software Development; Database Management,Software Developer
+B.Sc Computer Science,Cloud & Security,7.17,First Class,2,2,4,4,2,1,1,0,2,1,0,4,5,5,2,2,5,3,3,5,Cybersecurity; Cloud Computing; Software Development,Cybersecurity Analyst
+B.Sc Information Technology,Web Technologies,8.18,First Class,5,4,3,4,2,2,1,2,5,5,4,5,3,1,5,4,4,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Data Analysis; Software Development,Machine Learning Engineer
+B.Sc Information Technology,Cloud & Security,7.44,First Class,3,5,4,2,2,1,1,1,1,1,0,2,2,2,5,3,5,4,3,4,Software Development; Artificial Intelligence,Software Developer
+B.Sc Information Technology,Cloud & Security,7.58,First Class,5,4,3,2,0,3,0,1,2,1,0,1,2,2,4,4,5,4,3,5,Software Development; Data Analysis,Software Developer
+B.Sc Information Technology,Software Engineering,8.63,Distinction,3,1,0,4,1,1,4,5,4,0,0,0,1,1,2,4,3,3,2,5,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Cloud & Security,7.41,First Class,2,2,1,5,0,2,3,2,2,0,0,2,3,3,3,3,4,3,4,4,Database Management,Database Administrator
+BCA,Software Engineering,6.24,Second Class,3,2,3,4,1,1,1,2,2,1,0,3,5,5,1,4,5,4,3,5,Cybersecurity; Cloud Computing; Database Management; Web Development,Cybersecurity Analyst
+B.Sc Information Technology,Web Technologies,6.79,Second Class,3,2,3,3,2,2,1,1,3,2,0,3,2,3,3,3,5,4,4,5,Software Development; Machine Learning,Software Developer
+BCA,Data Science,6.99,Second Class,2,2,4,2,2,2,1,1,3,0,0,4,5,5,1,4,4,4,2,5,Cybersecurity; Cloud Computing; Web Development,Cybersecurity Analyst
+B.Sc Information Technology,Software Engineering,9.05,Distinction,3,2,1,2,2,2,0,1,1,1,0,5,3,2,4,3,5,4,3,4,Cloud Computing; Web Development,Cloud Engineer
+B.Sc Information Technology,Data Science,7.19,First Class,2,1,1,1,1,3,1,0,1,0,1,5,3,3,4,3,3,3,3,5,Cloud Computing; Cybersecurity; Database Management,Cloud Engineer
+BCA,Data Science,6.51,Second Class,4,2,1,2,5,5,1,0,1,0,0,3,2,1,5,4,4,4,3,3,Web Development; Software Development; Data Science,Web Developer
+B.Sc Computer Science,Data Science,6.33,Second Class,1,0,0,4,0,1,4,3,4,1,0,2,1,1,2,5,4,3,2,5,Data Analysis; Database Management; Machine Learning,Data Analyst
+B.Sc Information Technology,Information Technology,5.67,Pass,2,1,0,5,2,1,4,4,5,2,0,1,1,1,2,3,5,2,2,5,Data Analysis; Database Management; Cybersecurity,Data Analyst
+B.Sc Information Technology,Data Science,8.0,First Class,5,4,5,3,3,3,0,1,2,1,0,2,3,0,4,3,5,5,3,4,Software Development,Software Developer
+B.Sc Computer Science,Software Engineering,7.6,First Class,3,1,1,2,0,2,0,1,1,1,1,5,4,4,3,2,4,4,3,4,Cloud Computing,Cloud Engineer
+B.Sc Information Technology,Information Technology,6.61,Second Class,3,0,0,4,1,1,4,5,5,1,0,2,2,1,1,4,4,4,3,5,Data Analysis; Database Management,Data Analyst
+BCA,Information Technology,6.4,Second Class,4,4,4,3,2,2,1,0,3,0,0,1,2,1,4,3,5,4,3,4,Software Development; Data Science,Software Developer
+B.Sc Computer Science,Web Technologies,7.67,First Class,4,1,0,4,2,2,3,4,4,2,0,3,1,1,3,4,4,3,1,5,Data Analysis; Database Management,Data Analyst
+B.Sc Computer Science,Web Technologies,5.78,Pass,2,0,0,4,0,1,4,3,4,2,0,2,1,0,1,3,5,2,1,5,Data Analysis; Database Management; Cybersecurity; Machine Learning,Data Analyst
+B.Sc Information Technology,Cloud & Security,5.5,Pass,4,2,3,2,1,2,1,1,1,0,1,2,5,4,4,4,4,3,2,5,Cybersecurity; Cloud Computing; Database Management,Cybersecurity Analyst
+B.Sc Information Technology,Web Technologies,6.64,Second Class,5,3,4,3,2,3,1,1,1,1,0,3,2,2,4,3,5,4,2,5,Software Development; Machine Learning; Artificial Intelligence,Software Developer
+B.Sc Information Technology,Cloud & Security,7.73,First Class,5,3,1,4,1,1,1,4,5,4,4,3,1,0,5,4,5,3,2,5,Data Science; Artificial Intelligence; Machine Learning,Data Scientist
+B.Sc Information Technology,Software Engineering,6.88,Second Class,3,0,1,2,1,2,2,1,0,1,0,5,5,2,4,3,4,4,3,5,Cloud Computing,Cloud Engineer
+B.Sc Information Technology,Cloud & Security,6.61,Second Class,3,1,1,1,5,3,1,1,1,0,0,2,2,2,4,3,4,5,1,2,Web Development; Software Development; Machine Learning,Web Developer
+B.Sc Information Technology,Cloud & Security,6.87,Second Class,1,1,0,4,2,2,4,3,5,3,0,2,0,1,3,3,5,3,3,5,Data Analysis; Database Management; Artificial Intelligence; Data Science,Data Analyst
+B.Sc Information Technology,Data Science,7.15,First Class,2,3,0,5,1,0,3,2,3,0,0,2,3,3,3,3,5,3,3,3,Database Management; Cloud Computing,Database Administrator
+B.Sc Information Technology,Cloud & Security,7.18,First Class,3,2,1,5,1,1,3,3,2,1,1,4,3,3,2,2,4,3,3,4,Database Management; Artificial Intelligence,Database Administrator
+B.Sc Information Technology,Data Science,6.36,Second Class,2,2,0,5,0,1,2,2,1,2,0,3,2,2,3,3,3,2,3,5,Database Management; Web Development; Machine Learning,Database Administrator
+B.Sc Information Technology,Software Engineering,5.69,Pass,3,0,1,4,2,0,5,4,4,2,0,2,1,0,2,5,5,4,2,5,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Information Technology,5.74,Pass,3,2,0,3,1,0,4,2,5,1,0,2,1,0,2,4,4,2,3,5,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Information Technology,6.73,Second Class,2,2,1,5,1,2,2,1,2,1,0,2,3,3,4,4,4,4,2,5,Database Management; Data Science; Machine Learning,Database Administrator
+B.Sc Information Technology,Software Engineering,9.0,Distinction,4,2,1,5,2,1,2,1,5,4,4,3,2,1,4,4,5,2,3,4,Data Science; Artificial Intelligence; Machine Learning; Data Analysis,Data Scientist
+B.Sc Information Technology,Data Science,7.87,First Class,4,5,5,2,2,3,0,1,1,0,0,2,2,2,3,3,5,4,4,4,Software Development; Cloud Computing,Software Developer
+B.Sc Information Technology,Web Technologies,6.2,Second Class,2,1,0,4,1,1,3,3,2,2,0,3,1,1,3,4,5,3,2,4,Data Analysis; Database Management; Web Development,Data Analyst
+BCA,Software Engineering,7.13,First Class,2,3,2,3,2,2,1,1,3,0,0,4,5,5,1,2,4,4,4,5,Cybersecurity; Cloud Computing; Data Science,Cybersecurity Analyst
+B.Sc Information Technology,Cloud & Security,7.28,First Class,1,1,0,5,1,0,4,5,4,0,1,2,0,0,2,3,5,3,3,5,Data Analysis; Database Management,Data Analyst
+B.Sc Computer Science,Data Science,8.44,First Class,4,4,5,3,3,4,0,1,2,1,0,0,2,3,3,3,5,4,3,4,Software Development; Cloud Computing,Software Developer
+B.Sc Information Technology,Software Engineering,8.18,First Class,2,2,2,2,1,2,1,1,0,1,0,5,4,2,4,3,3,4,3,5,Cloud Computing; Software Development; Data Science,Cloud Engineer
+B.Sc Information Technology,Cloud & Security,7.13,First Class,5,2,1,4,0,1,3,2,5,5,5,2,0,0,5,3,5,2,3,5,Data Science; Artificial Intelligence; Machine Learning; Cybersecurity; Web Development,Data Scientist
+B.Sc Information Technology,Software Engineering,7.09,First Class,5,2,1,5,0,1,3,3,5,4,4,3,0,1,4,4,4,2,3,5,Data Science; Artificial Intelligence; Machine Learning; Cybersecurity,Data Scientist
+B.Sc Information Technology,Data Science,6.8,Second Class,1,1,3,3,2,0,1,0,1,1,0,3,5,4,4,3,4,3,3,5,Cybersecurity; Cloud Computing; Software Development; Web Development,Cybersecurity Analyst
+B.Sc Information Technology,Information Technology,6.36,Second Class,1,0,0,3,0,1,4,3,4,0,0,2,1,1,2,3,4,2,2,5,Data Analysis; Database Management; Machine Learning; Artificial Intelligence,Data Analyst
+B.Sc Information Technology,Web Technologies,8.21,First Class,1,2,3,4,1,0,1,1,2,1,0,2,5,4,1,3,5,3,2,5,Cybersecurity; Cloud Computing,Cybersecurity Analyst
+B.Sc Information Technology,Information Technology,8.02,First Class,5,3,3,4,1,2,3,1,4,3,5,3,1,3,4,3,5,4,3,4,Machine Learning; Artificial Intelligence; Data Science; Data Analysis,Machine Learning Engineer
+B.Sc Information Technology,Information Technology,6.36,Second Class,5,1,1,4,1,1,2,2,5,4,4,3,1,1,4,3,5,3,3,5,Data Science; Artificial Intelligence; Machine Learning; Data Analysis,Data Scientist
+B.Sc Computer Science,Web Technologies,6.79,Second Class,3,2,2,1,0,0,1,1,0,1,0,5,5,3,2,3,3,4,3,5,Cloud Computing; Artificial Intelligence,Cloud Engineer
+B.Sc Information Technology,Web Technologies,6.97,Second Class,5,3,3,3,1,3,2,2,4,4,5,4,1,1,4,2,5,4,2,5,Machine Learning; Artificial Intelligence; Data Science; Data Analysis; Cybersecurity,Machine Learning Engineer
+B.Sc Information Technology,Web Technologies,8.03,First Class,5,3,0,5,1,1,3,3,5,5,4,3,0,2,4,4,4,3,2,4,Data Science; Artificial Intelligence; Machine Learning; Web Development,Data Scientist
+B.Sc Information Technology,Software Engineering,7.44,First Class,3,1,1,2,1,2,1,0,1,1,1,5,4,3,4,3,3,4,3,4,Cloud Computing; Artificial Intelligence,Cloud Engineer
+B.Sc Computer Science,Web Technologies,8.29,First Class,2,1,3,3,1,1,2,1,2,0,0,3,4,5,3,3,5,3,3,5,Cybersecurity; Cloud Computing; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Cloud & Security,7.79,First Class,5,2,3,5,1,1,2,2,3,5,5,3,2,2,5,3,5,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Cybersecurity,Machine Learning Engineer
+B.Sc Information Technology,Cloud & Security,6.97,Second Class,3,1,0,3,0,2,3,4,4,2,0,1,1,2,3,3,3,4,2,5,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Cloud & Security,6.4,Second Class,3,2,2,2,2,3,1,1,1,2,0,5,4,3,3,3,4,4,3,5,Cloud Computing; Database Management,Cloud Engineer
+B.Sc Computer Science,Software Engineering,5.77,Pass,4,2,1,3,1,1,4,3,5,5,5,3,1,0,5,5,5,2,3,4,Data Science; Artificial Intelligence; Machine Learning; Cybersecurity; Web Development,Data Scientist
+B.Sc Information Technology,Web Technologies,8.91,Distinction,5,2,1,4,1,1,4,2,3,3,4,4,0,1,4,4,5,4,2,5,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+BCA,Information Technology,6.32,Second Class,3,1,1,3,5,5,1,2,1,1,1,3,0,1,4,3,4,5,1,3,Web Development; Software Development,Web Developer
+B.Sc Information Technology,Cloud & Security,6.77,Second Class,3,3,1,3,5,5,0,0,1,1,0,2,2,2,3,3,4,4,2,3,Web Development; Software Development; Data Analysis; Artificial Intelligence,Web Developer
+B.Sc Computer Science,Software Engineering,7.2,First Class,5,3,3,3,0,2,3,1,4,5,5,5,1,0,4,2,5,5,3,4,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+B.Sc Information Technology,Software Engineering,6.37,Second Class,2,1,1,5,0,1,2,2,1,1,0,3,1,2,2,2,3,3,3,5,Database Management; Data Analysis,Database Administrator
+B.Sc Information Technology,Web Technologies,6.54,Second Class,3,2,0,3,4,5,2,0,0,1,0,1,2,3,4,3,4,4,1,3,Web Development; Software Development; Database Management; Machine Learning,Web Developer
+B.Sc Information Technology,Cloud & Security,8.26,First Class,3,2,2,3,5,5,1,1,0,0,0,2,2,1,4,3,4,4,2,3,Web Development; Software Development; Data Analysis,Web Developer
+B.Sc Information Technology,Data Science,6.26,Second Class,3,4,4,3,2,3,1,1,2,2,0,2,1,1,4,3,5,4,3,5,Software Development; Artificial Intelligence; Database Management,Software Developer
+B.Sc Information Technology,Software Engineering,8.98,Distinction,4,1,2,4,0,0,3,3,5,4,5,3,1,1,4,5,5,3,4,5,Data Science; Artificial Intelligence; Machine Learning; Software Development; Cloud Computing,Data Scientist
+B.Sc Computer Science,Software Engineering,6.32,Second Class,3,2,2,3,1,1,1,1,2,1,0,5,2,3,3,3,4,5,4,3,Cloud Computing,Cloud Engineer
+B.Sc Information Technology,Information Technology,6.4,Second Class,5,3,3,4,1,1,3,2,5,4,3,4,2,3,3,2,4,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Software Development,Machine Learning Engineer
+B.Sc Information Technology,Software Engineering,6.97,Second Class,3,1,1,4,1,2,3,5,4,0,0,2,0,1,2,4,3,4,3,5,Data Analysis; Database Management; Artificial Intelligence,Data Analyst
+B.Sc Information Technology,Web Technologies,7.35,First Class,3,2,1,2,0,3,0,0,1,2,0,5,4,1,3,3,3,5,2,4,Cloud Computing; Data Analysis,Cloud Engineer
+B.Sc Information Technology,Information Technology,7.52,First Class,3,1,0,4,1,0,5,3,4,0,0,2,0,1,0,4,4,2,1,5,Data Analysis; Database Management; Software Development,Data Analyst
+B.Sc Computer Science,Data Science,7.88,First Class,4,4,4,4,1,2,2,2,3,5,3,4,3,1,4,3,5,5,3,5,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+B.Sc Information Technology,Data Science,8.37,First Class,5,3,3,4,2,2,1,2,5,5,5,4,1,2,3,3,5,3,2,5,Machine Learning; Artificial Intelligence; Data Science; Cybersecurity,Machine Learning Engineer
+B.Sc Information Technology,Software Engineering,6.45,Second Class,3,2,1,4,0,3,1,0,2,2,0,3,5,4,3,3,5,3,3,4,Cybersecurity; Cloud Computing; Database Management,Cybersecurity Analyst
+B.Sc Information Technology,Web Technologies,8.09,First Class,3,1,1,1,0,2,0,2,1,1,0,4,4,3,3,4,3,4,3,3,Cloud Computing; Cybersecurity,Cloud Engineer
+B.Sc Information Technology,Web Technologies,7.56,First Class,4,1,1,4,1,1,3,3,4,5,2,1,1,2,4,3,5,3,3,5,Data Science; Artificial Intelligence; Machine Learning; Software Development,Data Scientist
+B.Sc Information Technology,Data Science,6.75,Second Class,4,5,2,2,1,1,0,1,1,1,1,2,2,2,4,2,5,4,4,4,Software Development; Cloud Computing,Software Developer
+BCA,Cloud & Security,6.17,Second Class,4,1,0,3,3,5,2,1,0,0,0,2,2,0,3,4,4,5,2,3,Web Development; Software Development,Web Developer
+B.Sc Information Technology,Data Science,8.34,First Class,3,2,1,2,1,1,1,1,2,0,0,5,4,2,3,4,4,4,4,3,Cloud Computing; Software Development,Cloud Engineer
+B.Sc Information Technology,Information Technology,6.35,Second Class,2,2,0,4,1,2,3,2,2,0,0,3,4,2,3,2,4,3,3,4,Database Management,Database Administrator
+B.Sc Computer Science,Data Science,7.32,First Class,3,2,2,3,3,3,2,1,1,1,0,2,3,5,3,2,5,4,3,5,Cybersecurity; Cloud Computing; Web Development,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,6.79,Second Class,3,1,2,2,2,1,1,1,3,2,1,3,5,5,4,4,5,3,3,5,Cybersecurity; Cloud Computing; Web Development; Database Management,Cybersecurity Analyst
+BCA,Cloud & Security,6.77,Second Class,1,1,1,4,0,0,2,4,2,2,1,1,2,2,0,5,4,4,2,5,Data Analysis; Database Management; Cloud Computing,Data Analyst
+B.Sc Information Technology,Data Science,7.14,First Class,2,2,1,2,5,5,1,0,1,1,1,3,2,2,5,4,4,4,1,3,Web Development; Software Development; Artificial Intelligence,Web Developer
+B.Sc Computer Science,Software Engineering,7.68,First Class,2,1,3,3,2,1,2,2,2,2,0,2,3,4,3,3,5,3,3,5,Cybersecurity; Cloud Computing,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,8.16,First Class,4,0,3,1,1,2,0,0,2,2,0,3,5,5,4,3,5,2,3,4,Cybersecurity; Cloud Computing,Cybersecurity Analyst
+B.Sc Computer Science,Information Technology,6.59,Second Class,3,3,1,1,1,2,2,1,2,0,0,5,4,3,4,3,4,4,2,3,Cloud Computing; Machine Learning,Cloud Engineer
+B.Sc Information Technology,Data Science,6.68,Second Class,1,2,0,5,0,1,3,2,2,1,0,3,3,3,3,3,4,4,3,4,Database Management,Database Administrator
+B.Sc Information Technology,Web Technologies,6.84,Second Class,2,2,1,5,0,1,2,2,2,0,0,2,3,3,2,2,4,3,2,4,Database Management,Database Administrator
+BCA,Data Science,6.23,Second Class,4,3,2,5,1,3,2,1,3,5,5,4,2,2,5,2,5,4,4,5,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+B.Sc Information Technology,Information Technology,7.47,First Class,3,2,0,5,1,1,4,0,2,0,0,3,4,3,3,4,4,3,3,5,Database Management; Cloud Computing; Machine Learning,Database Administrator
+B.Sc Information Technology,Web Technologies,7.68,First Class,2,2,0,4,1,2,3,3,3,0,0,3,3,2,4,3,4,3,2,4,Database Management; Cybersecurity; Artificial Intelligence,Database Administrator
+B.Sc Information Technology,Web Technologies,6.6,Second Class,5,3,2,4,0,1,2,2,3,4,5,3,3,3,3,4,5,4,2,4,Machine Learning; Artificial Intelligence; Data Science; Web Development; Data Analysis,Machine Learning Engineer
+B.Sc Information Technology,Data Science,7.82,First Class,4,2,0,4,1,0,3,3,5,5,5,3,1,1,4,4,5,4,4,5,Data Science; Artificial Intelligence; Machine Learning; Cybersecurity,Data Scientist
+B.Sc Information Technology,Web Technologies,6.02,Second Class,4,5,4,3,2,3,2,2,2,0,0,1,2,2,4,4,5,3,4,3,Software Development; Cybersecurity,Software Developer
+B.Sc Information Technology,Data Science,9.37,Distinction,5,3,1,4,1,3,2,1,4,5,5,4,0,0,4,3,5,4,2,5,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+B.Sc Information Technology,Information Technology,7.5,First Class,3,3,1,2,1,2,1,1,1,1,0,5,3,3,4,3,5,4,2,4,Cloud Computing; Software Development,Cloud Engineer
+B.Sc Information Technology,Data Science,7.22,First Class,4,4,4,2,3,2,1,2,2,0,0,2,2,2,4,4,5,4,3,3,Software Development,Software Developer
+B.Sc Computer Science,Information Technology,6.04,Second Class,2,2,4,3,2,2,1,1,1,1,0,4,5,5,2,3,5,3,3,5,Cybersecurity; Cloud Computing; Machine Learning; Data Science,Cybersecurity Analyst
+B.Sc Information Technology,Information Technology,6.71,Second Class,3,2,0,3,4,5,1,0,0,0,0,2,2,2,4,3,4,3,2,4,Web Development; Software Development; Database Management; Data Science,Web Developer
+B.Sc Information Technology,Web Technologies,7.4,First Class,5,4,3,4,1,2,3,3,5,5,4,4,2,3,5,3,5,3,3,5,Machine Learning; Artificial Intelligence; Data Science; Database Management; Cloud Computing,Machine Learning Engineer
+B.Sc Information Technology,Data Science,7.8,First Class,5,3,3,4,1,2,2,1,5,3,5,4,3,2,5,2,5,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Database Management,Machine Learning Engineer
+B.Sc Information Technology,Web Technologies,7.0,First Class,5,3,2,4,1,2,2,2,3,5,5,4,2,3,5,3,5,5,3,5,Machine Learning; Artificial Intelligence; Data Science; Data Analysis,Machine Learning Engineer
+B.Sc Information Technology,Cloud & Security,8.62,Distinction,5,4,4,5,0,2,2,1,5,4,4,4,2,3,4,3,5,3,3,5,Machine Learning; Artificial Intelligence; Data Science; Cybersecurity,Machine Learning Engineer
+B.Sc Computer Science,Cloud & Security,7.38,First Class,5,1,3,4,1,1,2,1,4,5,5,5,3,2,3,3,5,5,3,4,Machine Learning; Artificial Intelligence; Data Science; Database Management; Web Development,Machine Learning Engineer
+B.Sc Computer Science,Web Technologies,8.32,First Class,5,3,4,5,1,2,1,2,5,5,3,3,2,1,4,3,5,3,4,5,Machine Learning; Artificial Intelligence; Data Science; Cloud Computing,Machine Learning Engineer
+B.Sc Information Technology,Data Science,8.78,Distinction,2,0,0,4,1,0,5,2,5,0,0,1,2,1,1,4,3,2,3,5,Data Analysis; Database Management; Data Science; Cybersecurity,Data Analyst
+B.Sc Computer Science,Data Science,8.56,Distinction,1,2,1,5,0,2,2,1,2,2,0,4,2,3,1,3,4,3,3,4,Database Management; Data Science; Machine Learning,Database Administrator
+B.Sc Information Technology,Software Engineering,8.43,First Class,1,2,0,4,0,1,4,0,3,1,0,3,4,3,4,3,4,4,4,3,Database Management; Data Analysis; Machine Learning,Database Administrator
+B.Sc Information Technology,Web Technologies,8.6,Distinction,4,1,1,2,1,1,3,3,5,5,4,3,1,0,3,3,5,3,4,5,Data Science; Artificial Intelligence; Machine Learning; Cloud Computing; Software Development,Data Scientist
+B.Sc Information Technology,Web Technologies,9.17,Distinction,5,1,0,4,1,1,3,3,5,4,5,3,2,0,5,3,5,2,3,5,Data Science; Artificial Intelligence; Machine Learning; Software Development,Data Scientist
+B.Sc Computer Science,Data Science,6.62,Second Class,2,2,1,5,0,0,2,0,2,1,0,3,3,2,2,3,4,3,3,3,Database Management; Software Development,Database Administrator
+B.Sc Information Technology,Software Engineering,8.01,First Class,4,2,3,4,2,2,1,1,2,0,1,2,5,4,2,3,5,3,2,5,Cybersecurity; Cloud Computing; Software Development; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,8.04,First Class,5,3,3,4,1,2,0,2,3,4,4,3,3,2,5,2,5,4,3,5,Machine Learning; Artificial Intelligence; Data Science; Data Analysis,Machine Learning Engineer
+B.Sc Information Technology,Cloud & Security,7.29,First Class,4,2,1,4,0,1,3,3,5,4,4,3,0,1,4,4,5,3,4,5,Data Science; Artificial Intelligence; Machine Learning; Software Development; Cybersecurity,Data Scientist
+B.Sc Information Technology,Web Technologies,6.98,Second Class,3,1,2,2,4,5,1,0,1,2,0,2,2,2,4,3,3,4,1,3,Web Development; Software Development,Web Developer
+BCA,Information Technology,7.33,First Class,5,4,3,4,1,2,0,2,4,4,4,3,2,1,4,3,5,5,3,5,Machine Learning; Artificial Intelligence; Data Science; Web Development; Cloud Computing,Machine Learning Engineer
+B.Sc Information Technology,Web Technologies,7.0,First Class,4,1,0,4,0,1,4,2,4,2,0,2,0,2,1,4,4,4,1,5,Data Analysis; Database Management; Cloud Computing,Data Analyst
+B.Sc Information Technology,Web Technologies,7.32,First Class,3,1,1,1,0,0,0,1,1,0,0,4,5,3,2,4,4,4,3,4,Cloud Computing; Web Development,Cloud Engineer
+B.Sc Information Technology,Cloud & Security,9.54,Distinction,4,3,4,4,2,3,2,2,3,5,4,4,2,2,3,3,5,3,3,5,Machine Learning; Artificial Intelligence; Data Science; Web Development,Machine Learning Engineer
+B.Sc Information Technology,Information Technology,7.13,First Class,3,2,1,4,5,3,1,0,0,1,0,2,0,2,4,4,4,4,2,3,Web Development; Software Development; Database Management,Web Developer
+B.Sc Information Technology,Cloud & Security,8.19,First Class,0,3,1,5,1,0,4,0,1,0,0,3,1,2,2,3,4,3,3,4,Database Management; Data Analysis,Database Administrator
+B.Sc Information Technology,Software Engineering,8.32,First Class,3,2,1,3,4,5,1,1,1,1,0,3,0,1,4,3,3,5,3,3,Web Development; Software Development; Cloud Computing,Web Developer
+B.Sc Information Technology,Software Engineering,7.08,First Class,5,2,1,4,1,1,1,1,4,5,3,3,2,1,3,5,4,3,4,5,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+B.Sc Information Technology,Information Technology,7.09,First Class,3,2,0,3,5,3,1,0,1,1,1,1,2,1,4,3,3,4,2,4,Web Development; Software Development; Artificial Intelligence,Web Developer
+B.Sc Information Technology,Information Technology,8.61,Distinction,5,2,1,4,1,0,3,4,5,5,4,4,2,0,4,4,5,2,4,4,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+B.Sc Computer Science,Data Science,7.74,First Class,4,3,1,3,0,1,2,3,4,4,4,3,1,1,5,4,5,3,2,4,Data Science; Artificial Intelligence; Machine Learning; Cloud Computing,Data Scientist
+B.Sc Information Technology,Cloud & Security,5.5,Pass,2,3,1,5,0,0,2,1,2,1,0,4,4,2,4,3,4,3,2,5,Database Management; Machine Learning,Database Administrator
+B.Sc Information Technology,Cloud & Security,7.73,First Class,3,2,1,4,0,1,3,4,4,5,4,3,1,0,3,4,5,3,2,4,Data Science; Artificial Intelligence; Machine Learning,Data Scientist
+B.Sc Computer Science,Data Science,7.6,First Class,4,2,1,3,2,3,2,1,0,1,0,5,4,3,4,2,4,4,3,4,Cloud Computing,Cloud Engineer
+B.Sc Information Technology,Web Technologies,6.73,Second Class,5,1,1,4,1,1,2,2,5,5,4,3,0,2,4,3,5,4,4,5,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+B.Sc Information Technology,Data Science,8.33,First Class,4,4,4,3,2,2,1,1,2,2,0,2,3,3,3,3,5,4,3,3,Software Development,Software Developer
+B.Sc Information Technology,Cloud & Security,7.33,First Class,2,1,3,3,2,3,0,1,2,0,0,2,5,5,3,3,5,3,3,5,Cybersecurity; Cloud Computing; Software Development,Cybersecurity Analyst
+B.Sc Computer Science,Data Science,8.21,First Class,4,1,4,4,1,2,3,2,3,5,5,5,3,2,4,2,5,4,4,4,Machine Learning; Artificial Intelligence; Data Science; Web Development,Machine Learning Engineer
+B.Sc Computer Science,Cloud & Security,5.97,Pass,3,0,0,5,0,0,2,5,4,2,0,2,1,1,2,4,3,4,2,5,Data Analysis; Database Management; Web Development,Data Analyst
+B.Sc Computer Science,Cloud & Security,7.81,First Class,4,2,2,3,5,5,0,0,1,1,1,3,3,0,4,3,5,4,1,4,Web Development; Software Development; Database Management,Web Developer
+B.Sc Information Technology,Information Technology,8.24,First Class,2,1,1,5,1,2,3,3,0,1,0,3,2,4,4,3,4,2,4,5,Database Management,Database Administrator
+B.Sc Information Technology,Cloud & Security,6.14,Second Class,5,3,1,4,1,1,4,3,4,5,3,2,1,1,2,4,5,3,4,5,Data Science; Artificial Intelligence; Machine Learning,Data Scientist
+B.Sc Information Technology,Data Science,8.47,First Class,2,0,1,2,1,3,1,2,2,1,0,5,4,3,3,3,4,5,4,4,Cloud Computing; Software Development,Cloud Engineer
+B.Sc Information Technology,Data Science,6.77,Second Class,3,1,1,4,2,0,4,4,4,1,0,2,1,1,3,3,5,4,3,5,Data Analysis; Database Management; Artificial Intelligence,Data Analyst
+B.Sc Information Technology,Cloud & Security,7.64,First Class,3,3,3,2,0,2,1,1,1,2,0,3,3,5,3,3,5,4,3,5,Cybersecurity; Cloud Computing; Machine Learning,Cybersecurity Analyst
+B.Sc Information Technology,Web Technologies,7.85,First Class,3,2,1,2,5,4,0,1,1,2,0,3,2,2,4,2,4,4,1,3,Web Development; Software Development,Web Developer
+B.Sc Computer Science,Web Technologies,8.21,First Class,3,0,0,3,1,3,0,2,1,1,0,5,4,3,3,3,5,3,3,3,Cloud Computing; Web Development; Data Analysis,Cloud Engineer
+B.Sc Information Technology,Web Technologies,7.15,First Class,2,1,1,1,1,2,1,1,1,1,0,4,4,3,4,3,4,4,3,4,Cloud Computing; Web Development; Database Management,Cloud Engineer
+B.Sc Information Technology,Cloud & Security,7.32,First Class,5,3,1,4,0,1,2,3,5,5,4,3,1,1,4,4,5,4,3,5,Data Science; Artificial Intelligence; Machine Learning; Database Management,Data Scientist
+B.Sc Information Technology,Data Science,5.5,Pass,4,2,1,2,1,2,1,1,1,1,0,5,3,3,3,4,4,3,2,4,Cloud Computing,Cloud Engineer
+B.Sc Information Technology,Data Science,7.54,First Class,3,5,4,2,2,4,1,0,2,1,0,2,3,3,4,3,5,5,2,5,Software Development,Software Developer
+B.Sc Information Technology,Software Engineering,7.06,First Class,4,4,4,2,0,3,1,2,2,1,0,0,2,1,4,3,5,5,3,4,Software Development; Machine Learning; Cloud Computing,Software Developer
+B.Sc Information Technology,Information Technology,7.33,First Class,4,4,4,2,2,3,1,0,2,0,0,2,3,1,2,3,5,4,2,4,Software Development; Data Analysis; Cybersecurity,Software Developer
+B.Sc Computer Science,Web Technologies,7.71,First Class,3,2,2,3,5,5,1,0,0,1,0,2,2,2,4,3,4,3,2,3,Web Development; Software Development; Database Management,Web Developer
+B.Sc Computer Science,Information Technology,9.28,Distinction,3,1,0,3,1,0,4,3,2,2,0,3,1,1,2,4,3,3,3,5,Data Analysis; Database Management; Artificial Intelligence,Data Analyst
+B.Sc Computer Science,Information Technology,5.8,Pass,0,2,0,5,1,2,3,2,1,1,1,3,3,2,3,4,4,3,3,3,Database Management; Web Development; Machine Learning,Database Administrator
+B.Sc Information Technology,Web Technologies,7.66,First Class,3,1,0,4,1,0,4,2,4,3,0,3,1,1,0,3,4,3,1,5,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Software Engineering,7.78,First Class,3,2,0,3,4,3,2,1,2,1,0,2,2,2,5,2,4,4,1,3,Web Development; Software Development; Artificial Intelligence,Web Developer
+BCA,Software Engineering,6.82,Second Class,3,2,1,4,1,1,4,2,5,5,2,1,0,1,4,4,4,3,4,5,Data Science; Artificial Intelligence; Machine Learning; Data Analysis,Data Scientist
+B.Sc Information Technology,Data Science,7.21,First Class,5,1,3,4,1,2,2,3,4,5,4,3,2,0,5,2,5,4,3,4,Machine Learning; Artificial Intelligence; Data Science; Cybersecurity,Machine Learning Engineer
+B.Sc Information Technology,Web Technologies,6.54,Second Class,3,2,0,2,0,0,0,0,0,1,0,5,4,2,5,3,5,4,3,5,Cloud Computing; Machine Learning,Cloud Engineer
+B.Sc Information Technology,Web Technologies,7.49,First Class,3,1,0,3,1,1,3,3,4,2,1,3,1,1,2,4,3,3,3,5,Data Analysis; Database Management; Cybersecurity,Data Analyst
+B.Sc Information Technology,Cloud & Security,9.16,Distinction,3,2,1,4,5,5,1,0,1,0,0,2,2,1,4,4,4,5,2,2,Web Development; Software Development,Web Developer
+B.Sc Information Technology,Software Engineering,6.39,Second Class,3,4,2,2,2,3,0,1,2,0,1,1,3,0,5,2,5,4,3,4,Software Development,Software Developer
+B.Sc Information Technology,Cloud & Security,6.59,Second Class,3,4,5,3,2,2,1,1,3,1,0,2,2,2,3,3,5,4,2,4,Software Development; Machine Learning,Software Developer
+B.Sc Information Technology,Information Technology,7.02,First Class,3,2,1,2,3,5,1,2,1,1,1,2,2,2,4,3,3,4,1,2,Web Development; Software Development; Artificial Intelligence,Web Developer
+B.Sc Information Technology,Cloud & Security,7.39,First Class,3,2,1,3,5,5,1,1,0,1,0,2,1,3,3,3,4,4,2,3,Web Development; Software Development; Data Science,Web Developer
+B.Sc Information Technology,Software Engineering,7.57,First Class,4,2,3,3,1,2,3,1,4,4,5,4,2,2,3,2,5,4,4,5,Machine Learning; Artificial Intelligence; Data Science; Web Development,Machine Learning Engineer
+B.Sc Information Technology,Web Technologies,7.29,First Class,3,1,0,4,1,0,4,4,4,1,0,1,0,2,2,4,4,3,3,4,Data Analysis; Database Management,Data Analyst
+B.Sc Information Technology,Information Technology,7.26,First Class,4,3,2,4,1,2,3,1,3,4,5,4,3,1,4,3,5,5,4,5,Machine Learning; Artificial Intelligence; Data Science,Machine Learning Engineer
+B.Sc Information Technology,Software Engineering,7.89,First Class,3,3,3,3,2,1,2,1,1,2,0,3,5,5,2,4,5,3,3,5,Cybersecurity; Cloud Computing; Artificial Intelligence,Cybersecurity Analyst
+B.Sc Information Technology,Cloud & Security,7.07,First Class,3,2,3,3,2,2,1,0,2,2,1,1,5,5,2,3,5,3,2,5,Cybersecurity; Cloud Computing; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Web Technologies,7.33,First Class,3,2,3,3,0,2,2,1,2,1,0,1,4,5,1,4,5,2,3,5,Cybersecurity; Cloud Computing; Database Management; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Software Engineering,6.68,Second Class,3,2,0,5,1,1,2,5,4,2,0,1,0,1,2,5,3,3,1,5,Data Analysis; Database Management; Software Development,Data Analyst
+B.Sc Information Technology,Data Science,8.05,First Class,2,2,1,5,1,0,4,1,0,1,0,4,3,4,2,2,4,4,3,3,Database Management,Database Administrator
+B.Sc Information Technology,Web Technologies,7.44,First Class,4,2,1,3,5,5,2,1,0,1,0,2,2,1,5,4,5,4,2,3,Web Development; Software Development; Artificial Intelligence,Web Developer
+B.Sc Information Technology,Cloud & Security,7.22,First Class,2,1,1,1,1,2,1,2,1,1,0,3,4,4,4,4,3,4,2,4,Cloud Computing; Artificial Intelligence; Data Science,Cloud Engineer
+B.Sc Information Technology,Cloud & Security,8.48,First Class,3,2,3,4,2,2,1,1,1,0,0,3,5,5,3,2,5,3,3,5,Cybersecurity; Cloud Computing; Machine Learning; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Data Science,8.27,First Class,3,4,4,3,2,3,0,0,2,0,0,2,3,2,5,3,5,5,3,3,Software Development; Database Management,Software Developer
+B.Sc Information Technology,Web Technologies,8.21,First Class,4,4,3,4,2,3,1,0,2,0,0,2,2,2,3,3,5,4,3,3,Software Development,Software Developer
+B.Sc Information Technology,Web Technologies,7.14,First Class,3,2,1,4,1,0,2,2,2,0,0,3,1,3,3,2,4,3,4,4,Database Management; Data Analysis; Software Development,Database Administrator
+B.Sc Computer Science,Web Technologies,7.43,First Class,3,1,1,5,1,0,3,0,2,1,1,2,3,1,3,3,4,4,3,4,Database Management; Cybersecurity,Database Administrator
+B.Sc Information Technology,Cloud & Security,7.39,First Class,3,1,0,4,1,1,4,4,3,2,0,2,1,1,3,4,5,3,2,5,Data Analysis; Database Management; Software Development,Data Analyst
+B.Sc Information Technology,Data Science,6.65,Second Class,3,4,4,2,3,2,1,0,2,1,0,2,2,2,3,3,4,4,3,5,Software Development; Cybersecurity,Software Developer
+B.Sc Information Technology,Information Technology,5.75,Pass,2,2,2,5,1,1,3,1,1,0,0,4,4,1,1,3,4,2,3,4,Database Management; Data Analysis,Database Administrator
+B.Sc Information Technology,Cloud & Security,6.26,Second Class,3,3,3,3,3,3,1,1,3,0,0,2,2,3,4,3,5,3,3,4,Software Development; Data Analysis,Software Developer
+B.Sc Computer Science,Cloud & Security,7.42,First Class,5,3,3,4,1,3,2,1,3,3,5,3,3,3,4,4,5,4,3,4,Machine Learning; Artificial Intelligence; Data Science; Web Development; Data Analysis,Machine Learning Engineer
+B.Sc Computer Science,Web Technologies,6.54,Second Class,3,3,4,3,2,1,2,1,2,0,0,2,5,4,3,2,5,2,4,5,Cybersecurity; Cloud Computing; Database Management,Cybersecurity Analyst
+B.Sc Information Technology,Cloud & Security,7.63,First Class,3,2,0,3,1,0,4,2,4,2,1,2,1,0,2,3,4,3,1,5,Data Analysis; Database Management; Web Development,Data Analyst
+B.Sc Computer Science,Web Technologies,7.16,First Class,4,3,4,3,2,2,1,1,3,0,0,2,5,4,3,4,5,3,2,5,Cybersecurity; Cloud Computing; Artificial Intelligence; Software Development,Cybersecurity Analyst
+B.Sc Information Technology,Cloud & Security,7.09,First Class,2,4,4,3,2,1,2,2,2,0,0,3,2,2,3,2,4,5,3,4,Software Development,Software Developer
+B.Sc Information Technology,Information Technology,7.58,First Class,4,2,3,3,2,3,1,2,2,1,0,1,0,0,4,3,4,4,4,3,Software Development; Data Science,Software Developer
+B.Sc Computer Science,Cloud & Security,5.97,Pass,4,2,3,3,2,1,1,1,0,0,1,4,5,5,3,2,5,3,3,4,Cybersecurity; Cloud Computing; Data Analysis,Cybersecurity Analyst
+B.Sc Information Technology,Software Engineering,6.97,Second Class,3,2,0,2,1,2,0,0,1,0,0,4,4,1,4,4,4,5,3,4,Cloud Computing,Cloud Engineer

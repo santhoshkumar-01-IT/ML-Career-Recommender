@@ -1,0 +1,259 @@
+{
+  "careers": {
+    "Data Analyst": {
+      "description": "Transforms raw data into actionable insights, interactive dashboards, and business reports using statistical techniques and BI tools.",
+      "required_cgpa": 6.5,
+      "technical_skills": {
+        "Python": 3,
+        "Java": 1,
+        "C_CPP": 0,
+        "SQL": 4,
+        "HTML_CSS": 1,
+        "JavaScript": 1,
+        "Excel": 4,
+        "Power_BI": 4,
+        "Statistics": 4,
+        "Machine_Learning": 2,
+        "Deep_Learning": 0,
+        "Cloud_Computing": 2,
+        "Networking": 1,
+        "Cybersecurity": 1,
+        "Git_GitHub": 2
+      },
+      "soft_skills": {
+        "Communication": 4,
+        "Problem_Solving": 4,
+        "Teamwork": 3,
+        "Leadership": 2,
+        "Analytical_Thinking": 5
+      },
+      "primary_interests": [
+        "Data Analysis",
+        "Database Management"
+      ]
+    },
+    "Data Scientist": {
+      "description": "Develops predictive statistical models, analyzes complex datasets, and extracts strategic business value using advanced ML algorithms.",
+      "required_cgpa": 7.5,
+      "technical_skills": {
+        "Python": 5,
+        "Java": 2,
+        "C_CPP": 1,
+        "SQL": 4,
+        "HTML_CSS": 1,
+        "JavaScript": 1,
+        "Excel": 3,
+        "Power_BI": 3,
+        "Statistics": 5,
+        "Machine_Learning": 5,
+        "Deep_Learning": 4,
+        "Cloud_Computing": 3,
+        "Networking": 1,
+        "Cybersecurity": 1,
+        "Git_GitHub": 4
+      },
+      "soft_skills": {
+        "Communication": 4,
+        "Problem_Solving": 5,
+        "Teamwork": 3,
+        "Leadership": 3,
+        "Analytical_Thinking": 5
+      },
+      "primary_interests": [
+        "Data Science",
+        "Artificial Intelligence",
+        "Machine Learning"
+      ]
+    },
+    "Software Developer": {
+      "description": "Designs, writes, tests, and maintains robust software applications, backend services, and scalable desktop or mobile systems.",
+      "required_cgpa": 6.5,
+      "technical_skills": {
+        "Python": 4,
+        "Java": 4,
+        "C_CPP": 4,
+        "SQL": 3,
+        "HTML_CSS": 2,
+        "JavaScript": 3,
+        "Excel": 1,
+        "Power_BI": 1,
+        "Statistics": 2,
+        "Machine_Learning": 1,
+        "Deep_Learning": 0,
+        "Cloud_Computing": 2,
+        "Networking": 2,
+        "Cybersecurity": 2,
+        "Git_GitHub": 4
+      },
+      "soft_skills": {
+        "Communication": 3,
+        "Problem_Solving": 5,
+        "Teamwork": 4,
+        "Leadership": 3,
+        "Analytical_Thinking": 4
+      },
+      "primary_interests": [
+        "Software Development"
+      ]
+    },
+    "Web Developer": {
+      "description": "Builds responsive, user-friendly frontend interfaces and powerful server-side web applications, REST APIs, and web services.",
+      "required_cgpa": 6.0,
+      "technical_skills": {
+        "Python": 3,
+        "Java": 2,
+        "C_CPP": 1,
+        "SQL": 3,
+        "HTML_CSS": 5,
+        "JavaScript": 5,
+        "Excel": 1,
+        "Power_BI": 1,
+        "Statistics": 1,
+        "Machine_Learning": 1,
+        "Deep_Learning": 0,
+        "Cloud_Computing": 2,
+        "Networking": 2,
+        "Cybersecurity": 2,
+        "Git_GitHub": 4
+      },
+      "soft_skills": {
+        "Communication": 3,
+        "Problem_Solving": 4,
+        "Teamwork": 4,
+        "Leadership": 2,
+        "Analytical_Thinking": 3
+      },
+      "primary_interests": [
+        "Web Development",
+        "Software Development"
+      ]
+    },
+    "Database Administrator": {
+      "description": "Ensures database performance, integrity, security, high availability, backup, recovery, and seamless query optimization.",
+      "required_cgpa": 6.5,
+      "technical_skills": {
+        "Python": 2,
+        "Java": 2,
+        "C_CPP": 1,
+        "SQL": 5,
+        "HTML_CSS": 1,
+        "JavaScript": 1,
+        "Excel": 3,
+        "Power_BI": 2,
+        "Statistics": 2,
+        "Machine_Learning": 1,
+        "Deep_Learning": 0,
+        "Cloud_Computing": 3,
+        "Networking": 3,
+        "Cybersecurity": 3,
+        "Git_GitHub": 3
+      },
+      "soft_skills": {
+        "Communication": 3,
+        "Problem_Solving": 4,
+        "Teamwork": 3,
+        "Leadership": 3,
+        "Analytical_Thinking": 4
+      },
+      "primary_interests": [
+        "Database Management"
+      ]
+    },
+    "Cloud Engineer": {
+      "description": "Architects, deploys, automates, and manages reliable cloud infrastructure, serverless architectures, and CI/CD pipelines.",
+      "required_cgpa": 6.8,
+      "technical_skills": {
+        "Python": 3,
+        "Java": 2,
+        "C_CPP": 1,
+        "SQL": 2,
+        "HTML_CSS": 1,
+        "JavaScript": 2,
+        "Excel": 1,
+        "Power_BI": 1,
+        "Statistics": 1,
+        "Machine_Learning": 1,
+        "Deep_Learning": 0,
+        "Cloud_Computing": 5,
+        "Networking": 4,
+        "Cybersecurity": 3,
+        "Git_GitHub": 4
+      },
+      "soft_skills": {
+        "Communication": 3,
+        "Problem_Solving": 4,
+        "Teamwork": 4,
+        "Leadership": 3,
+        "Analytical_Thinking": 4
+      },
+      "primary_interests": [
+        "Cloud Computing"
+      ]
+    },
+    "Cybersecurity Analyst": {
+      "description": "Protects organizational networks, endpoints, and sensitive data from cyber attacks, vulnerabilities, and unauthorized breaches.",
+      "required_cgpa": 6.8,
+      "technical_skills": {
+        "Python": 3,
+        "Java": 2,
+        "C_CPP": 3,
+        "SQL": 3,
+        "HTML_CSS": 2,
+        "JavaScript": 2,
+        "Excel": 1,
+        "Power_BI": 1,
+        "Statistics": 2,
+        "Machine_Learning": 1,
+        "Deep_Learning": 0,
+        "Cloud_Computing": 3,
+        "Networking": 5,
+        "Cybersecurity": 5,
+        "Git_GitHub": 3
+      },
+      "soft_skills": {
+        "Communication": 3,
+        "Problem_Solving": 5,
+        "Teamwork": 3,
+        "Leadership": 3,
+        "Analytical_Thinking": 5
+      },
+      "primary_interests": [
+        "Cybersecurity",
+        "Cloud Computing"
+      ]
+    },
+    "Machine Learning Engineer": {
+      "description": "Bridges data science and software engineering by building, optimizing, containerizing, and deploying scalable ML/DL models in production.",
+      "required_cgpa": 7.5,
+      "technical_skills": {
+        "Python": 5,
+        "Java": 3,
+        "C_CPP": 3,
+        "SQL": 4,
+        "HTML_CSS": 1,
+        "JavaScript": 2,
+        "Excel": 2,
+        "Power_BI": 2,
+        "Statistics": 4,
+        "Machine_Learning": 5,
+        "Deep_Learning": 5,
+        "Cloud_Computing": 4,
+        "Networking": 2,
+        "Cybersecurity": 2,
+        "Git_GitHub": 4
+      },
+      "soft_skills": {
+        "Communication": 3,
+        "Problem_Solving": 5,
+        "Teamwork": 4,
+        "Leadership": 3,
+        "Analytical_Thinking": 5
+      },
+      "primary_interests": [
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Data Science"
+      ]
+    }
+  }
+}

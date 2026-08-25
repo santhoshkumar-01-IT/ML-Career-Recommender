@@ -1,0 +1,666 @@
+{
+  "skills": {
+    "Python": {
+      "beginner": [
+        "Variables, Data Types, Conditionals",
+        "Loops and Functions",
+        "Lists, Tuples, Dictionaries, Sets"
+      ],
+      "intermediate": [
+        "Object-Oriented Programming (OOP)",
+        "File Handling and Exception Handling",
+        "List Comprehensions, Lambda, Generators"
+      ],
+      "advanced": [
+        "Decorators, Context Managers, Metaprogramming",
+        "Multithreading and AsyncIO",
+        "Packaging and Testing with PyTest"
+      ],
+      "courses": [
+        {
+          "name": "Python for Everybody (University of Michigan / Coursera)",
+          "type": "Course",
+          "url": "https://www.coursera.org/specializations/python"
+        },
+        {
+          "name": "Scientific Computing with Python (freeCodeCamp)",
+          "type": "Certification",
+          "url": "https://www.freecodecamp.org/learn/scientific-computing-with-python/"
+        },
+        {
+          "name": "Core Python Tutorial by Corey Schafer (YouTube)",
+          "type": "Video Series",
+          "url": "https://youtube.com"
+        }
+      ],
+      "projects": [
+        "Command-line Task Manager with JSON persistence",
+        "Web Scraping script with BeautifulSoup",
+        "REST API backend with FastAPI"
+      ],
+      "estimated_hours": 40
+    },
+    "SQL": {
+      "beginner": [
+        "SELECT, WHERE, ORDER BY, DISTINCT",
+        "GROUP BY, HAVING, Aggregate Functions",
+        "INNER, LEFT, RIGHT, FULL OUTER JOINs"
+      ],
+      "intermediate": [
+        "Subqueries, CTEs (Common Table Expressions)",
+        "Window Functions (ROW_NUMBER, RANK, LEAD, LAG)",
+        "Indexes, Views, and Constraints"
+      ],
+      "advanced": [
+        "Query Optimization & EXPLAIN Plans",
+        "Stored Procedures, Triggers, and Transactions (ACID)",
+        "Database Sharding and Partitioning Concepts"
+      ],
+      "courses": [
+        {
+          "name": "Intro to SQL & Advanced SQL (Kaggle Learn)",
+          "type": "Interactive Course",
+          "url": "https://www.kaggle.com/learn"
+        },
+        {
+          "name": "Relational Database Certification (freeCodeCamp)",
+          "type": "Certification",
+          "url": "https://www.freecodecamp.org"
+        },
+        {
+          "name": "SQL for Data Science (UC Davis / Coursera)",
+          "type": "Course",
+          "url": "https://www.coursera.org"
+        }
+      ],
+      "projects": [
+        "E-Commerce Sales Analytics SQL Query Suite",
+        "Student Grading and Attendance Database Schema",
+        "Financial Transaction Ledger with Audit Triggers"
+      ],
+      "estimated_hours": 35
+    },
+    "Excel": {
+      "beginner": [
+        "Basic Formulas (SUM, AVERAGE, COUNTIF)",
+        "Data Formatting and Sorting/Filtering",
+        "Cell Referencing ( vs A1)"
+      ],
+      "intermediate": [
+        "VLOOKUP, XLOOKUP, INDEX-MATCH",
+        "Pivot Tables and Pivot Charts",
+        "Conditional Formatting and Data Validation"
+      ],
+      "advanced": [
+        "Power Query for ETL and Data Transformation",
+        "Power Pivot and DAX measures",
+        "VBA & Macros Automation"
+      ],
+      "courses": [
+        {
+          "name": "Excel Skills for Business (Macquarie University / Coursera)",
+          "type": "Specialization",
+          "url": "https://www.coursera.org"
+        },
+        {
+          "name": "Data Analysis in Excel (freeCodeCamp)",
+          "type": "Video Course",
+          "url": "https://www.freecodecamp.org"
+        }
+      ],
+      "projects": [
+        "Interactive Financial Modeling Dashboard",
+        "Sales Pipeline Tracker with Pivot Tables",
+        "Automated Payroll Sheet with Power Query"
+      ],
+      "estimated_hours": 25
+    },
+    "Power_BI": {
+      "beginner": [
+        "Connecting to Data Sources (CSV, Excel, SQL)",
+        "Basic Visualizations (Bar, Line, Pie, Cards)",
+        "Page Layout and Formatting"
+      ],
+      "intermediate": [
+        "Power Query Editor transformations",
+        "DAX calculations (CALCULATE, RELATED, SUMX)",
+        "Relationships and Data Modeling (Star Schema)"
+      ],
+      "advanced": [
+        "Row-Level Security (RLS) & Workspace Sharing",
+        "Incremental Refresh & Performance Analyzer",
+        "Custom Visuals and Paginated Reports"
+      ],
+      "courses": [
+        {
+          "name": "Microsoft Power BI Data Analyst (PL-300 Exam Prep / Microsoft Learn)",
+          "type": "Official Learning Path",
+          "url": "https://learn.microsoft.com"
+        },
+        {
+          "name": "Power BI for Beginners (freeCodeCamp YouTube)",
+          "type": "Video Course",
+          "url": "https://youtube.com"
+        }
+      ],
+      "projects": [
+        "Executive Sales & Profit Performance Dashboard",
+        "HR Analytics & Employee Retention Dashboard",
+        "Customer Churn Analysis Dashboard"
+      ],
+      "estimated_hours": 30
+    },
+    "Statistics": {
+      "beginner": [
+        "Measures of Central Tendency (Mean, Median, Mode)",
+        "Measures of Dispersion (Variance, Std Dev, IQR)",
+        "Probability Fundamentals (Independent, Conditional)"
+      ],
+      "intermediate": [
+        "Probability Distributions (Normal, Binomial, Poisson)",
+        "Hypothesis Testing (Z-test, t-test, Chi-square, ANOVA)",
+        "Confidence Intervals and p-values"
+      ],
+      "advanced": [
+        "Bayesian Statistics & Maximum Likelihood Estimation",
+        "Multivariate Statistical Analysis & PCA",
+        "Time Series Decomposition & Stationarity (ARIMA)"
+      ],
+      "courses": [
+        {
+          "name": "Statistics with Python (University of Michigan / Coursera)",
+          "type": "Specialization",
+          "url": "https://www.coursera.org"
+        },
+        {
+          "name": "Khan Academy Probability and Statistics",
+          "type": "Interactive Course",
+          "url": "https://www.khanacademy.org"
+        }
+      ],
+      "projects": [
+        "A/B Testing Analysis for Website Conversion",
+        "Customer Survey Statistical Analysis & Hypothesis Testing",
+        "Real Estate Price Influencer Hypothesis Analysis"
+      ],
+      "estimated_hours": 40
+    },
+    "Machine_Learning": {
+      "beginner": [
+        "Supervised vs Unsupervised Learning concepts",
+        "Linear & Logistic Regression",
+        "Model Evaluation (Accuracy, Precision, Recall, F1)"
+      ],
+      "intermediate": [
+        "Decision Trees, Random Forests, Gradient Boosting",
+        "K-Means Clustering, Hierarchical Clustering",
+        "Cross-Validation, Grid Search, Hyperparameter Tuning"
+      ],
+      "advanced": [
+        "Ensemble Methods (XGBoost, LightGBM, CatBoost)",
+        "Dimensionality Reduction (t-SNE, UMAP, PCA)",
+        "MLOps Basics: Model Tracking and Serializing"
+      ],
+      "courses": [
+        {
+          "name": "Machine Learning Specialization (Andrew Ng / DeepLearning.AI)",
+          "type": "Specialization",
+          "url": "https://www.coursera.org"
+        },
+        {
+          "name": "Intro to Machine Learning (Kaggle Learn)",
+          "type": "Interactive Course",
+          "url": "https://www.kaggle.com/learn"
+        }
+      ],
+      "projects": [
+        "End-to-End Loan Default Prediction System",
+        "Housing Price Regression Model with Scikit-learn",
+        "Customer Segmentation Clustering Pipeline"
+      ],
+      "estimated_hours": 50
+    },
+    "Deep_Learning": {
+      "beginner": [
+        "Biological vs Artificial Neurons, Perceptrons",
+        "Activation Functions (ReLU, Sigmoid, Softmax)",
+        "Forward and Backward Propagation, Loss Functions"
+      ],
+      "intermediate": [
+        "Convolutional Neural Networks (CNNs) for Images",
+        "Recurrent Neural Networks (RNNs, LSTMs) for Sequences",
+        "Transfer Learning using PyTorch or TensorFlow"
+      ],
+      "advanced": [
+        "Transformers and Attention Mechanisms",
+        "Large Language Models (LLMs) & Fine-tuning",
+        "Generative Adversarial Networks (GANs) & Diffusion Models"
+      ],
+      "courses": [
+        {
+          "name": "Deep Learning Specialization (DeepLearning.AI / Coursera)",
+          "type": "Specialization",
+          "url": "https://www.coursera.org"
+        },
+        {
+          "name": "PyTorch for Deep Learning Bootcamp (freeCodeCamp)",
+          "type": "Course",
+          "url": "https://freecodecamp.org"
+        }
+      ],
+      "projects": [
+        "Medical Image Classification with ResNet Transfer Learning",
+        "Sentiment Analysis NLP with BERT",
+        "Face Recognition or Object Detection pipeline"
+      ],
+      "estimated_hours": 60
+    },
+    "Java": {
+      "beginner": [
+        "Syntax, Variables, Control Flow, Arrays",
+        "Classes, Objects, Methods, Constructors",
+        "Access Modifiers and Encapsulation"
+      ],
+      "intermediate": [
+        "Inheritance, Polymorphism, Abstract Classes, Interfaces",
+        "Java Collections Framework (List, Map, Set)",
+        "Exception Handling and Multithreading Basics"
+      ],
+      "advanced": [
+        "Spring Boot REST APIs & Microservices",
+        "Hibernate / JPA ORM and Spring Data",
+        "JVM Memory Management, Profiling, and Concurrency"
+      ],
+      "courses": [
+        {
+          "name": "Java Programming and Software Engineering (Duke University / Coursera)",
+          "type": "Specialization",
+          "url": "https://www.coursera.org"
+        },
+        {
+          "name": "Spring Boot Full Course (freeCodeCamp)",
+          "type": "Video Course",
+          "url": "https://freecodecamp.org"
+        }
+      ],
+      "projects": [
+        "Student Management System with Spring Boot & MySQL",
+        "Banking System CLI with OOP Principles",
+        "Multi-tenant REST API with JWT Authentication"
+      ],
+      "estimated_hours": 45
+    },
+    "C_CPP": {
+      "beginner": [
+        "Data Types, Pointers, Memory Addresses",
+        "Functions, Arrays, and Strings",
+        "Structures and Unions"
+      ],
+      "intermediate": [
+        "Object-Oriented C++ (Classes, Templates)",
+        "Standard Template Library (STL: vector, map, set)",
+        "Dynamic Memory Allocation (new/delete, malloc/free)"
+      ],
+      "advanced": [
+        "Smart Pointers, RAII, Move Semantics (C++11/17/20)",
+        "Multithreading and Mutex Locks in C++",
+        "Data Structures & Algorithms optimization"
+      ],
+      "courses": [
+        {
+          "name": "CS50x: Introduction to Computer Science (Harvard)",
+          "type": "Course",
+          "url": "https://cs50.harvard.edu/x"
+        },
+        {
+          "name": "C++ Programming Course (freeCodeCamp)",
+          "type": "Video Course",
+          "url": "https://freecodecamp.org"
+        }
+      ],
+      "projects": [
+        "High-performance Custom Memory Allocator",
+        "Graph Algorithms & Pathfinding Visualizer in C++",
+        "Simple File System Simulation in C"
+      ],
+      "estimated_hours": 50
+    },
+    "HTML_CSS": {
+      "beginner": [
+        "Semantic HTML5 Elements (header, nav, article, footer)",
+        "CSS Selectors, Box Model, Typography, Colors",
+        "Forms, Inputs, and Form Validation"
+      ],
+      "intermediate": [
+        "CSS Flexbox and CSS Grid layouts",
+        "Responsive Design & Media Queries",
+        "CSS Variables, Transitions, and Animations"
+      ],
+      "advanced": [
+        "CSS Architecture (BEM, Tailwind CSS)",
+        "Modern CSS (:has(), container queries, subgrid)",
+        "Web Accessibility (ARIA, WCAG standards)"
+      ],
+      "courses": [
+        {
+          "name": "Responsive Web Design Certification (freeCodeCamp)",
+          "type": "Certification",
+          "url": "https://www.freecodecamp.org"
+        },
+        {
+          "name": "MDN Web Docs: Learn Web Development",
+          "type": "Documentation & Tutorials",
+          "url": "https://developer.mozilla.org"
+        }
+      ],
+      "projects": [
+        "Modern Responsive Portfolio Website",
+        "Product Landing Page with Glassmorphism & Animations",
+        "Accessible Multi-step Form UI"
+      ],
+      "estimated_hours": 25
+    },
+    "JavaScript": {
+      "beginner": [
+        "Syntax, Variables (let, const), Operators",
+        "Functions, Arrow Functions, Scope, Closures",
+        "DOM Manipulation and Event Listeners"
+      ],
+      "intermediate": [
+        "Asynchronous JS: Promises, Async/Await, Fetch API",
+        "ES6+ Features (Destructuring, Spread, Modules)",
+        "Client-Side Storage (LocalStorage, SessionStorage)"
+      ],
+      "advanced": [
+        "Frontend Frameworks (React, Vue, or Next.js)",
+        "TypeScript integration and Type Safety",
+        "Node.js & Express RESTful API backends"
+      ],
+      "courses": [
+        {
+          "name": "JavaScript Algorithms and Data Structures (freeCodeCamp)",
+          "type": "Certification",
+          "url": "https://www.freecodecamp.org"
+        },
+        {
+          "name": "The Complete JavaScript Course (Jonas Schmedtmann)",
+          "type": "Course",
+          "url": "https://javascript.info"
+        }
+      ],
+      "projects": [
+        "Interactive Weather App using Fetch API",
+        "Kanban Task Board with Drag-and-Drop in React",
+        "Full-stack MERN/PERN Notes App"
+      ],
+      "estimated_hours": 45
+    },
+    "Cloud_Computing": {
+      "beginner": [
+        "Cloud Fundamentals: IaaS, PaaS, SaaS",
+        "Regions, Availability Zones, and Compute Instances (EC2/GCE)",
+        "Object Storage (S3, Cloud Storage)"
+      ],
+      "intermediate": [
+        "Virtual Private Cloud (VPC), Subnets, Security Groups",
+        "Serverless Functions (AWS Lambda, Cloud Functions)",
+        "Relational & NoSQL Managed Databases (RDS, Firestore)"
+      ],
+      "advanced": [
+        "Infrastructure as Code (Terraform, CloudFormation)",
+        "Container Orchestration with Docker & Kubernetes (EKS/GKE)",
+        "Cloud Security, IAM policies, and Cost Optimization"
+      ],
+      "courses": [
+        {
+          "name": "AWS Certified Cloud Practitioner / Solutions Architect Prep",
+          "type": "Certification Path",
+          "url": "https://aws.amazon.com/training/"
+        },
+        {
+          "name": "Google Cloud Digital Leader & Associate Cloud Engineer",
+          "type": "Learning Path",
+          "url": "https://cloud.google.com/training"
+        }
+      ],
+      "projects": [
+        "Deploying a Containerized Microservice on AWS ECS or GCP Cloud Run",
+        "Automated Cloud Backup Pipeline using Lambda & S3",
+        "Terraform Infrastructure for Multi-tier Web App"
+      ],
+      "estimated_hours": 40
+    },
+    "Networking": {
+      "beginner": [
+        "OSI Model and TCP/IP Model Layers",
+        "IP Addressing (IPv4/IPv6), Subnetting basics",
+        "Common Protocols: HTTP, HTTPS, DNS, DHCP, FTP"
+      ],
+      "intermediate": [
+        "Routing & Switching (BGP, OSPF, VLANs)",
+        "Transport Layer (TCP Handshake, UDP, Ports)",
+        "Firewalls, NAT, and VPN configurations"
+      ],
+      "advanced": [
+        "Network Traffic Analysis with Wireshark",
+        "Software Defined Networking (SDN)",
+        "Load Balancers, Reverse Proxies (Nginx), and CDNs"
+      ],
+      "courses": [
+        {
+          "name": "Computer Networking (Stanford / Coursera)",
+          "type": "Course",
+          "url": "https://www.coursera.org"
+        },
+        {
+          "name": "CompTIA Network+ Full Course (Professor Messer / YouTube)",
+          "type": "Video Course",
+          "url": "https://youtube.com"
+        }
+      ],
+      "projects": [
+        "Packet Capture and Protocol Analysis using Wireshark",
+        "Virtual Network Setup in Cisco Packet Tracer",
+        "Custom Nginx Reverse Proxy with SSL Certificates"
+      ],
+      "estimated_hours": 35
+    },
+    "Cybersecurity": {
+      "beginner": [
+        "CIA Triad (Confidentiality, Integrity, Availability)",
+        "Types of Malware, Phishing, Social Engineering",
+        "Basic Password Security and Multi-Factor Auth (MFA)"
+      ],
+      "intermediate": [
+        "OWASP Top 10 Web Vulnerabilities (SQLi, XSS, CSRF)",
+        "Network Scanning and Reconnaissance with Nmap",
+        "Cryptography: Symmetric, Asymmetric, Hashing (AES, RSA, SHA)"
+      ],
+      "advanced": [
+        "Security Information and Event Management (SIEM / Splunk)",
+        "Penetration Testing methodologies (Metasploit, Burp Suite)",
+        "Incident Response, Threat Hunting, and Digital Forensics"
+      ],
+      "courses": [
+        {
+          "name": "Google Cybersecurity Professional Certificate (Coursera)",
+          "type": "Professional Certificate",
+          "url": "https://www.coursera.org/professional-certificates/google-cybersecurity"
+        },
+        {
+          "name": "TryHackMe & HackTheBox Cyber Security Rooms",
+          "type": "Hands-on Labs",
+          "url": "https://tryhackme.com"
+        }
+      ],
+      "projects": [
+        "Vulnerability Assessment of a Test Web Application using Burp Suite",
+        "Setting up a Snort / Suricata Intrusion Detection System",
+        "Automated Security Audit Script with Python"
+      ],
+      "estimated_hours": 50
+    },
+    "Git_GitHub": {
+      "beginner": [
+        "git init, add, commit, status, log",
+        "Configuring SSH keys and Git User Info",
+        "Pushing and pulling from GitHub repositories"
+      ],
+      "intermediate": [
+        "Branching (git branch, git checkout, git switch)",
+        "Merging, Merge Conflict Resolution, Rebasing",
+        "Pull Requests, Code Reviews, and Issues"
+      ],
+      "advanced": [
+        "GitHub Actions CI/CD workflows",
+        "Git Hooks, Submodules, and Git Cherry-pick",
+        "Git Bisect for debugging regression bugs"
+      ],
+      "courses": [
+        {
+          "name": "Git & GitHub Crash Course (freeCodeCamp)",
+          "type": "Video Course",
+          "url": "https://freecodecamp.org"
+        },
+        {
+          "name": "Pro Git Book (Official Documentation)",
+          "type": "Book",
+          "url": "https://git-scm.com/book/en/v2"
+        }
+      ],
+      "projects": [
+        "Open-Source Contribution with PR and Code Review",
+        "Automated CI/CD Pipeline with GitHub Actions for testing & linting",
+        "Multi-branch Feature Workflow with Semantic Versioning"
+      ],
+      "estimated_hours": 15
+    },
+    "Communication": {
+      "beginner": [
+        "Active Listening and Clear Written Expression",
+        "Structuring Technical Emails and Messages"
+      ],
+      "intermediate": [
+        "Presenting Technical Concepts to Non-Technical Audiences",
+        "Conducting Effective Standups and Demos"
+      ],
+      "advanced": [
+        "Technical Writing: Architecture Decision Records (ADRs)",
+        "Cross-functional Stakeholder Management"
+      ],
+      "courses": [
+        {
+          "name": "Effective Communication for Engineers (Coursera)",
+          "type": "Course",
+          "url": "https://coursera.org"
+        }
+      ],
+      "projects": [
+        "Write comprehensive Technical Documentation and API README",
+        "Deliver a 10-minute Tech Talk on a Project Architecture"
+      ],
+      "estimated_hours": 10
+    },
+    "Problem_Solving": {
+      "beginner": [
+        "Decomposing Complex Problems into Subproblems",
+        "Basic Pseudocode and Flowchart Design"
+      ],
+      "intermediate": [
+        "Data Structures & Algorithmic Problem Solving (LeetCode Easy/Med)",
+        "Root Cause Analysis (5 Whys Technique)"
+      ],
+      "advanced": [
+        "System Design Patterns & Scalability Tradeoffs",
+        "Debugging Distributed System Failures"
+      ],
+      "courses": [
+        {
+          "name": "Problem Solving & Algorithmic Thinking (HackerRank / LeetCode)",
+          "type": "Practice Platform",
+          "url": "https://leetcode.com"
+        }
+      ],
+      "projects": [
+        "Solve 50 curated LeetCode problems covering Arrays, Trees, Graphs",
+        "Conduct a Post-Mortem RCA on a software bug"
+      ],
+      "estimated_hours": 20
+    },
+    "Teamwork": {
+      "beginner": [
+        "Constructive Code Reviews and Feedback",
+        "Understanding Agile/Scrum Roles and Ceremonies"
+      ],
+      "intermediate": [
+        "Pair Programming and Collaborative Debugging",
+        "Conflict Resolution in Team Deliverables"
+      ],
+      "advanced": [
+        "Mentoring Junior Teammates & Knowledge Sharing Sessions",
+        "Leading Sprint Planning and Retrospectives"
+      ],
+      "courses": [
+        {
+          "name": "Working in Teams (Coursera)",
+          "type": "Course",
+          "url": "https://coursera.org"
+        }
+      ],
+      "projects": [
+        "Collaborate on a Group Capstone GitHub Repository with strict PR reviews"
+      ],
+      "estimated_hours": 10
+    },
+    "Leadership": {
+      "beginner": [
+        "Personal Accountability and Ownership of Tasks",
+        "Time Management and Sprint Task Estimation"
+      ],
+      "intermediate": [
+        "Sprint Facilitation & Tech Task Delegation",
+        "Driving Consensus during Technical Debates"
+      ],
+      "advanced": [
+        "Strategic Roadmapping and Technical Vision",
+        "Engineering Management and Team Motivation"
+      ],
+      "courses": [
+        {
+          "name": "Leadership & Influence for Tech Professionals (Coursera)",
+          "type": "Course",
+          "url": "https://coursera.org"
+        }
+      ],
+      "projects": [
+        "Serve as Scrum Master or Tech Lead for a team academic project"
+      ],
+      "estimated_hours": 10
+    },
+    "Analytical_Thinking": {
+      "beginner": [
+        "Distinguishing Correlation vs Causation",
+        "Data-Driven Decision Making principles"
+      ],
+      "intermediate": [
+        "Metric Design (KPIs, North Star Metrics, OKRs)",
+        "Quantitative Tradeoff Analysis (Cost vs Latency vs Accuracy)"
+      ],
+      "advanced": [
+        "Mathematical Optimization & Experimental Design",
+        "Business Impact Modeling for ML/Software Solutions"
+      ],
+      "courses": [
+        {
+          "name": "Critical Thinking and Problem Solving (Coursera / edX)",
+          "type": "Course",
+          "url": "https://coursera.org"
+        }
+      ],
+      "projects": [
+        "Perform Cost-Benefit and Performance Tradeoff Analysis for two Database Engines"
+      ],
+      "estimated_hours": 15
+    }
+  }
+}

@@ -1,0 +1,25 @@
+# Environment Variables
+.env
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*.class
+*.so
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# SQLite fallback database
+data/*.db
+
+# Logs & temp
+*.log
+.DS_Store
+.vscode/
+.idea/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/

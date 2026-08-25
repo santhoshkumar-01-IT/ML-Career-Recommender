@@ -1,0 +1,789 @@
+{
+  "timestamp": "2026-08-25 21:04:35",
+  "total_samples": 1600,
+  "train_samples": 1280,
+  "test_samples": 320,
+  "classes": [
+    "Cloud Engineer",
+    "Cybersecurity Analyst",
+    "Data Analyst",
+    "Data Scientist",
+    "Database Administrator",
+    "Machine Learning Engineer",
+    "Software Developer",
+    "Web Developer"
+  ],
+  "best_model": "Random Forest",
+  "models": {
+    "Logistic Regression": {
+      "accuracy": 0.9906,
+      "precision_weighted": 0.9907,
+      "precision_macro": 0.9907,
+      "recall_weighted": 0.9906,
+      "recall_macro": 0.9906,
+      "f1_weighted": 0.9906,
+      "f1_macro": 0.9906,
+      "confusion_matrix": [
+        [
+          39,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          39,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          39,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      ],
+      "classification_report": {
+        "Cloud Engineer": {
+          "precision": 1.0,
+          "recall": 0.975,
+          "f1-score": 0.9873417721518988,
+          "support": 40.0
+        },
+        "Cybersecurity Analyst": {
+          "precision": 0.975609756097561,
+          "recall": 1.0,
+          "f1-score": 0.9876543209876543,
+          "support": 40.0
+        },
+        "Data Analyst": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Data Scientist": {
+          "precision": 0.975,
+          "recall": 0.975,
+          "f1-score": 0.975,
+          "support": 40.0
+        },
+        "Database Administrator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Machine Learning Engineer": {
+          "precision": 0.975,
+          "recall": 0.975,
+          "f1-score": 0.975,
+          "support": 40.0
+        },
+        "Software Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Web Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "accuracy": 0.990625,
+        "macro avg": {
+          "precision": 0.9907012195121951,
+          "recall": 0.9906250000000001,
+          "f1-score": 0.9906245116424441,
+          "support": 320.0
+        },
+        "weighted avg": {
+          "precision": 0.990701219512195,
+          "recall": 0.990625,
+          "f1-score": 0.9906245116424441,
+          "support": 320.0
+        }
+      }
+    },
+    "Decision Tree": {
+      "accuracy": 0.9469,
+      "precision_weighted": 0.9493,
+      "precision_macro": 0.9493,
+      "recall_weighted": 0.9469,
+      "recall_macro": 0.9469,
+      "f1_weighted": 0.947,
+      "f1_macro": 0.947,
+      "confusion_matrix": [
+        [
+          37,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          39,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          36,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          36,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0,
+          37,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          38,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      ],
+      "classification_report": {
+        "Cloud Engineer": {
+          "precision": 1.0,
+          "recall": 0.925,
+          "f1-score": 0.961038961038961,
+          "support": 40.0
+        },
+        "Cybersecurity Analyst": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1-score": 0.9411764705882353,
+          "support": 40.0
+        },
+        "Data Analyst": {
+          "precision": 0.9069767441860465,
+          "recall": 0.975,
+          "f1-score": 0.9397590361445783,
+          "support": 40.0
+        },
+        "Data Scientist": {
+          "precision": 0.9230769230769231,
+          "recall": 0.9,
+          "f1-score": 0.9113924050632911,
+          "support": 40.0
+        },
+        "Database Administrator": {
+          "precision": 0.972972972972973,
+          "recall": 0.9,
+          "f1-score": 0.935064935064935,
+          "support": 40.0
+        },
+        "Machine Learning Engineer": {
+          "precision": 0.9024390243902439,
+          "recall": 0.925,
+          "f1-score": 0.9135802469135802,
+          "support": 40.0
+        },
+        "Software Developer": {
+          "precision": 1.0,
+          "recall": 0.95,
+          "f1-score": 0.9743589743589743,
+          "support": 40.0
+        },
+        "Web Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "accuracy": 0.946875,
+        "macro avg": {
+          "precision": 0.9492943191893845,
+          "recall": 0.946875,
+          "f1-score": 0.9470463786465695,
+          "support": 320.0
+        },
+        "weighted avg": {
+          "precision": 0.9492943191893846,
+          "recall": 0.946875,
+          "f1-score": 0.9470463786465695,
+          "support": 320.0
+        }
+      }
+    },
+    "Random Forest": {
+      "accuracy": 0.9969,
+      "precision_weighted": 0.997,
+      "precision_macro": 0.997,
+      "recall_weighted": 0.9969,
+      "recall_macro": 0.9969,
+      "f1_weighted": 0.9969,
+      "f1_macro": 0.9969,
+      "confusion_matrix": [
+        [
+          39,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      ],
+      "classification_report": {
+        "Cloud Engineer": {
+          "precision": 1.0,
+          "recall": 0.975,
+          "f1-score": 0.9873417721518988,
+          "support": 40.0
+        },
+        "Cybersecurity Analyst": {
+          "precision": 0.975609756097561,
+          "recall": 1.0,
+          "f1-score": 0.9876543209876543,
+          "support": 40.0
+        },
+        "Data Analyst": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Data Scientist": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Database Administrator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Machine Learning Engineer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Software Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Web Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "accuracy": 0.996875,
+        "macro avg": {
+          "precision": 0.9969512195121951,
+          "recall": 0.996875,
+          "f1-score": 0.9968745116424441,
+          "support": 320.0
+        },
+        "weighted avg": {
+          "precision": 0.996951219512195,
+          "recall": 0.996875,
+          "f1-score": 0.9968745116424442,
+          "support": 320.0
+        }
+      }
+    },
+    "K-Nearest Neighbors": {
+      "accuracy": 0.9875,
+      "precision_weighted": 0.9878,
+      "precision_macro": 0.9878,
+      "recall_weighted": 0.9875,
+      "recall_macro": 0.9875,
+      "f1_weighted": 0.9875,
+      "f1_macro": 0.9875,
+      "confusion_matrix": [
+        [
+          38,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          39,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          39,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      ],
+      "classification_report": {
+        "Cloud Engineer": {
+          "precision": 1.0,
+          "recall": 0.95,
+          "f1-score": 0.9743589743589743,
+          "support": 40.0
+        },
+        "Cybersecurity Analyst": {
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "f1-score": 0.975609756097561,
+          "support": 40.0
+        },
+        "Data Analyst": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Data Scientist": {
+          "precision": 0.975,
+          "recall": 0.975,
+          "f1-score": 0.975,
+          "support": 40.0
+        },
+        "Database Administrator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Machine Learning Engineer": {
+          "precision": 0.975,
+          "recall": 0.975,
+          "f1-score": 0.975,
+          "support": 40.0
+        },
+        "Software Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Web Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "accuracy": 0.9875,
+        "macro avg": {
+          "precision": 0.987797619047619,
+          "recall": 0.9875,
+          "f1-score": 0.987496091307067,
+          "support": 320.0
+        },
+        "weighted avg": {
+          "precision": 0.987797619047619,
+          "recall": 0.9875,
+          "f1-score": 0.987496091307067,
+          "support": 320.0
+        }
+      }
+    },
+    "Support Vector Machine": {
+      "accuracy": 0.9906,
+      "precision_weighted": 0.9907,
+      "precision_macro": 0.9907,
+      "recall_weighted": 0.9906,
+      "recall_macro": 0.9906,
+      "f1_weighted": 0.9906,
+      "f1_macro": 0.9906,
+      "confusion_matrix": [
+        [
+          39,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          39,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          39,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40
+        ]
+      ],
+      "classification_report": {
+        "Cloud Engineer": {
+          "precision": 1.0,
+          "recall": 0.975,
+          "f1-score": 0.9873417721518988,
+          "support": 40.0
+        },
+        "Cybersecurity Analyst": {
+          "precision": 0.975609756097561,
+          "recall": 1.0,
+          "f1-score": 0.9876543209876543,
+          "support": 40.0
+        },
+        "Data Analyst": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Data Scientist": {
+          "precision": 0.975,
+          "recall": 0.975,
+          "f1-score": 0.975,
+          "support": 40.0
+        },
+        "Database Administrator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Machine Learning Engineer": {
+          "precision": 0.975,
+          "recall": 0.975,
+          "f1-score": 0.975,
+          "support": 40.0
+        },
+        "Software Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "Web Developer": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 40.0
+        },
+        "accuracy": 0.990625,
+        "macro avg": {
+          "precision": 0.9907012195121951,
+          "recall": 0.9906250000000001,
+          "f1-score": 0.9906245116424441,
+          "support": 320.0
+        },
+        "weighted avg": {
+          "precision": 0.990701219512195,
+          "recall": 0.990625,
+          "f1-score": 0.9906245116424441,
+          "support": 320.0
+        }
+      }
+    }
+  }
+}
