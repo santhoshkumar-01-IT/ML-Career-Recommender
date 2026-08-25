@@ -15,7 +15,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="IT Career Recommender & Skill Gap Analyzer",
-    page_icon="🎓",
+    page_icon="??",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -29,6 +29,7 @@ from skill_gap import SkillGapAnalyzer
 from learning_recommendation import LearningRoadmapEngine
 from database import db_manager
 
+# Custom CSS for Modern, Premium Academic UI
 st.markdown("""
 <style>
     .main-header { font-size: 2.2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 0.2rem; }
@@ -51,6 +52,25 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# Navigation Constants to prevent any routing mismatches
+PAGE_HOME = "?? Home & Overview"
+PAGE_ASSESSMENT = "?? Student Assessment"
+PAGE_RECOMMENDATIONS = "?? Career Recommendations"
+PAGE_SKILL_GAP = "?? Skill Gap Analysis"
+PAGE_LEARNING_PATH = "?? Personalized Learning Path"
+PAGE_MODEL_PERF = "?? Model Performance & Evaluation"
+PAGE_ADMIN_DB = "?? Assessment History & DB (Admin)"
+
+PAGES_LIST = [
+    PAGE_HOME,
+    PAGE_ASSESSMENT,
+    PAGE_RECOMMENDATIONS,
+    PAGE_SKILL_GAP,
+    PAGE_LEARNING_PATH,
+    PAGE_MODEL_PERF,
+    PAGE_ADMIN_DB
+]
+
 # Initialize Session State
 if "predictor" not in st.session_state:
     try:
@@ -70,35 +90,24 @@ if "prediction_result" not in st.session_state:
 
 # Sidebar Navigation
 st.sidebar.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=70)
-st.sidebar.title("🎓 Career Navigator")
+st.sidebar.title("?? Career Navigator")
 st.sidebar.markdown("**B.Sc. Information Technology**\nDecision Support & Skill Gap Engine")
 
-nav_choice = st.sidebar.radio(
-    "Navigation Menu",
-    [
-        "🏠 Home & Overview",
-        "📝 Student Assessment",
-        "🎯 Career Recommendations",
-        "📊 Skill Gap Analysis",
-        "🚀 Personalized Learning Path",
-        "🧠 Model Performance & Evaluation",
-        "📜 Assessment History & DB"
-    ]
-)
+nav_choice = st.sidebar.radio("Navigation Menu", PAGES_LIST)
 
 st.sidebar.divider()
 db_status = db_manager.get_status()
 if db_status["is_mysql"]:
-    st.sidebar.success("🟢 **Database:** MySQL Connected")
+    st.sidebar.success("?? **Database:** MySQL Connected")
 else:
-    st.sidebar.info("🟡 **Database:** SQLite (Local Fallback)")
+    st.sidebar.info("?? **Database:** SQLite (Local Fallback)")
 st.sidebar.caption("v1.0.0 | Academic Project 2026")
 
 # ==============================================================================
 # PAGE 1: HOME & OVERVIEW
 # ==============================================================================
-if nav_choice == "🏠 Home & Overview":
-    st.markdown('<div class="main-header">🎓 ML-Based Career Recommendation & Skill Gap Analysis System</div>', unsafe_allow_html=True)
+if nav_choice == PAGE_HOME:
+    st.markdown('<div class="main-header">?? ML-Based Career Recommendation & Skill Gap Analysis System</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">An intelligent end-to-end guidance platform engineered specifically for B.Sc. Information Technology students.</div>', unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
@@ -112,10 +121,10 @@ if nav_choice == "🏠 Home & Overview":
         st.markdown("""<div class="metric-card"><div class="card-title">Best Model Accuracy</div><div class="card-value">99.7%</div></div>""", unsafe_allow_html=True)
         
     st.markdown("""
-    ### 🎯 System Objective & Workflow
+    ### ?? System Objective & Workflow
     This application assists IT undergraduates in transitioning from academia to industry by analyzing their academic standing, technical proficiencies (0-5), soft skills (0-5), and personal career interests.
     
-    ### 🌟 Key Modules
+    ### ?? Key Modules
     1. **Multi-Model Machine Learning**: Compares Logistic Regression, Decision Tree, Random Forest, KNN, and SVM on stratified cross-validated data.
     2. **Ranked Probability Estimates**: Produces true model probability distributions rather than hardcoded scores.
     3. **Standardized Skill Benchmarks**: Measures students against industry-defined skill expectations across all 8 IT career pathways.
@@ -124,74 +133,53 @@ if nav_choice == "🏠 Home & Overview":
     """)
     
     st.divider()
-    st.info("💡 **Getting Started:** Click on **📝 Student Assessment** in the sidebar or use the button below to analyze your career match!")
+    st.info("?? **Getting Started:** Click on **?? Student Assessment** in the sidebar to analyze your career match!")
 
 # ==============================================================================
 # PAGE 2: STUDENT ASSESSMENT FORM
 # ==============================================================================
-elif nav_choice == "📝 Student Assessment":
-    st.markdown('<div class="main-header">📝 Student Assessment Form</div>', unsafe_allow_html=True)
+elif nav_choice == PAGE_ASSESSMENT:
+    st.markdown('<div class="main-header">?? Student Assessment Form</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Enter your academic background, technical skills, soft skills, and career interests.</div>', unsafe_allow_html=True)
     
-    # Preset Profiles for Viva / Demo
     with st.expander("? Quick Demo Presets (Click to auto-populate sample student profiles)"):
         preset_cols = st.columns(4)
-        if preset_cols[0].button("📊 Data Analyst Profile", use_container_width=True):
+        if preset_cols[0].button("?? Data Analyst Profile", use_container_width=True):
             st.session_state["preset"] = {
-                "name": "Aarav Patel",
-                "degree": "B.Sc Information Technology",
-                "specialization": "Information Technology",
-                "cgpa": 8.4,
+                "name": "Aarav Patel", "degree": "B.Sc Information Technology", "specialization": "Information Technology", "cgpa": 8.4,
                 "interests": ["Data Analysis", "Database Management"],
-                "Python": 4, "Java": 1, "C_CPP": 0, "SQL": 5, "HTML_CSS": 1,
-                "JavaScript": 1, "Excel": 5, "Power_BI": 5, "Statistics": 4,
-                "Machine_Learning": 2, "Deep_Learning": 0, "Cloud_Computing": 2,
-                "Networking": 1, "Cybersecurity": 1, "Git_GitHub": 3,
+                "Python": 4, "Java": 1, "C_CPP": 0, "SQL": 5, "HTML_CSS": 1, "JavaScript": 1, "Excel": 5, "Power_BI": 5, "Statistics": 4,
+                "Machine_Learning": 2, "Deep_Learning": 0, "Cloud_Computing": 2, "Networking": 1, "Cybersecurity": 1, "Git_GitHub": 3,
                 "Communication": 4, "Problem_Solving": 4, "Teamwork": 4, "Leadership": 3, "Analytical_Thinking": 5
             }
             st.rerun()
             
-        if preset_cols[1].button("🌐 Web Developer Profile", use_container_width=True):
+        if preset_cols[1].button("?? Web Developer Profile", use_container_width=True):
             st.session_state["preset"] = {
-                "name": "Priya Sharma",
-                "degree": "B.Sc Information Technology",
-                "specialization": "Web Technologies",
-                "cgpa": 7.9,
+                "name": "Priya Sharma", "degree": "B.Sc Information Technology", "specialization": "Web Technologies", "cgpa": 7.9,
                 "interests": ["Web Development", "Software Development"],
-                "Python": 3, "Java": 2, "C_CPP": 1, "SQL": 3, "HTML_CSS": 5,
-                "JavaScript": 5, "Excel": 1, "Power_BI": 1, "Statistics": 1,
-                "Machine_Learning": 1, "Deep_Learning": 0, "Cloud_Computing": 2,
-                "Networking": 2, "Cybersecurity": 2, "Git_GitHub": 4,
+                "Python": 3, "Java": 2, "C_CPP": 1, "SQL": 3, "HTML_CSS": 5, "JavaScript": 5, "Excel": 1, "Power_BI": 1, "Statistics": 1,
+                "Machine_Learning": 1, "Deep_Learning": 0, "Cloud_Computing": 2, "Networking": 2, "Cybersecurity": 2, "Git_GitHub": 4,
                 "Communication": 4, "Problem_Solving": 4, "Teamwork": 4, "Leadership": 2, "Analytical_Thinking": 3
             }
             st.rerun()
             
-        if preset_cols[2].button("🔒 Cybersecurity Profile", use_container_width=True):
+        if preset_cols[2].button("?? Cybersecurity Profile", use_container_width=True):
             st.session_state["preset"] = {
-                "name": "Vikram Singh",
-                "degree": "B.Sc Information Technology",
-                "specialization": "Cloud & Security",
-                "cgpa": 8.1,
+                "name": "Vikram Singh", "degree": "B.Sc Information Technology", "specialization": "Cloud & Security", "cgpa": 8.1,
                 "interests": ["Cybersecurity", "Cloud Computing"],
-                "Python": 3, "Java": 2, "C_CPP": 4, "SQL": 3, "HTML_CSS": 2,
-                "JavaScript": 2, "Excel": 1, "Power_BI": 1, "Statistics": 2,
-                "Machine_Learning": 1, "Deep_Learning": 0, "Cloud_Computing": 3,
-                "Networking": 5, "Cybersecurity": 5, "Git_GitHub": 3,
+                "Python": 3, "Java": 2, "C_CPP": 4, "SQL": 3, "HTML_CSS": 2, "JavaScript": 2, "Excel": 1, "Power_BI": 1, "Statistics": 2,
+                "Machine_Learning": 1, "Deep_Learning": 0, "Cloud_Computing": 3, "Networking": 5, "Cybersecurity": 5, "Git_GitHub": 3,
                 "Communication": 3, "Problem_Solving": 5, "Teamwork": 3, "Leadership": 3, "Analytical_Thinking": 5
             }
             st.rerun()
 
-        if preset_cols[3].button("🤖 ML Engineer Profile", use_container_width=True):
+        if preset_cols[3].button("?? ML Engineer Profile", use_container_width=True):
             st.session_state["preset"] = {
-                "name": "Rohan Gupta",
-                "degree": "B.Sc Information Technology",
-                "specialization": "Data Science",
-                "cgpa": 8.8,
+                "name": "Rohan Gupta", "degree": "B.Sc Information Technology", "specialization": "Data Science", "cgpa": 8.8,
                 "interests": ["Machine Learning", "Artificial Intelligence", "Data Science"],
-                "Python": 5, "Java": 3, "C_CPP": 3, "SQL": 4, "HTML_CSS": 1,
-                "JavaScript": 2, "Excel": 2, "Power_BI": 2, "Statistics": 5,
-                "Machine_Learning": 5, "Deep_Learning": 5, "Cloud_Computing": 4,
-                "Networking": 2, "Cybersecurity": 2, "Git_GitHub": 4,
+                "Python": 5, "Java": 3, "C_CPP": 3, "SQL": 4, "HTML_CSS": 1, "JavaScript": 2, "Excel": 2, "Power_BI": 2, "Statistics": 5,
+                "Machine_Learning": 5, "Deep_Learning": 5, "Cloud_Computing": 4, "Networking": 2, "Cybersecurity": 2, "Git_GitHub": 4,
                 "Communication": 3, "Problem_Solving": 5, "Teamwork": 4, "Leadership": 3, "Analytical_Thinking": 5
             }
             st.rerun()
@@ -199,38 +187,18 @@ elif nav_choice == "📝 Student Assessment":
     preset = st.session_state.get("preset", {})
 
     with st.form("assessment_form"):
-        tab1, tab2, tab3, tab4 = st.tabs([
-            "🎓 Academic Profile",
-            "💻 Technical Skills (0-5)",
-            "🤝 Soft Skills (0-5)",
-            "🎯 Interests & Focus"
-        ])
-        
+        tab1, tab2, tab3, tab4 = st.tabs(["?? Academic Profile", "?? Technical Skills (0-5)", "?? Soft Skills (0-5)", "?? Interests & Focus"])
         with tab1:
             col_a1, col_a2 = st.columns(2)
             student_name = col_a1.text_input("Student Full Name", value=preset.get("name", "Ananya Sharma"))
             student_id = col_a2.text_input("Student ID / Roll Number", value="STU" + str(np.random.randint(1000, 9999)))
             
             col_a3, col_a4, col_a5 = st.columns(3)
-            degree = col_a3.selectbox(
-                "Degree Program",
-                ["B.Sc Information Technology", "B.Sc Computer Science", "BCA"],
-                index=["B.Sc Information Technology", "B.Sc Computer Science", "BCA"].index(preset.get("degree", "B.Sc Information Technology"))
-            )
-            specialization = col_a4.selectbox(
-                "Specialization",
-                ["Information Technology", "Data Science", "Software Engineering", "Cloud & Security", "Web Technologies"],
-                index=["Information Technology", "Data Science", "Software Engineering", "Cloud & Security", "Web Technologies"].index(preset.get("specialization", "Information Technology"))
-            )
-            cgpa = col_a5.number_input(
-                "Current CGPA (Out of 10.0)",
-                min_value=0.0,
-                max_value=10.0,
-                value=float(preset.get("cgpa", 8.2)),
-                step=0.1
-            )
+            degree = col_a3.selectbox("Degree Program", ["B.Sc Information Technology", "B.Sc Computer Science", "BCA"], index=["B.Sc Information Technology", "B.Sc Computer Science", "BCA"].index(preset.get("degree", "B.Sc Information Technology")))
+            specialization = col_a4.selectbox("Specialization", ["Information Technology", "Data Science", "Software Engineering", "Cloud & Security", "Web Technologies"], index=["Information Technology", "Data Science", "Software Engineering", "Cloud & Security", "Web Technologies"].index(preset.get("specialization", "Information Technology")))
+            cgpa = col_a5.number_input("Current CGPA (Out of 10.0)", min_value=0.0, max_value=10.0, value=float(preset.get("cgpa", 8.2)), step=0.1)
             academic_level = get_academic_performance(cgpa)
-            st.info(f"📊 **Calculated Academic Standing:** {academic_level} (CGPA: {cgpa:.2f})")
+            st.info(f"?? **Calculated Academic Standing:** {academic_level} (CGPA: {cgpa:.2f})")
             
         with tab2:
             st.caption("Rating Guide: 0 = No knowledge | 1 = Beginner | 2 = Basic | 3 = Intermediate | 4 = Advanced | 5 = Expert")
@@ -239,13 +207,7 @@ elif nav_choice == "📝 Student Assessment":
             for idx, skill in enumerate(TECHNICAL_SKILLS):
                 col = tech_cols[idx % 3]
                 display_name = skill.replace("_", " ")
-                tech_ratings[skill] = col.slider(
-                    f"{display_name}",
-                    min_value=0,
-                    max_value=5,
-                    value=int(preset.get(skill, 2)),
-                    key=f"tech_{skill}"
-                )
+                tech_ratings[skill] = col.slider(f"{display_name}", min_value=0, max_value=5, value=int(preset.get(skill, 2)), key=f"tech_{skill}")
                 
         with tab3:
             st.caption("Rate your interpersonal and behavioral competencies (0 to 5)")
@@ -254,41 +216,22 @@ elif nav_choice == "📝 Student Assessment":
             for idx, skill in enumerate(SOFT_SKILLS):
                 col = soft_cols[idx % 3]
                 display_name = skill.replace("_", " ")
-                soft_ratings[skill] = col.slider(
-                    f"{display_name}",
-                    min_value=0,
-                    max_value=5,
-                    value=int(preset.get(skill, 3)),
-                    key=f"soft_{skill}"
-                )
+                soft_ratings[skill] = col.slider(f"{display_name}", min_value=0, max_value=5, value=int(preset.get(skill, 3)), key=f"soft_{skill}")
                 
         with tab4:
             st.caption("Select the technical domains that genuinely interest you (Multi-select allowed)")
             default_interests = preset.get("interests", ["Data Analysis", "Artificial Intelligence"])
-            selected_interests = st.multiselect(
-                "Career Interests",
-                INTERESTS,
-                default=[i for i in default_interests if i in INTERESTS]
-            )
+            selected_interests = st.multiselect("Career Interests", INTERESTS, default=[i for i in default_interests if i in INTERESTS])
             
-        submit_button = st.form_submit_button("🚀 Analyze My Career & Skill Gaps", type="primary", use_container_width=True)
+        submit_button = st.form_submit_button("?? Analyze My Career & Skill Gaps", type="primary", use_container_width=True)
 
     if submit_button:
         student_data = {
-            "name": student_name,
-            "student_id": student_id,
-            "degree": degree,
-            "specialization": specialization,
-            "cgpa": cgpa,
-            "academic_performance": academic_level,
-            **tech_ratings,
-            **soft_ratings,
-            "interests": selected_interests
+            "name": student_name, "student_id": student_id, "degree": degree, "specialization": specialization,
+            "cgpa": cgpa, "academic_performance": academic_level, **tech_ratings, **soft_ratings, "interests": selected_interests
         }
-        
         preprocessor = st.session_state.predictor.preprocessor
         is_valid, err_msg = preprocessor.validate_single_input(student_data)
-        
         if not is_valid:
             st.error(f"? {err_msg}")
         else:
@@ -299,11 +242,7 @@ elif nav_choice == "📝 Student Assessment":
                     st.session_state.prediction_result = pred_results
                     
                     all_skills = {**tech_ratings, **soft_ratings}
-                    db_manager.save_assessment(
-                        student_data,
-                        all_skills,
-                        pred_results["top_recommendations"]
-                    )
+                    db_manager.save_assessment(student_data, all_skills, pred_results["top_recommendations"])
                     
                     st.success("? Analysis complete! Prediction saved to database.")
                     st.balloons()
@@ -312,8 +251,8 @@ elif nav_choice == "📝 Student Assessment":
                     top_score = pred_results["top_recommendations"][0]["match_score"]
                     st.markdown(f"""
                     <div class="highlight-card">
-                        <h3 style="margin-top:0; color:#1E3A8A;">🎯 Top Match: {top_career} ({top_score}% Match)</h3>
-                        <p>Navigate to <b>🎯 Career Recommendations</b> or <b>📊 Skill Gap Analysis</b> from the sidebar to inspect your full report.</p>
+                        <h3 style="margin-top:0; color:#1E3A8A;">?? Top Match: {top_career} ({top_score}% Match)</h3>
+                        <p>Navigate to <b>?? Career Recommendations</b> or <b>?? Skill Gap Analysis</b> from the sidebar to inspect your full report.</p>
                     </div>
                     """, unsafe_allow_html=True)
                 except Exception as ex:
@@ -322,12 +261,12 @@ elif nav_choice == "📝 Student Assessment":
 # ==============================================================================
 # PAGE 3: CAREER RECOMMENDATIONS
 # ==============================================================================
-elif nav_choice == "🎯 Career Recommendations":
-    st.markdown('<div class="main-header">🎯 Recommended IT Career Paths</div>', unsafe_allow_html=True)
+elif nav_choice == PAGE_RECOMMENDATIONS:
+    st.markdown('<div class="main-header">?? Recommended IT Career Paths</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Ranked career matches determined by trained Scikit-learn Machine Learning classification.</div>', unsafe_allow_html=True)
     
     if st.session_state.prediction_result is None:
-        st.warning("⚠️ No student assessment found. Please complete the **📝 Student Assessment** form first.")
+        st.warning("?? No student assessment found. Please complete the **?? Student Assessment** form first.")
     else:
         results = st.session_state.prediction_result
         top_recs = results["top_recommendations"]
@@ -336,7 +275,7 @@ elif nav_choice == "🎯 Career Recommendations":
         
         st.markdown(f"""
         <div class="highlight-card">
-            <div style="font-size:0.9rem; font-weight:700; color:#2563EB; text-transform:uppercase;">🥇 Primary Career Recommendation</div>
+            <div style="font-size:0.9rem; font-weight:700; color:#2563EB; text-transform:uppercase;">?? Primary Career Recommendation</div>
             <div style="font-size:2.2rem; font-weight:800; color:#1E3A8A; margin: 4px 0;">{primary}</div>
             <div style="font-size:1.1rem; color:#374151;">{top_recs[0]["description"]}</div>
             <div style="margin-top:10px;">
@@ -345,11 +284,11 @@ elif nav_choice == "🎯 Career Recommendations":
         </div>
         """, unsafe_allow_html=True)
         
-        st.subheader("🏆 Top 3 Ranked Career Matches")
+        st.subheader("?? Top 3 Ranked Career Matches")
         rec_cols = st.columns(3)
         for i, rec in enumerate(top_recs):
             with rec_cols[i]:
-                rank_badge = ["🥇 Rank 1", "🥈 Rank 2", "🥉 Rank 3"][i]
+                rank_badge = ["?? Rank 1", "?? Rank 2", "?? Rank 3"][i]
                 st.markdown(f"""
                 <div class="metric-card">
                     <div style="display:flex; justify-content:space-between; align-items:center;">
@@ -363,7 +302,7 @@ elif nav_choice == "🎯 Career Recommendations":
                 st.progress(rec["match_score"] / 100.0)
 
         st.divider()
-        st.subheader("📊 Probability Distribution Across All 8 IT Career Domains")
+        st.subheader("?? Probability Distribution Across All 8 IT Career Domains")
         
         score_df = pd.DataFrame([
             {"Career": k, "Match Probability (%)": v}
@@ -387,12 +326,12 @@ elif nav_choice == "🎯 Career Recommendations":
 # ==============================================================================
 # PAGE 4: SKILL GAP ANALYSIS
 # ==============================================================================
-elif nav_choice == "📊 Skill Gap Analysis":
-    st.markdown('<div class="main-header">📊 Skill Gap Analysis Engine</div>', unsafe_allow_html=True)
+elif nav_choice == PAGE_SKILL_GAP:
+    st.markdown('<div class="main-header">?? Skill Gap Analysis Engine</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Detailed comparison between your current proficiencies and industry standard requirements.</div>', unsafe_allow_html=True)
     
     if st.session_state.current_assessment is None:
-        st.warning("⚠️ No student assessment found. Please complete the **📝 Student Assessment** form first.")
+        st.warning("?? No student assessment found. Please complete the **?? Student Assessment** form first.")
     else:
         student_data = st.session_state.current_assessment
         pred_results = st.session_state.prediction_result
@@ -407,7 +346,7 @@ elif nav_choice == "📊 Skill Gap Analysis":
         
         gap_report = st.session_state.gap_analyzer.analyze_gaps(student_data, target_career)
         
-        st.markdown("### 📈 Career Readiness Scores")
+        st.markdown("### ?? Career Readiness Scores")
         m1, m2, m3, m4 = st.columns(4)
         with m1:
             st.markdown(f"""<div class="metric-card"><div class="card-title">Overall Career Readiness</div><div class="card-value" style="color:#2563EB;">{gap_report["overall_readiness_score"]}%</div></div>""", unsafe_allow_html=True)
@@ -420,7 +359,7 @@ elif nav_choice == "📊 Skill Gap Analysis":
             
         col_radar, col_bar = st.columns(2)
         with col_radar:
-            st.subheader("🕸️ Skill Profile Radar Chart")
+            st.subheader("??? Skill Profile Radar Chart")
             radar_data = gap_report["radar_chart"]
             
             fig_radar = go.Figure()
@@ -447,7 +386,7 @@ elif nav_choice == "📊 Skill Gap Analysis":
             st.plotly_chart(fig_radar, use_container_width=True)
             
         with col_bar:
-            st.subheader("📊 Skill Gap (+ Surplus / - Deficit)")
+            st.subheader("?? Skill Gap (+ Surplus / - Deficit)")
             bar_data = gap_report["bar_chart"]
             bar_df = pd.DataFrame({
                 "Skill": [s.replace("_", " ") for s in bar_data["skills"]],
@@ -469,11 +408,11 @@ elif nav_choice == "📊 Skill Gap Analysis":
             st.plotly_chart(fig_gap, use_container_width=True)
 
         st.divider()
-        st.subheader("📋 Detailed Skill Classification Breakdown")
+        st.subheader("?? Detailed Skill Classification Breakdown")
         
         b1, b2, b3, b4 = st.columns(4)
         with b1:
-            st.markdown("##### 🌟 Strong Skills")
+            st.markdown("##### ?? Strong Skills")
             if gap_report["strong_skills"]:
                 for s in gap_report["strong_skills"]:
                     st.markdown(f"- **{s['skill'].replace('_', ' ')}** (Lvl {s['student_level']}/{s['required_level']})")
@@ -489,7 +428,7 @@ elif nav_choice == "📊 Skill Gap Analysis":
                 st.caption("None identified")
                 
         with b3:
-            st.markdown("##### ⚠️ Needs Improvement")
+            st.markdown("##### ?? Needs Improvement")
             if gap_report["needs_improvement"]:
                 for s in gap_report["needs_improvement"]:
                     st.markdown(f"- **{s['skill'].replace('_', ' ')}** (Lvl {s['student_level']} vs Req {s['required_level']})")
@@ -497,22 +436,22 @@ elif nav_choice == "📊 Skill Gap Analysis":
                 st.caption("None identified")
                 
         with b4:
-            st.markdown("##### 🚨 Major Gaps")
+            st.markdown("##### ?? Major Gaps")
             if gap_report["major_gaps"]:
                 for s in gap_report["major_gaps"]:
                     st.markdown(f"- **{s['skill'].replace('_', ' ')}** (Lvl {s['student_level']} vs Req {s['required_level']})")
             else:
-                st.caption("No critical gaps identified! 🎉")
+                st.caption("No critical gaps identified! ??")
 
 # ==============================================================================
 # PAGE 5: PERSONALIZED LEARNING PATH
 # ==============================================================================
-elif nav_choice == "🚀 Personalized Learning Path":
-    st.markdown('<div class="main-header">🚀 Personalized Learning Roadmap</div>', unsafe_allow_html=True)
+elif nav_choice == PAGE_LEARNING_PATH:
+    st.markdown('<div class="main-header">?? Personalized Learning Roadmap</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Customized 4-phase structured action plan with curated resources and capstone project recommendation.</div>', unsafe_allow_html=True)
     
     if st.session_state.current_assessment is None:
-        st.warning("⚠️ No student assessment found. Please complete the **📝 Student Assessment** form first.")
+        st.warning("?? No student assessment found. Please complete the **?? Student Assessment** form first.")
     else:
         student_data = st.session_state.current_assessment
         pred_results = st.session_state.prediction_result
@@ -537,18 +476,18 @@ elif nav_choice == "🚀 Personalized Learning Path":
 
         st.markdown(f"""
         <div class="highlight-card">
-            <h4 style="margin-top:0; color:#1E3A8A;">🏆 Recommended Capstone Portfolio Project:</h4>
+            <h4 style="margin-top:0; color:#1E3A8A;">?? Recommended Capstone Portfolio Project:</h4>
             <p style="font-size:1.15rem; font-weight:600; color:#111827; margin-bottom:0;">{roadmap["capstone_project"]}</p>
         </div>
         """, unsafe_allow_html=True)
         
-        st.subheader("📅 4-Phase Chronological Curriculum")
+        st.subheader("?? 4-Phase Chronological Curriculum")
         for phase in roadmap["phases"]:
-            with st.expander(f"📌 {phase['title']} — {phase['duration']}", expanded=(phase["phase_number"] <= 2)):
+            with st.expander(f"?? {phase['title']} ? {phase['duration']}", expanded=(phase["phase_number"] <= 2)):
                 st.markdown(f"**Goal:** {phase['description']}")
                 
                 for skill_item in phase["skills"]:
-                    st.markdown(f"#### 🔹 {skill_item['skill'].replace('_', ' ')}")
+                    st.markdown(f"#### ?? {skill_item['skill'].replace('_', ' ')}")
                     if "topics" in skill_item and skill_item["topics"]:
                         st.markdown("**Key Topics to Master:**")
                         for top in skill_item["topics"]:
@@ -557,26 +496,26 @@ elif nav_choice == "🚀 Personalized Learning Path":
                     if "courses" in skill_item and skill_item["courses"]:
                         st.markdown("**Recommended Free Learning Resources & Certifications:**")
                         for c in skill_item["courses"]:
-                            st.markdown(f"- 🎓 [{c['name']}]({c.get('url', '#')}) *({c.get('type', 'Course')})*")
+                            st.markdown(f"- ?? [{c['name']}]({c.get('url', '#')}) *({c.get('type', 'Course')})*")
                             
                     if "projects" in skill_item and skill_item["projects"]:
                         st.markdown("**Hands-on Practice Projects:**")
                         for proj in skill_item["projects"]:
-                            st.markdown(f"- 💻 {proj}")
+                            st.markdown(f"- ?? {proj}")
                     st.divider()
 
 # ==============================================================================
 # PAGE 6: MODEL PERFORMANCE & EVALUATION
 # ==============================================================================
-elif nav_choice == "🧠 Model Performance & Evaluation":
-    st.markdown('<div class="main-header">🧠 Machine Learning Model Evaluation</div>', unsafe_allow_html=True)
+elif nav_choice == PAGE_MODEL_PERF:
+    st.markdown('<div class="main-header">?? Machine Learning Model Evaluation</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Fair comparison across 5 supervised classification algorithms on stratified test splits.</div>', unsafe_allow_html=True)
     
     base_dir = os.path.dirname(os.path.abspath(__file__))
     metrics_path = os.path.join(base_dir, "models", "model_metrics.json")
     
     if not os.path.exists(metrics_path):
-        st.warning("⚠️ Model metrics file not found. Running training module to generate metrics...")
+        st.warning("?? Model metrics file not found. Running training module to generate metrics...")
         from train_model import train_and_evaluate_models
         train_and_evaluate_models()
         
@@ -589,7 +528,7 @@ elif nav_choice == "🧠 Model Performance & Evaluation":
     
     st.markdown(f"""
     <div class="highlight-card">
-        <h4 style="margin-top:0; color:#1E3A8A;">🏆 Selected Production Model: {best_model}</h4>
+        <h4 style="margin-top:0; color:#1E3A8A;">?? Selected Production Model: {best_model}</h4>
         <p>Trained and evaluated on <b>{metrics_data.get('total_samples', 1600)}</b> stratified student samples ({metrics_data.get('train_samples', 1280)} Training / {metrics_data.get('test_samples', 320)} Testing).</p>
     </div>
     """, unsafe_allow_html=True)
@@ -606,7 +545,7 @@ elif nav_choice == "🧠 Model Performance & Evaluation":
         })
         
     comp_df = pd.DataFrame(table_rows).sort_values(by="F1-Score (Weighted %)", ascending=False)
-    st.subheader("📊 Model Comparison Benchmark Table")
+    st.subheader("?? Model Comparison Benchmark Table")
     st.dataframe(comp_df, use_container_width=True, hide_index=True)
     
     fig_comp = px.bar(
@@ -620,7 +559,7 @@ elif nav_choice == "🧠 Model Performance & Evaluation":
     st.plotly_chart(fig_comp, use_container_width=True)
     
     st.divider()
-    st.subheader("🔍 Interactive Confusion Matrix Heatmap")
+    st.subheader("?? Interactive Confusion Matrix Heatmap")
     
     selected_eval_model = st.selectbox(
         "Select Model for Confusion Matrix Inspection",
@@ -642,7 +581,7 @@ elif nav_choice == "🧠 Model Performance & Evaluation":
     fig_cm.update_layout(height=550)
     st.plotly_chart(fig_cm, use_container_width=True)
     
-    with st.expander(f"📑 View Detailed Classification Report for {selected_eval_model}"):
+    with st.expander(f"?? View Detailed Classification Report for {selected_eval_model}"):
         report_data = models_dict[selected_eval_model]["classification_report"]
         report_rows = []
         for c in classes:
@@ -657,14 +596,21 @@ elif nav_choice == "🧠 Model Performance & Evaluation":
         st.dataframe(pd.DataFrame(report_rows), use_container_width=True, hide_index=True)
 
 # ==============================================================================
-# ==============================================================================
 # PAGE 7: ASSESSMENT HISTORY & DATABASE EXPLORER (ADMIN PROTECTED)
 # ==============================================================================
-elif nav_choice == "?? Assessment History & DB (Admin)":
+elif nav_choice == PAGE_ADMIN_DB:
     st.markdown('<div class="main-header">?? Admin Portal & Database Explorer</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Restricted administrative access for faculty and project reviewers.</div>', unsafe_allow_html=True)
     
-    ADMIN_PASSWORD = str(st.secrets.get("ADMIN_PASSWORD", os.getenv("ADMIN_PASSWORD", "admin123")) if hasattr(st, "secrets") else os.getenv("ADMIN_PASSWORD", "admin123"))
+    # Retrieve Admin Password from Streamlit Secrets or environment variable
+    ADMIN_PASSWORD = "admin123"
+    try:
+        if hasattr(st, "secrets") and "ADMIN_PASSWORD" in st.secrets:
+            ADMIN_PASSWORD = str(st.secrets["ADMIN_PASSWORD"])
+        elif os.getenv("ADMIN_PASSWORD"):
+            ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
+    except Exception:
+        ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123")
     
     if "admin_authenticated" not in st.session_state:
         st.session_state.admin_authenticated = False
@@ -687,7 +633,7 @@ elif nav_choice == "?? Assessment History & DB (Admin)":
                     st.rerun()
                 else:
                     st.error("? Invalid password. Access denied.")
-            st.caption("Default demo password: `admin123` (Configurable in `.env` / Streamlit Secrets)")
+            st.caption("Default password: `admin123` (Configurable in `.env` / Streamlit Secrets)")
     else:
         # Admin Header with Logout Button
         col_title, col_logout = st.columns([4, 1])
