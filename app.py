@@ -657,42 +657,89 @@ elif nav_choice == "🧠 Model Performance & Evaluation":
         st.dataframe(pd.DataFrame(report_rows), use_container_width=True, hide_index=True)
 
 # ==============================================================================
-# PAGE 7: ASSESSMENT HISTORY & DATABASE EXPLORER
 # ==============================================================================
-elif nav_choice == "📜 Assessment History & DB":
-    st.markdown('<div class="main-header">📜 Assessment History & Database Explorer</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Audit past student career recommendations logged in MySQL / SQLite database.</div>', unsafe_allow_html=True)
+# PAGE 7: ASSESSMENT HISTORY & DATABASE EXPLORER (ADMIN PROTECTED)
+# ==============================================================================
+elif nav_choice == "?? Assessment History & DB (Admin)":
+    st.markdown('<div class="main-header">?? Admin Portal & Database Explorer</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Restricted administrative access for faculty and project reviewers.</div>', unsafe_allow_html=True)
     
-    db_info = db_manager.get_status()
+    ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "admin123")
     
-    col_db1, col_db2, col_db3 = st.columns(3)
-    with col_db1:
-        st.markdown(f"""<div class="metric-card"><div class="card-title">Database Engine</div><div class="card-value" style="font-size:1.3rem;">{db_info["mode"]}</div></div>""", unsafe_allow_html=True)
-    with col_db2:
-        st.markdown(f"""<div class="metric-card"><div class="card-title">Host / Path</div><div class="card-value" style="font-size:1.1rem; word-break:break-all;">{db_info["host"]}</div></div>""", unsafe_allow_html=True)
-    with col_db3:
-        st.markdown(f"""<div class="metric-card"><div class="card-title">Target Database</div><div class="card-value" style="font-size:1.2rem;">{db_info["database"]}</div></div>""", unsafe_allow_html=True)
-
-    if not db_info["is_mysql"]:
-        st.info("💡 **Dual-Mode Notice:** The application is operating on high-speed SQLite storage. To connect to an external MySQL server, configure your credentials in `.env` and click Retry Connection below.")
-        if st.button("🔄 Retry MySQL Connection"):
-            db_manager._test_connection()
-            st.rerun()
-
-    st.divider()
-    st.subheader("📋 Recorded Student Assessments")
-    
-    assessments_df = db_manager.get_recent_assessments(limit=50)
-    
-    if len(assessments_df) == 0:
-        st.info("No assessment records found in database. Complete an assessment in **📝 Student Assessment** to log data.")
-    else:
-        st.dataframe(assessments_df, use_container_width=True, hide_index=True)
+    if "admin_authenticated" not in st.session_state:
+        st.session_state.admin_authenticated = False
         
-        csv_data = assessments_df.to_csv(index=False).encode('utf-8')
-        st.download_button(
-            label="📥 Export Assessment History as CSV",
-            data=csv_data,
-            file_name="student_career_assessments_export.csv",
-            mime="text/csv"
-        )
+    if not st.session_state.admin_authenticated:
+        st.markdown("""
+        <div class="highlight-card" style="border-left-color: #EF4444; background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);">
+            <h4 style="margin-top:0; color:#991B1B;">?? Protected Administrative Area</h4>
+            <p style="color:#7F1D1D; margin-bottom:0;">Student assessment history and database exports are confidential. Please enter the Administrator passcode to proceed.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col_auth1, col_auth2 = st.columns([1, 2])
+        with col_auth1:
+            entered_pass = st.text_input("Enter Admin Password", type="password", placeholder="????????", key="admin_pwd_field")
+            if st.button("?? Unlock Admin Portal", type="primary", use_container_width=True):
+                if entered_pass == ADMIN_PASSWORD:
+                    st.session_state.admin_authenticated = True
+                    st.success("? Access granted! Welcome, Administrator.")
+                    st.rerun()
+                else:
+                    st.error("? Invalid password. Access denied.")
+            st.caption("Default demo password: `admin123` (Configurable in `.env` / Streamlit Secrets)")
+    else:
+        # Admin Header with Logout Button
+        col_title, col_logout = st.columns([4, 1])
+        with col_title:
+            st.success("?? **Administrator Mode Active**")
+        with col_logout:
+            if st.button("?? Log Out", use_container_width=True):
+                st.session_state.admin_authenticated = False
+                st.rerun()
+                
+        db_info = db_manager.get_status()
+        
+        col_db1, col_db2, col_db3 = st.columns(3)
+        with col_db1:
+            st.markdown(f"""<div class="metric-card"><div class="card-title">Database Engine</div><div class="card-value" style="font-size:1.3rem;">{db_info["mode"]}</div></div>""", unsafe_allow_html=True)
+        with col_db2:
+            st.markdown(f"""<div class="metric-card"><div class="card-title">Host / Path</div><div class="card-value" style="font-size:1.1rem; word-break:break-all;">{db_info["host"]}</div></div>""", unsafe_allow_html=True)
+        with col_db3:
+            st.markdown(f"""<div class="metric-card"><div class="card-title">Target Database</div><div class="card-value" style="font-size:1.2rem;">{db_info["database"]}</div></div>""", unsafe_allow_html=True)
+
+        if not db_info["is_mysql"]:
+            st.info("?? **Dual-Mode Notice:** The application is operating on high-speed SQLite storage. To connect to an external MySQL server, configure your credentials in `.env` and click Retry Connection below.")
+            if st.button("?? Retry MySQL Connection"):
+                db_manager._test_connection()
+                st.rerun()
+
+        st.divider()
+        st.subheader("?? Recorded Student Assessments")
+        
+        assessments_df = db_manager.get_recent_assessments(limit=100)
+        
+        if len(assessments_df) == 0:
+            st.info("No assessment records found in database. Complete an assessment in **?? Student Assessment** to log data.")
+        else:
+            # Summary Metrics for Admin
+            adm_col1, adm_col2, adm_col3 = st.columns(3)
+            with adm_col1:
+                st.metric("Total Assessments Logged", len(assessments_df))
+            with adm_col2:
+                top_overall_career = assessments_df['primary_recommended_career'].mode()[0] if not assessments_df['primary_recommended_career'].empty else "N/A"
+                st.metric("Most Recommended Career", top_overall_career)
+            with adm_col3:
+                avg_cgpa = round(assessments_df['cgpa'].mean(), 2) if not assessments_df['cgpa'].empty else 0.0
+                st.metric("Average Student CGPA", avg_cgpa)
+                
+            st.dataframe(assessments_df, use_container_width=True, hide_index=True)
+            
+            csv_data = assessments_df.to_csv(index=False).encode('utf-8')
+            st.download_button(
+                label="?? Export Assessment History as CSV",
+                data=csv_data,
+                file_name="student_career_assessments_export.csv",
+                mime="text/csv",
+                type="primary"
+            )
