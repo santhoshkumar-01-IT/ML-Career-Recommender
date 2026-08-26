@@ -29,49 +29,142 @@ from skill_gap import SkillGapAnalyzer
 from learning_recommendation import LearningRoadmapEngine
 from database import db_manager
 
-# Custom CSS for Modern, Premium Academic UI
+# Custom CSS for Modern, Premium Responsive Academic UI & Full Arrow Controls
 st.markdown("""
 <style>
-    .main-header { font-size: 2.2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 0.2rem; }
-    .sub-header { font-size: 1.1rem; color: #4B5563; margin-bottom: 1.5rem; }
-    .metric-card {
-        background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
-        border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.2rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom: 1rem;
+    /* Google Font Integration */
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    
+    html, body, [class*="css"] {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-    .card-title { font-size: 0.9rem; font-weight: 600; color: #6B7280; text-transform: uppercase; }
-    .card-value { font-size: 1.8rem; font-weight: 700; color: #111827; }
+
+    .main-header {
+        font-size: 2.2rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.3rem;
+        letter-spacing: -0.02em;
+    }
+    
+    .sub-header {
+        font-size: 1.05rem;
+        color: #4B5563;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+    
+    /* Modern Elevated Metric Cards */
+    .metric-card {
+        background: #FFFFFF;
+        border: 1px solid #E2E8F0;
+        border-radius: 16px;
+        padding: 1.3rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
+        margin-bottom: 1rem;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .metric-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 24px -4px rgba(30, 58, 138, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
+        border-color: #BFDBFE;
+    }
+    
+    .card-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #64748B;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.4rem;
+    }
+    
+    .card-value {
+        font-size: 1.85rem;
+        font-weight: 800;
+        color: #0F172A;
+    }
+    
     .highlight-card {
         background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-        border-left: 5px solid #2563EB; border-radius: 8px; padding: 1.2rem; margin-bottom: 1.2rem;
+        border-left: 6px solid #2563EB;
+        border-radius: 14px;
+        padding: 1.4rem;
+        margin-bottom: 1.4rem;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
     }
-    .badge-strong { background-color: #DEF7EC; color: #03543F; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
-    .badge-meets { background-color: #E1EFFE; color: #1E429F; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
-    .badge-improve { background-color: #FEF08A; color: #713F12; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
-    .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     
-    /* Hide ONLY top-right toolbar & GitHub actions without breaking UI */
+    /* Modern Skill Badges */
+    .badge-strong { background-color: #DEF7EC; color: #03543F; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #BCF0DA; }
+    .badge-meets { background-color: #E1EFFE; color: #1E429F; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #B4C6FC; }
+    .badge-improve { background-color: #FEF08A; color: #713F12; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #FDE047; }
+    .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #F8B4B4; }
+    
+    /* Hide ONLY top-right toolbar, GitHub actions, deploy button, and hamburger menu */
     #MainMenu { visibility: hidden !important; display: none !important; }
     footer { visibility: hidden !important; display: none !important; }
     .stDeployButton { display: none !important; }
     [data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
     [data-testid="stToolbarActions"] { visibility: hidden !important; display: none !important; }
+    [data-testid="stDecoration"] { visibility: hidden !important; display: none !important; }
+    [data-testid="stStatusWidget"] { visibility: hidden !important; display: none !important; }
 
-    /* Force Sidebar to ALWAYS stay open, expanded, and visible */
-    [data-testid="stSidebar"] {
-        display: flex !important;
-        visibility: visible !important;
-        transform: none !important;
-        min-width: 300px !important;
-        max-width: 340px !important;
+    /* Top Header Transparent to preserve native expand/collapse arrow controls */
+    [data-testid="stHeader"] {
+        background: transparent !important;
     }
     
-    /* Hide the sidebar collapse chevron so users cannot accidentally close it */
-    button[data-testid="stSidebarCollapseButton"] {
-        display: none !important;
+    /* Right Expand Arrow (>) when sidebar is hidden - Floating & Clickable on Mobile & Desktop */
+    [data-testid="stSidebarCollapsedControl"],
+    button[data-testid="stSidebarCollapsedControl"],
+    [data-testid="collapsedControl"] {
+        display: flex !important;
+        visibility: visible !important;
+        position: fixed !important;
+        top: 14px !important;
+        left: 14px !important;
+        z-index: 999999 !important;
+        background: #1E3A8A !important;
+        color: #FFFFFF !important;
+        border-radius: 10px !important;
+        padding: 8px !important;
+        box-shadow: 0 4px 14px rgba(30, 58, 138, 0.35) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        cursor: pointer !important;
+        transition: transform 0.2s ease, background-color 0.2s ease !important;
     }
-    [data-testid="stSidebarCollapsedControl"] {
-        display: none !important;
+    [data-testid="stSidebarCollapsedControl"]:hover,
+    [data-testid="collapsedControl"]:hover {
+        background: #2563EB !important;
+        transform: scale(1.08) !important;
+    }
+    [data-testid="stSidebarCollapsedControl"] svg,
+    [data-testid="collapsedControl"] svg {
+        fill: #FFFFFF !important;
+        color: #FFFFFF !important;
+    }
+    
+    /* Left Collapse Arrow (<<) inside sidebar */
+    button[data-testid="stSidebarCollapseButton"] {
+        display: flex !important;
+        visibility: visible !important;
+        border-radius: 8px !important;
+        transition: all 0.2s ease !important;
+        cursor: pointer !important;
+    }
+    button[data-testid="stSidebarCollapseButton"]:hover {
+        background-color: #EFF6FF !important;
+        color: #1E3A8A !important;
+    }
+    
+    /* Mobile-Responsive Enhancements */
+    @media (max-width: 768px) {
+        .main-header { font-size: 1.6rem !important; }
+        .sub-header { font-size: 0.95rem !important; }
+        .card-value { font-size: 1.4rem !important; }
+        .metric-card { padding: 1rem !important; border-radius: 12px !important; }
     }
 </style>
 """, unsafe_allow_html=True)
