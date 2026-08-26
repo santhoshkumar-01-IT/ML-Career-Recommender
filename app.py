@@ -50,24 +50,28 @@ st.markdown("""
     .badge-improve { background-color: #FEF08A; color: #713F12; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     
-    /* Hide ONLY top-right toolbar, GitHub actions, Edit buttons, and Streamlit menu */
+    /* Hide ONLY top-right toolbar & GitHub actions without breaking UI */
     #MainMenu { visibility: hidden !important; display: none !important; }
     footer { visibility: hidden !important; display: none !important; }
+    .stDeployButton { display: none !important; }
     [data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
     [data-testid="stToolbarActions"] { visibility: hidden !important; display: none !important; }
-    .stDeployButton { display: none !important; }
-    [data-testid="stDecoration"] { visibility: hidden !important; display: none !important; }
-    [data-testid="stStatusWidget"] { visibility: hidden !important; display: none !important; }
-    
-    /* Keep Header transparent so the sidebar collapse/expand toggle button is ALWAYS visible */
-    [data-testid="stHeader"] {
-        background: transparent !important;
-    }
-    [data-testid="stSidebarCollapsedControl"] {
+
+    /* Force Sidebar to ALWAYS stay open, expanded, and visible */
+    [data-testid="stSidebar"] {
         display: flex !important;
         visibility: visible !important;
-        color: #1E3A8A !important;
-        z-index: 999999 !important;
+        transform: none !important;
+        min-width: 300px !important;
+        max-width: 340px !important;
+    }
+    
+    /* Hide the sidebar collapse chevron so users cannot accidentally close it */
+    button[data-testid="stSidebarCollapseButton"] {
+        display: none !important;
+    }
+    [data-testid="stSidebarCollapsedControl"] {
+        display: none !important;
     }
 </style>
 """, unsafe_allow_html=True)
