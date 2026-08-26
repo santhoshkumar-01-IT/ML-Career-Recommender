@@ -50,16 +50,25 @@ st.markdown("""
     .badge-improve { background-color: #FEF08A; color: #713F12; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     
-    /* Completely hide top-right toolbar, GitHub links, Edit button, and Streamlit menu */
+    /* Hide ONLY top-right toolbar, GitHub actions, Edit buttons, and Streamlit menu */
     #MainMenu { visibility: hidden !important; display: none !important; }
-    header { visibility: hidden !important; display: none !important; }
     footer { visibility: hidden !important; display: none !important; }
     [data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
-    [data-testid="stHeader"] { visibility: hidden !important; display: none !important; }
+    [data-testid="stToolbarActions"] { visibility: hidden !important; display: none !important; }
+    .stDeployButton { display: none !important; }
     [data-testid="stDecoration"] { visibility: hidden !important; display: none !important; }
     [data-testid="stStatusWidget"] { visibility: hidden !important; display: none !important; }
-    .stDeployButton { display: none !important; }
-    div[data-testid="stToolbar"] { display: none !important; }
+    
+    /* Keep Header transparent so the sidebar collapse/expand toggle button is ALWAYS visible */
+    [data-testid="stHeader"] {
+        background: transparent !important;
+    }
+    [data-testid="stSidebarCollapsedControl"] {
+        display: flex !important;
+        visibility: visible !important;
+        color: #1E3A8A !important;
+        z-index: 999999 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -664,35 +673,36 @@ elif nav_choice == PAGE_ADMIN_DB or st.session_state.get("show_admin_login", Fal
     st.markdown('<div class="sub-header">Restricted access portal for authorized faculty and system administrators.</div>', unsafe_allow_html=True)
     
     if not st.session_state.admin_authenticated:
-        # Secure Authentication Card (No hints or passwords displayed)
-        st.markdown("""
-        <div class="highlight-card" style="border-left-color: #DC2626; background: #FEF2F2;">
-            <h4 style="margin-top:0; color:#991B1B;">\U0001F510 Restricted Administrator Access</h4>
-            <p style="color:#7F1D1D; margin-bottom:0;">Please authenticate with authorized administrator credentials to manage assessment databases and export records.</p>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        col_auth1, col_auth2 = st.columns([1, 2])
-        with col_auth1:
-            entered_pass = st.text_input("Administrator Password", type="password", placeholder="\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022", key="admin_pwd_field")
-            btn_col1, btn_col2 = st.columns(2)
-            with btn_col1:
-                if st.button("\U0001F513 Sign In", type="primary", use_container_width=True):
-                    if entered_pass == ADMIN_PASSWORD:
-                        st.session_state.admin_authenticated = True
-                        st.session_state["show_admin_login"] = False
-                        st.success("\u2705 Access granted! Welcome, Administrator.")
-                        st.rerun()
-                    else:
-                        st.error("\u274C Access Denied: Invalid credentials.")
-            with btn_col2:
-                if st.button("\u2190 Student Mode", use_container_width=True):
+        # Single Unified Admin Sign-In Portal
+        center_col1, center_col2, center_col3 = st.columns([1, 2, 1])
+        with center_col2:
+            st.markdown("""
+            <div class="metric-card" style="border-top: 4px solid #1E3A8A; padding: 2rem; margin-top: 1rem;">
+                <h3 style="margin-top:0; color:#1E3A8A; font-weight:700;">\U0001F512 Administrator Sign-In</h3>
+                <p style="color:#6B7280; font-size:0.95rem; margin-bottom:1.5rem;">Enter authorized passcode to access database records & student reports.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            with st.form("admin_login_form"):
+                entered_pass = st.text_input("Administrator Passcode", type="password", placeholder="Enter secret passcode...", key="admin_pwd_field")
+                submit_admin = st.form_submit_button("\U0001F513 Unlock Admin Portal", type="primary", use_container_width=True)
+                
+            if submit_admin:
+                if entered_pass == ADMIN_PASSWORD:
+                    st.session_state.admin_authenticated = True
                     st.session_state["show_admin_login"] = False
-                    if hasattr(st, "query_params") and "role" in st.query_params:
-                        del st.query_params["role"]
-                    if hasattr(st, "query_params") and "admin" in st.query_params:
-                        del st.query_params["admin"]
+                    st.success("\u2705 Access granted! Welcome, Administrator.")
                     st.rerun()
+                else:
+                    st.error("\u274C Access Denied: Invalid passcode.")
+                    
+            if st.button("\u2190 Return to Student Portal", use_container_width=True):
+                st.session_state["show_admin_login"] = False
+                if hasattr(st, "query_params") and "role" in st.query_params:
+                    del st.query_params["role"]
+                if hasattr(st, "query_params") and "admin" in st.query_params:
+                    del st.query_params["admin"]
+                st.rerun()
     else:
         # Authenticated Admin Dashboard
         col_title, col_logout = st.columns([4, 1])
