@@ -29,7 +29,7 @@ from skill_gap import SkillGapAnalyzer
 from learning_recommendation import LearningRoadmapEngine
 from database import db_manager
 
-# Custom CSS for Modern, Ultra-Responsive UI with Guaranteed Arrow Controls
+# Custom CSS for Modern, Premium Responsive Academic UI
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -51,7 +51,7 @@ st.markdown("""
     .sub-header {
         font-size: 1.05rem;
         color: #4B5563;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
         line-height: 1.5;
     }
     
@@ -106,51 +106,14 @@ st.markdown("""
     [data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
     [data-testid="stToolbarActions"] { visibility: hidden !important; display: none !important; }
 
-    /* Top Header Transparent */
-    [data-testid="stHeader"] {
-        background: transparent !important;
-        pointer-events: none !important;
-    }
-    
-    /* Guaranteed Floating Expand Arrow Button (>) when sidebar is hidden on Mobile & PC */
-    [data-testid="stSidebarCollapsedControl"],
-    [data-testid="collapsedControl"],
-    button[data-testid="stSidebarCollapsedControl"],
-    div[data-testid="stSidebarCollapsedControl"] {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        position: fixed !important;
-        top: 12px !important;
-        left: 12px !important;
-        z-index: 99999999 !important;
-        background: #1E3A8A !important;
-        color: #FFFFFF !important;
-        border-radius: 10px !important;
-        padding: 6px 10px !important;
-        box-shadow: 0 4px 14px rgba(30, 58, 138, 0.4) !important;
-        border: 2px solid rgba(255, 255, 255, 0.3) !important;
-        cursor: pointer !important;
-        transition: all 0.2s ease !important;
-    }
-    [data-testid="stSidebarCollapsedControl"]:hover {
-        background: #2563EB !important;
-        transform: scale(1.08) !important;
-    }
-    [data-testid="stSidebarCollapsedControl"] svg,
-    [data-testid="collapsedControl"] svg {
-        fill: #FFFFFF !important;
-        color: #FFFFFF !important;
-        stroke: #FFFFFF !important;
-    }
-    
-    /* Left Collapse Arrow (<<) inside sidebar */
-    button[data-testid="stSidebarCollapseButton"] {
-        display: flex !important;
-        visibility: visible !important;
-        border-radius: 8px !important;
-        cursor: pointer !important;
+    /* Top App Navigation Bar Styling */
+    .top-nav-container {
+        background: #F8FAFC;
+        border: 1px solid #E2E8F0;
+        border-radius: 16px;
+        padding: 8px 12px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
     }
     
     @media (max-width: 768px) {
@@ -233,11 +196,23 @@ st.sidebar.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=7
 st.sidebar.title("\U0001F393 Career Navigator")
 st.sidebar.markdown("**B.Sc. Information Technology**\nDecision Support & Skill Gap Engine")
 
-# If accessed via Admin URL or button click, route to Admin Gate
+# Unified Navigation State Management
+if "current_page" not in st.session_state:
+    st.session_state["current_page"] = PAGE_HOME
+
 if (is_admin_query or st.session_state.get("show_admin_login", False)) and not st.session_state.admin_authenticated:
-    nav_choice = PAGE_ADMIN_DB
-else:
-    nav_choice = st.sidebar.radio("Navigation Menu", PAGES_LIST)
+    st.session_state["current_page"] = PAGE_ADMIN_DB
+
+# Sidebar Navigation Control
+sidebar_choice = st.sidebar.radio(
+    "Navigation Menu",
+    PAGES_LIST,
+    index=PAGES_LIST.index(st.session_state["current_page"]) if st.session_state["current_page"] in PAGES_LIST else 0,
+    key="sidebar_radio"
+)
+if sidebar_choice != st.session_state["current_page"]:
+    st.session_state["current_page"] = sidebar_choice
+    st.rerun()
 
 st.sidebar.divider()
 
@@ -246,13 +221,14 @@ if st.session_state.admin_authenticated:
     st.sidebar.success("\U0001F7E2 **Mode:** Administrator Active")
     if st.sidebar.button("\U0001F512 Log Out (Admin)", use_container_width=True):
         st.session_state.admin_authenticated = False
+        st.session_state["show_admin_login"] = False
         if hasattr(st, "query_params") and "role" in st.query_params:
             del st.query_params["role"]
         if hasattr(st, "query_params") and "admin" in st.query_params:
             del st.query_params["admin"]
+        st.session_state["current_page"] = PAGE_HOME
         st.rerun()
 else:
-    # Student View: Clean footer with unobtrusive Faculty/Admin login button
     col_f1, col_f2 = st.sidebar.columns([3, 2])
     with col_f1:
         st.caption("v1.0.0 | Academic 2026")
@@ -261,7 +237,43 @@ else:
             st.session_state["show_admin_login"] = True
             if hasattr(st, "query_params"):
                 st.query_params["role"] = "admin"
+            st.session_state["current_page"] = PAGE_ADMIN_DB
             st.rerun()
+
+# Top Horizontal Quick-Navigation Bar on Main Page (Guarantees Navigation is ALWAYS accessible on mobile!)
+nav_col1, nav_col2 = st.columns([4, 1])
+with nav_col1:
+    top_nav_selection = st.selectbox(
+        "\U0001F4CD Current Page Navigator (Use to switch pages anytime)",
+        PAGES_LIST,
+        index=PAGES_LIST.index(st.session_state["current_page"]) if st.session_state["current_page"] in PAGES_LIST else 0,
+        key="top_nav_selectbox",
+        help="Quick navigation bar - switch between assessment, recommendations, skill gap, and roadmaps instantly on mobile or desktop."
+    )
+    if top_nav_selection != st.session_state["current_page"]:
+        st.session_state["current_page"] = top_nav_selection
+        st.rerun()
+
+with nav_col2:
+    if st.session_state.admin_authenticated:
+        if st.button("\U0001F512 Log Out", key="top_logout_btn", use_container_width=True):
+            st.session_state.admin_authenticated = False
+            st.session_state["show_admin_login"] = False
+            if hasattr(st, "query_params") and "role" in st.query_params:
+                del st.query_params["role"]
+            st.session_state["current_page"] = PAGE_HOME
+            st.rerun()
+    else:
+        if st.button("\U0001F510 Admin", key="top_admin_btn", help="Faculty/Admin Portal", use_container_width=True):
+            st.session_state["show_admin_login"] = True
+            if hasattr(st, "query_params"):
+                st.query_params["role"] = "admin"
+            st.session_state["current_page"] = PAGE_ADMIN_DB
+            st.rerun()
+
+st.divider()
+
+nav_choice = st.session_state["current_page"]
 
 # ==============================================================================
 # PAGE 1: HOME & OVERVIEW
