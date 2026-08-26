@@ -49,6 +49,12 @@ st.markdown("""
     .badge-meets { background-color: #E1EFFE; color: #1E429F; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     .badge-improve { background-color: #FEF08A; color: #713F12; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
+    
+    /* Target ONLY the top-right GitHub icon, Fork/Edit, Deploy, and Streamlit menu */
+    div[data-testid="stToolbarActions"] { display: none !important; visibility: hidden !important; }
+    .stDeployButton { display: none !important; }
+    #MainMenu { display: none !important; visibility: hidden !important; }
+    footer { display: none !important; visibility: hidden !important; }
 </style>
 """, unsafe_allow_html=True)
 
