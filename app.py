@@ -49,6 +49,17 @@ st.markdown("""
     .badge-meets { background-color: #E1EFFE; color: #1E429F; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     .badge-improve { background-color: #FEF08A; color: #713F12; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
     .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
+    
+    /* Completely hide top-right toolbar, GitHub links, Edit button, and Streamlit menu */
+    #MainMenu { visibility: hidden !important; display: none !important; }
+    header { visibility: hidden !important; display: none !important; }
+    footer { visibility: hidden !important; display: none !important; }
+    [data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
+    [data-testid="stHeader"] { visibility: hidden !important; display: none !important; }
+    [data-testid="stDecoration"] { visibility: hidden !important; display: none !important; }
+    [data-testid="stStatusWidget"] { visibility: hidden !important; display: none !important; }
+    .stDeployButton { display: none !important; }
+    div[data-testid="stToolbar"] { display: none !important; }
 </style>
 """, unsafe_allow_html=True)
 
