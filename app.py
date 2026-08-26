@@ -29,10 +29,9 @@ from skill_gap import SkillGapAnalyzer
 from learning_recommendation import LearningRoadmapEngine
 from database import db_manager
 
-# Custom CSS for Modern, Premium Responsive Academic UI & Full Arrow Controls
+# Custom CSS for Modern, Ultra-Responsive UI with Guaranteed Arrow Controls
 st.markdown("""
 <style>
-    /* Google Font Integration */
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
     
     html, body, [class*="css"] {
@@ -56,7 +55,6 @@ st.markdown("""
         line-height: 1.5;
     }
     
-    /* Modern Elevated Metric Cards */
     .metric-card {
         background: #FFFFFF;
         border: 1px solid #E2E8F0;
@@ -64,7 +62,7 @@ st.markdown("""
         padding: 1.3rem;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
         margin-bottom: 1rem;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.25s ease;
     }
     .metric-card:hover {
         transform: translateY(-3px);
@@ -96,47 +94,47 @@ st.markdown("""
         box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
     }
     
-    /* Modern Skill Badges */
     .badge-strong { background-color: #DEF7EC; color: #03543F; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #BCF0DA; }
     .badge-meets { background-color: #E1EFFE; color: #1E429F; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #B4C6FC; }
     .badge-improve { background-color: #FEF08A; color: #713F12; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #FDE047; }
-    .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #F8B4B4; }
+    .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #F8B4B4; }
     
-    /* Hide ONLY top-right toolbar, GitHub actions, deploy button, and hamburger menu */
+    /* Hide ONLY top-right toolbar & GitHub actions without breaking UI */
     #MainMenu { visibility: hidden !important; display: none !important; }
     footer { visibility: hidden !important; display: none !important; }
     .stDeployButton { display: none !important; }
     [data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
     [data-testid="stToolbarActions"] { visibility: hidden !important; display: none !important; }
-    [data-testid="stDecoration"] { visibility: hidden !important; display: none !important; }
-    [data-testid="stStatusWidget"] { visibility: hidden !important; display: none !important; }
 
-    /* Top Header Transparent to preserve native expand/collapse arrow controls */
+    /* Top Header Transparent */
     [data-testid="stHeader"] {
         background: transparent !important;
+        pointer-events: none !important;
     }
     
-    /* Right Expand Arrow (>) when sidebar is hidden - Floating & Clickable on Mobile & Desktop */
+    /* Guaranteed Floating Expand Arrow Button (>) when sidebar is hidden on Mobile & PC */
     [data-testid="stSidebarCollapsedControl"],
+    [data-testid="collapsedControl"],
     button[data-testid="stSidebarCollapsedControl"],
-    [data-testid="collapsedControl"] {
+    div[data-testid="stSidebarCollapsedControl"] {
         display: flex !important;
         visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
         position: fixed !important;
-        top: 14px !important;
-        left: 14px !important;
-        z-index: 999999 !important;
+        top: 12px !important;
+        left: 12px !important;
+        z-index: 99999999 !important;
         background: #1E3A8A !important;
         color: #FFFFFF !important;
         border-radius: 10px !important;
-        padding: 8px !important;
-        box-shadow: 0 4px 14px rgba(30, 58, 138, 0.35) !important;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        padding: 6px 10px !important;
+        box-shadow: 0 4px 14px rgba(30, 58, 138, 0.4) !important;
+        border: 2px solid rgba(255, 255, 255, 0.3) !important;
         cursor: pointer !important;
-        transition: transform 0.2s ease, background-color 0.2s ease !important;
+        transition: all 0.2s ease !important;
     }
-    [data-testid="stSidebarCollapsedControl"]:hover,
-    [data-testid="collapsedControl"]:hover {
+    [data-testid="stSidebarCollapsedControl"]:hover {
         background: #2563EB !important;
         transform: scale(1.08) !important;
     }
@@ -144,6 +142,7 @@ st.markdown("""
     [data-testid="collapsedControl"] svg {
         fill: #FFFFFF !important;
         color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
     }
     
     /* Left Collapse Arrow (<<) inside sidebar */
@@ -151,15 +150,9 @@ st.markdown("""
         display: flex !important;
         visibility: visible !important;
         border-radius: 8px !important;
-        transition: all 0.2s ease !important;
         cursor: pointer !important;
     }
-    button[data-testid="stSidebarCollapseButton"]:hover {
-        background-color: #EFF6FF !important;
-        color: #1E3A8A !important;
-    }
     
-    /* Mobile-Responsive Enhancements */
     @media (max-width: 768px) {
         .main-header { font-size: 1.6rem !important; }
         .sub-header { font-size: 0.95rem !important; }
