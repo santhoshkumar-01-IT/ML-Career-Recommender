@@ -29,99 +29,26 @@ from skill_gap import SkillGapAnalyzer
 from learning_recommendation import LearningRoadmapEngine
 from database import db_manager
 
-# Custom CSS for Modern, Premium Responsive Academic UI
+# Custom CSS for Modern, Premium Academic UI
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-    
-    html, body, [class*="css"] {
-        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-
-    .main-header {
-        font-size: 2.2rem;
-        font-weight: 800;
-        background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 0.3rem;
-        letter-spacing: -0.02em;
-    }
-    
-    .sub-header {
-        font-size: 1.05rem;
-        color: #4B5563;
-        margin-bottom: 1.2rem;
-        line-height: 1.5;
-    }
-    
+    .main-header { font-size: 2.2rem; font-weight: 700; color: #1E3A8A; margin-bottom: 0.2rem; }
+    .sub-header { font-size: 1.1rem; color: #4B5563; margin-bottom: 1.5rem; }
     .metric-card {
-        background: #FFFFFF;
-        border: 1px solid #E2E8F0;
-        border-radius: 16px;
-        padding: 1.3rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.05);
-        margin-bottom: 1rem;
-        transition: all 0.25s ease;
+        background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+        border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); margin-bottom: 1rem;
     }
-    .metric-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 12px 24px -4px rgba(30, 58, 138, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
-        border-color: #BFDBFE;
-    }
-    
-    .card-title {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #64748B;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 0.4rem;
-    }
-    
-    .card-value {
-        font-size: 1.85rem;
-        font-weight: 800;
-        color: #0F172A;
-    }
-    
+    .card-title { font-size: 0.9rem; font-weight: 600; color: #6B7280; text-transform: uppercase; }
+    .card-value { font-size: 1.8rem; font-weight: 700; color: #111827; }
     .highlight-card {
         background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-        border-left: 6px solid #2563EB;
-        border-radius: 14px;
-        padding: 1.4rem;
-        margin-bottom: 1.4rem;
-        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
+        border-left: 5px solid #2563EB; border-radius: 8px; padding: 1.2rem; margin-bottom: 1.2rem;
     }
-    
-    .badge-strong { background-color: #DEF7EC; color: #03543F; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #BCF0DA; }
-    .badge-meets { background-color: #E1EFFE; color: #1E429F; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #B4C6FC; }
-    .badge-improve { background-color: #FEF08A; color: #713F12; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #FDE047; }
-    .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 6px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; border: 1px solid #F8B4B4; }
-    
-    /* Hide ONLY top-right toolbar & GitHub actions without breaking UI */
-    #MainMenu { visibility: hidden !important; display: none !important; }
-    footer { visibility: hidden !important; display: none !important; }
-    .stDeployButton { display: none !important; }
-    [data-testid="stToolbar"] { visibility: hidden !important; display: none !important; }
-    [data-testid="stToolbarActions"] { visibility: hidden !important; display: none !important; }
-
-    /* Top App Navigation Bar Styling */
-    .top-nav-container {
-        background: #F8FAFC;
-        border: 1px solid #E2E8F0;
-        border-radius: 16px;
-        padding: 8px 12px;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
-    }
-    
-    @media (max-width: 768px) {
-        .main-header { font-size: 1.6rem !important; }
-        .sub-header { font-size: 0.95rem !important; }
-        .card-value { font-size: 1.4rem !important; }
-        .metric-card { padding: 1rem !important; border-radius: 12px !important; }
-    }
+    .badge-strong { background-color: #DEF7EC; color: #03543F; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
+    .badge-meets { background-color: #E1EFFE; color: #1E429F; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
+    .badge-improve { background-color: #FEF08A; color: #713F12; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
+    .badge-gap { background-color: #FDE8E8; color: #9B1C1C; padding: 4px 10px; border-radius: 12px; font-weight: 600; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -196,23 +123,11 @@ st.sidebar.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=7
 st.sidebar.title("\U0001F393 Career Navigator")
 st.sidebar.markdown("**B.Sc. Information Technology**\nDecision Support & Skill Gap Engine")
 
-# Unified Navigation State Management
-if "current_page" not in st.session_state:
-    st.session_state["current_page"] = PAGE_HOME
-
+# If accessed via Admin URL or button click, route to Admin Gate
 if (is_admin_query or st.session_state.get("show_admin_login", False)) and not st.session_state.admin_authenticated:
-    st.session_state["current_page"] = PAGE_ADMIN_DB
-
-# Sidebar Navigation Control
-sidebar_choice = st.sidebar.radio(
-    "Navigation Menu",
-    PAGES_LIST,
-    index=PAGES_LIST.index(st.session_state["current_page"]) if st.session_state["current_page"] in PAGES_LIST else 0,
-    key="sidebar_radio"
-)
-if sidebar_choice != st.session_state["current_page"]:
-    st.session_state["current_page"] = sidebar_choice
-    st.rerun()
+    nav_choice = PAGE_ADMIN_DB
+else:
+    nav_choice = st.sidebar.radio("Navigation Menu", PAGES_LIST)
 
 st.sidebar.divider()
 
@@ -221,14 +136,13 @@ if st.session_state.admin_authenticated:
     st.sidebar.success("\U0001F7E2 **Mode:** Administrator Active")
     if st.sidebar.button("\U0001F512 Log Out (Admin)", use_container_width=True):
         st.session_state.admin_authenticated = False
-        st.session_state["show_admin_login"] = False
         if hasattr(st, "query_params") and "role" in st.query_params:
             del st.query_params["role"]
         if hasattr(st, "query_params") and "admin" in st.query_params:
             del st.query_params["admin"]
-        st.session_state["current_page"] = PAGE_HOME
         st.rerun()
 else:
+    # Student View: Clean footer with unobtrusive Faculty/Admin login button
     col_f1, col_f2 = st.sidebar.columns([3, 2])
     with col_f1:
         st.caption("v1.0.0 | Academic 2026")
@@ -237,43 +151,7 @@ else:
             st.session_state["show_admin_login"] = True
             if hasattr(st, "query_params"):
                 st.query_params["role"] = "admin"
-            st.session_state["current_page"] = PAGE_ADMIN_DB
             st.rerun()
-
-# Top Horizontal Quick-Navigation Bar on Main Page (Guarantees Navigation is ALWAYS accessible on mobile!)
-nav_col1, nav_col2 = st.columns([4, 1])
-with nav_col1:
-    top_nav_selection = st.selectbox(
-        "\U0001F4CD Current Page Navigator (Use to switch pages anytime)",
-        PAGES_LIST,
-        index=PAGES_LIST.index(st.session_state["current_page"]) if st.session_state["current_page"] in PAGES_LIST else 0,
-        key="top_nav_selectbox",
-        help="Quick navigation bar - switch between assessment, recommendations, skill gap, and roadmaps instantly on mobile or desktop."
-    )
-    if top_nav_selection != st.session_state["current_page"]:
-        st.session_state["current_page"] = top_nav_selection
-        st.rerun()
-
-with nav_col2:
-    if st.session_state.admin_authenticated:
-        if st.button("\U0001F512 Log Out", key="top_logout_btn", use_container_width=True):
-            st.session_state.admin_authenticated = False
-            st.session_state["show_admin_login"] = False
-            if hasattr(st, "query_params") and "role" in st.query_params:
-                del st.query_params["role"]
-            st.session_state["current_page"] = PAGE_HOME
-            st.rerun()
-    else:
-        if st.button("\U0001F510 Admin", key="top_admin_btn", help="Faculty/Admin Portal", use_container_width=True):
-            st.session_state["show_admin_login"] = True
-            if hasattr(st, "query_params"):
-                st.query_params["role"] = "admin"
-            st.session_state["current_page"] = PAGE_ADMIN_DB
-            st.rerun()
-
-st.divider()
-
-nav_choice = st.session_state["current_page"]
 
 # ==============================================================================
 # PAGE 1: HOME & OVERVIEW
@@ -775,36 +653,35 @@ elif nav_choice == PAGE_ADMIN_DB or st.session_state.get("show_admin_login", Fal
     st.markdown('<div class="sub-header">Restricted access portal for authorized faculty and system administrators.</div>', unsafe_allow_html=True)
     
     if not st.session_state.admin_authenticated:
-        # Single Unified Admin Sign-In Portal
-        center_col1, center_col2, center_col3 = st.columns([1, 2, 1])
-        with center_col2:
-            st.markdown("""
-            <div class="metric-card" style="border-top: 4px solid #1E3A8A; padding: 2rem; margin-top: 1rem;">
-                <h3 style="margin-top:0; color:#1E3A8A; font-weight:700;">\U0001F512 Administrator Sign-In</h3>
-                <p style="color:#6B7280; font-size:0.95rem; margin-bottom:1.5rem;">Enter authorized passcode to access database records & student reports.</p>
-            </div>
-            """, unsafe_allow_html=True)
-            
-            with st.form("admin_login_form"):
-                entered_pass = st.text_input("Administrator Passcode", type="password", placeholder="Enter secret passcode...", key="admin_pwd_field")
-                submit_admin = st.form_submit_button("\U0001F513 Unlock Admin Portal", type="primary", use_container_width=True)
-                
-            if submit_admin:
-                if entered_pass == ADMIN_PASSWORD:
-                    st.session_state.admin_authenticated = True
+        # Secure Authentication Card (No hints or passwords displayed)
+        st.markdown("""
+        <div class="highlight-card" style="border-left-color: #DC2626; background: #FEF2F2;">
+            <h4 style="margin-top:0; color:#991B1B;">\U0001F510 Restricted Administrator Access</h4>
+            <p style="color:#7F1D1D; margin-bottom:0;">Please authenticate with authorized administrator credentials to manage assessment databases and export records.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col_auth1, col_auth2 = st.columns([1, 2])
+        with col_auth1:
+            entered_pass = st.text_input("Administrator Password", type="password", placeholder="\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022", key="admin_pwd_field")
+            btn_col1, btn_col2 = st.columns(2)
+            with btn_col1:
+                if st.button("\U0001F513 Sign In", type="primary", use_container_width=True):
+                    if entered_pass == ADMIN_PASSWORD:
+                        st.session_state.admin_authenticated = True
+                        st.session_state["show_admin_login"] = False
+                        st.success("\u2705 Access granted! Welcome, Administrator.")
+                        st.rerun()
+                    else:
+                        st.error("\u274C Access Denied: Invalid credentials.")
+            with btn_col2:
+                if st.button("\u2190 Student Mode", use_container_width=True):
                     st.session_state["show_admin_login"] = False
-                    st.success("\u2705 Access granted! Welcome, Administrator.")
+                    if hasattr(st, "query_params") and "role" in st.query_params:
+                        del st.query_params["role"]
+                    if hasattr(st, "query_params") and "admin" in st.query_params:
+                        del st.query_params["admin"]
                     st.rerun()
-                else:
-                    st.error("\u274C Access Denied: Invalid passcode.")
-                    
-            if st.button("\u2190 Return to Student Portal", use_container_width=True):
-                st.session_state["show_admin_login"] = False
-                if hasattr(st, "query_params") and "role" in st.query_params:
-                    del st.query_params["role"]
-                if hasattr(st, "query_params") and "admin" in st.query_params:
-                    del st.query_params["admin"]
-                st.rerun()
     else:
         # Authenticated Admin Dashboard
         col_title, col_logout = st.columns([4, 1])
