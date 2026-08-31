@@ -1,12 +1,15 @@
-# Machine Learning-Based Career Recommendation and Skill Gap Analysis System for IT Students
+# Machine Learning-Based Career Recommendation and Skill Gap Analysis System
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ml-career-recommender.streamlit.app)
 [![Python Version](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
 [![Framework](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg)](https://streamlit.io/)
 [![Machine Learning](https://img.shields.io/badge/ML-Scikit--Learn-F7931E.svg)](https://scikit-learn.org/)
 [![Database](https://img.shields.io/badge/Database-MySQL%20%7C%20SQLite-00758F.svg)](https://www.mysql.com/)
 [![License](https://img.shields.io/badge/Academic-Project-green.svg)](#)
 
-A comprehensive, end-to-end Machine Learning web application engineered specifically for **B.Sc. Information Technology** undergraduates. The system evaluates academic qualifications, 15 technical skills, 5 soft skills, and 9 domain interests to recommend top IT career pathways, compute probabilistic match percentages, evaluate skill gaps against industry benchmarks, and generate personalized 4-phase learning roadmaps.
+A comprehensive, end-to-end Machine Learning web application engineered for **students, graduates, and tech career seekers**. The system evaluates educational qualifications, 15 technical skills, 5 soft skills, and 9 domain interests to recommend top IT career pathways, compute probabilistic match percentages, evaluate skill gaps against industry benchmarks, and generate personalized 4-phase learning roadmaps.
+
+> 🚀 **Live Demo Web Link:** [https://ml-career-recommender.streamlit.app](https://ml-career-recommender.streamlit.app)
 
 ---
 

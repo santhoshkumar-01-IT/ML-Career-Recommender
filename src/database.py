@@ -186,8 +186,8 @@ class DatabaseManager:
                 ON DUPLICATE KEY UPDATE name=VALUES(name), cgpa=VALUES(cgpa);
                 """, (
                     student_id,
-                    student_info.get("name", "B.Sc IT Student"),
-                    student_info.get("degree", "B.Sc Information Technology"),
+                    student_info.get("name", "User / Student"),
+                    student_info.get("degree", "Information Technology / CS"),
                     student_info.get("specialization", "Information Technology"),
                     float(student_info.get("cgpa", 7.5)),
                     student_info.get("academic_performance", "First Class")
@@ -198,8 +198,8 @@ class DatabaseManager:
                 VALUES (?, ?, ?, ?, ?, ?, ?);
                 """, (
                     student_id,
-                    student_info.get("name", "B.Sc IT Student"),
-                    student_info.get("degree", "B.Sc Information Technology"),
+                    student_info.get("name", "User / Student"),
+                    student_info.get("degree", "Information Technology / CS"),
                     student_info.get("specialization", "Information Technology"),
                     float(student_info.get("cgpa", 7.5)),
                     student_info.get("academic_performance", "First Class"),

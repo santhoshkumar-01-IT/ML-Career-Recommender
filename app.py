@@ -1,6 +1,5 @@
 """
 Machine Learning-Based Career Recommendation and Skill Gap Analysis System
-for B.Sc. Information Technology Students
 Main Streamlit Application File with Strict Admin/Student Role Separation
 """
 
@@ -126,8 +125,8 @@ else:
 
 # Sidebar Brand Header
 st.sidebar.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=70)
-st.sidebar.title("\U0001F393 Career Navigator")
-st.sidebar.markdown("**B.Sc. Information Technology**\nDecision Support & Skill Gap Engine")
+st.sidebar.title("🎓 Career Navigator")
+st.sidebar.markdown("**AI Career Intelligence**\nDecision Support & Skill Gap Engine")
 
 # If accessed via Admin URL or button click, route to Admin Gate
 if (is_admin_query or st.session_state.get("show_admin_login", False)) and not st.session_state.admin_authenticated:
@@ -139,8 +138,8 @@ st.sidebar.divider()
 
 # Sidebar Footer & Discreet Admin Gateway
 if st.session_state.admin_authenticated:
-    st.sidebar.success("\U0001F7E2 **Mode:** Administrator Active")
-    if st.sidebar.button("\U0001F512 Log Out (Admin)", use_container_width=True):
+    st.sidebar.success("🟢 **Mode:** Administrator Active")
+    if st.sidebar.button("🔒 Log Out (Admin)", use_container_width=True):
         st.session_state.admin_authenticated = False
         if hasattr(st, "query_params") and "role" in st.query_params:
             del st.query_params["role"]
@@ -153,7 +152,7 @@ else:
     with col_f1:
         st.caption("v1.0.0 | Academic 2026")
     with col_f2:
-        if st.button("\U0001F510 Faculty/Admin", key="faculty_login_btn", help="Faculty & Administrator Portal"):
+        if st.button("🔐 Faculty/Admin", key="faculty_login_btn", help="Faculty & Administrator Portal"):
             st.session_state["show_admin_login"] = True
             if hasattr(st, "query_params"):
                 st.query_params["role"] = "admin"
@@ -163,8 +162,8 @@ else:
 # PAGE 1: HOME & OVERVIEW
 # ==============================================================================
 if nav_choice == PAGE_HOME:
-    st.markdown('<div class="main-header">\U0001F393 ML-Based Career Recommendation & Skill Gap Analysis System</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">An intelligent end-to-end guidance platform engineered specifically for B.Sc. Information Technology students.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">🎓 ML-Based Career Recommendation & Skill Gap Analysis System</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">An intelligent end-to-end guidance platform engineered for all students, graduates, and aspiring IT professionals.</div>', unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -177,10 +176,10 @@ if nav_choice == PAGE_HOME:
         st.markdown("""<div class="metric-card"><div class="card-title">Best Model Accuracy</div><div class="card-value">99.7%</div></div>""", unsafe_allow_html=True)
         
     st.markdown("""
-    ### \U0001F3AF System Objective & Workflow
-    This application assists IT undergraduates in transitioning from academia to industry by analyzing their academic standing, technical proficiencies (0-5), soft skills (0-5), and personal career interests.
+    ### 🎯 System Objective & Workflow
+    This application assists students, graduates, and professionals in discovering their optimal tech career pathways by analyzing their academic standing, technical proficiencies (0-5), soft skills (0-5), and personal career interests.
     
-    ### \U0001F31F Key Modules
+    ### 🌟 Key Modules
     1. **Multi-Model Machine Learning**: Compares Logistic Regression, Decision Tree, Random Forest, KNN, and SVM on stratified cross-validated data.
     2. **Ranked Probability Estimates**: Produces true model probability distributions rather than hardcoded scores.
     3. **Standardized Skill Benchmarks**: Measures students against industry-defined skill expectations across all 8 IT career pathways.
@@ -189,20 +188,20 @@ if nav_choice == PAGE_HOME:
     """)
     
     st.divider()
-    st.info("\U0001F4A1 **Getting Started:** Click on **\U0001F4DD Student Assessment** in the sidebar to analyze your career match!")
+    st.info("💡 **Getting Started:** Click on **📝 Student Assessment** in the sidebar to analyze your career match!")
 
 # ==============================================================================
 # PAGE 2: STUDENT ASSESSMENT FORM
 # ==============================================================================
 elif nav_choice == PAGE_ASSESSMENT:
-    st.markdown('<div class="main-header">\U0001F4DD Student Assessment Form</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">📝 User Assessment & Career Profiling</div>', unsafe_allow_html=True)
     st.markdown('<div class="sub-header">Enter your academic background, technical skills, soft skills, and career interests.</div>', unsafe_allow_html=True)
     
-    with st.expander("\u26A1 Quick Demo Presets (Click to auto-populate sample student profiles)"):
+    with st.expander("⚡ Quick Demo Presets (Click to auto-populate sample user profiles)"):
         preset_cols = st.columns(4)
-        if preset_cols[0].button("\U0001F4CA Data Analyst Profile", use_container_width=True):
+        if preset_cols[0].button("📊 Data Analyst Profile", use_container_width=True):
             st.session_state["preset"] = {
-                "name": "Aarav Patel", "degree": "B.Sc Information Technology", "specialization": "Information Technology", "cgpa": 8.4,
+                "name": "Aarav Patel", "degree": "B.Tech / B.E. (CSE / IT)", "specialization": "Information Technology", "cgpa": 8.4,
                 "interests": ["Data Analysis", "Database Management"],
                 "Python": 4, "Java": 1, "C_CPP": 0, "SQL": 5, "HTML_CSS": 1, "JavaScript": 1, "Excel": 5, "Power_BI": 5, "Statistics": 4,
                 "Machine_Learning": 2, "Deep_Learning": 0, "Cloud_Computing": 2, "Networking": 1, "Cybersecurity": 1, "Git_GitHub": 3,
@@ -210,9 +209,9 @@ elif nav_choice == PAGE_ASSESSMENT:
             }
             st.rerun()
             
-        if preset_cols[1].button("\U0001F310 Web Developer Profile", use_container_width=True):
+        if preset_cols[1].button("🌐 Web Developer Profile", use_container_width=True):
             st.session_state["preset"] = {
-                "name": "Priya Sharma", "degree": "B.Sc Information Technology", "specialization": "Web Technologies", "cgpa": 7.9,
+                "name": "Priya Sharma", "degree": "B.Sc Computer Science", "specialization": "Web Technologies", "cgpa": 7.9,
                 "interests": ["Web Development", "Software Development"],
                 "Python": 3, "Java": 2, "C_CPP": 1, "SQL": 3, "HTML_CSS": 5, "JavaScript": 5, "Excel": 1, "Power_BI": 1, "Statistics": 1,
                 "Machine_Learning": 1, "Deep_Learning": 0, "Cloud_Computing": 2, "Networking": 2, "Cybersecurity": 2, "Git_GitHub": 4,
@@ -220,9 +219,9 @@ elif nav_choice == PAGE_ASSESSMENT:
             }
             st.rerun()
             
-        if preset_cols[2].button("\U0001F512 Cybersecurity Profile", use_container_width=True):
+        if preset_cols[2].button("🔒 Cybersecurity Profile", use_container_width=True):
             st.session_state["preset"] = {
-                "name": "Vikram Singh", "degree": "B.Sc Information Technology", "specialization": "Cloud & Security", "cgpa": 8.1,
+                "name": "Vikram Singh", "degree": "BCA (Computer Applications)", "specialization": "Cloud & Security", "cgpa": 8.1,
                 "interests": ["Cybersecurity", "Cloud Computing"],
                 "Python": 3, "Java": 2, "C_CPP": 4, "SQL": 3, "HTML_CSS": 2, "JavaScript": 2, "Excel": 1, "Power_BI": 1, "Statistics": 2,
                 "Machine_Learning": 1, "Deep_Learning": 0, "Cloud_Computing": 3, "Networking": 5, "Cybersecurity": 5, "Git_GitHub": 3,
@@ -230,9 +229,9 @@ elif nav_choice == PAGE_ASSESSMENT:
             }
             st.rerun()
 
-        if preset_cols[3].button("\U0001F916 ML Engineer Profile", use_container_width=True):
+        if preset_cols[3].button("🤖 ML Engineer Profile", use_container_width=True):
             st.session_state["preset"] = {
-                "name": "Rohan Gupta", "degree": "B.Sc Information Technology", "specialization": "Data Science", "cgpa": 8.8,
+                "name": "Rohan Gupta", "degree": "B.Tech / B.E. (CSE / IT)", "specialization": "Data Science & AI", "cgpa": 8.8,
                 "interests": ["Machine Learning", "Artificial Intelligence", "Data Science"],
                 "Python": 5, "Java": 3, "C_CPP": 3, "SQL": 4, "HTML_CSS": 1, "JavaScript": 2, "Excel": 2, "Power_BI": 2, "Statistics": 5,
                 "Machine_Learning": 5, "Deep_Learning": 5, "Cloud_Computing": 4, "Networking": 2, "Cybersecurity": 2, "Git_GitHub": 4,
@@ -243,18 +242,42 @@ elif nav_choice == PAGE_ASSESSMENT:
     preset = st.session_state.get("preset", {})
 
     with st.form("assessment_form"):
-        tab1, tab2, tab3, tab4 = st.tabs(["\U0001F393 Academic Profile", "\U0001F4BB Technical Skills (0-5)", "\U0001F91D Soft Skills (0-5)", "\U0001F3AF Interests & Focus"])
+        tab1, tab2, tab3, tab4 = st.tabs(["🎓 Academic / Education Profile", "💻 Technical Skills (0-5)", "🤝 Soft Skills (0-5)", "🎯 Interests & Focus"])
         with tab1:
             col_a1, col_a2 = st.columns(2)
-            student_name = col_a1.text_input("Student Full Name", value=preset.get("name", "Ananya Sharma"))
-            student_id = col_a2.text_input("Student ID / Roll Number", value="STU" + str(np.random.randint(1000, 9999)))
+            student_name = col_a1.text_input("Full Name", value=preset.get("name", "Ananya Sharma"))
+            student_id = col_a2.text_input("Student / User ID", value="USR" + str(np.random.randint(1000, 9999)))
             
             col_a3, col_a4, col_a5 = st.columns(3)
-            degree = col_a3.selectbox("Degree Program", ["B.Sc Information Technology", "B.Sc Computer Science", "BCA"], index=["B.Sc Information Technology", "B.Sc Computer Science", "BCA"].index(preset.get("degree", "B.Sc Information Technology")))
-            specialization = col_a4.selectbox("Specialization", ["Information Technology", "Data Science", "Software Engineering", "Cloud & Security", "Web Technologies"], index=["Information Technology", "Data Science", "Software Engineering", "Cloud & Security", "Web Technologies"].index(preset.get("specialization", "Information Technology")))
-            cgpa = col_a5.number_input("Current CGPA (Out of 10.0)", min_value=0.0, max_value=10.0, value=float(preset.get("cgpa", 8.2)), step=0.1)
+            DEGREE_OPTIONS = [
+                "B.Tech / B.E. (CSE / IT)",
+                "B.Sc Information Technology",
+                "B.Sc Computer Science",
+                "BCA (Computer Applications)",
+                "MCA / M.Tech / M.Sc IT",
+                "B.Sc / B.Com / B.A. (Other)",
+                "Diploma / Other Degree"
+            ]
+            default_deg = preset.get("degree", "B.Tech / B.E. (CSE / IT)")
+            deg_idx = DEGREE_OPTIONS.index(default_deg) if default_deg in DEGREE_OPTIONS else 0
+            degree = col_a3.selectbox("Degree Program / Qualification", DEGREE_OPTIONS, index=deg_idx)
+            
+            SPEC_OPTIONS = [
+                "Information Technology",
+                "Computer Science",
+                "Data Science & AI",
+                "Software Engineering",
+                "Cloud & Security",
+                "Web Technologies",
+                "General / Other"
+            ]
+            default_spec = preset.get("specialization", "Information Technology")
+            spec_idx = SPEC_OPTIONS.index(default_spec) if default_spec in SPEC_OPTIONS else 0
+            specialization = col_a4.selectbox("Specialization / Domain", SPEC_OPTIONS, index=spec_idx)
+            
+            cgpa = col_a5.number_input("Current CGPA / Academic Score (Out of 10.0)", min_value=0.0, max_value=10.0, value=float(preset.get("cgpa", 8.2)), step=0.1)
             academic_level = get_academic_performance(cgpa)
-            st.info(f"\U0001F4CA **Calculated Academic Standing:** {academic_level} (CGPA: {cgpa:.2f})")
+            st.info(f"📊 **Calculated Academic Standing:** {academic_level} (Score: {cgpa:.2f})")
             
         with tab2:
             st.caption("Rating Guide: 0 = No knowledge | 1 = Beginner | 2 = Basic | 3 = Intermediate | 4 = Advanced | 5 = Expert")
