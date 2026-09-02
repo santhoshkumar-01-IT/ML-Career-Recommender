@@ -126,7 +126,7 @@ else:
 # Sidebar Brand Header
 st.sidebar.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=70)
 st.sidebar.title("🎓 Career Navigator")
-st.sidebar.markdown("**AI Career Intelligence**\nDecision Support & Skill Gap Engine")
+st.sidebar.markdown("**All B.Sc. & Tech Undergraduates**\nDecision Support & Skill Gap Engine")
 
 # If accessed via Admin URL or button click, route to Admin Gate
 if (is_admin_query or st.session_state.get("show_admin_login", False)) and not st.session_state.admin_authenticated:
@@ -163,7 +163,7 @@ else:
 # ==============================================================================
 if nav_choice == PAGE_HOME:
     st.markdown('<div class="main-header">🎓 ML-Based Career Recommendation & Skill Gap Analysis System</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">An intelligent end-to-end guidance platform engineered for all students, graduates, and aspiring IT professionals.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">An intelligent end-to-end guidance platform engineered for all B.Sc. students, tech undergraduates, and aspiring IT professionals.</div>', unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     with col1:
@@ -177,7 +177,7 @@ if nav_choice == PAGE_HOME:
         
     st.markdown("""
     ### 🎯 System Objective & Workflow
-    This application assists students, graduates, and professionals in discovering their optimal tech career pathways by analyzing their academic standing, technical proficiencies (0-5), soft skills (0-5), and personal career interests.
+    This application assists all B.Sc. students and tech undergraduates in transitioning from academia to industry by analyzing their academic standing, technical proficiencies (0-5), soft skills (0-5), and personal career interests.
     
     ### 🌟 Key Modules
     1. **Multi-Model Machine Learning**: Compares Logistic Regression, Decision Tree, Random Forest, KNN, and SVM on stratified cross-validated data.
