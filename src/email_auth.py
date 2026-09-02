@@ -23,18 +23,25 @@ except ImportError:
     pass
 
 def get_config_val(key: str, default_val: str = "") -> str:
+    # 1. Try Streamlit secrets
     try:
         import streamlit as st
-        if hasattr(st, "secrets") and key in st.secrets:
-            return str(st.secrets[key])
+        if hasattr(st, "secrets"):
+            if key in st.secrets:
+                return str(st.secrets[key])
+            # Check lowercase
+            if key.lower() in st.secrets:
+                return str(st.secrets[key.lower()])
+            # Check nested under [smtp] or [email]
+            if "smtp" in st.secrets and key in st.secrets["smtp"]:
+                return str(st.secrets["smtp"][key])
+            if "email" in st.secrets and key in st.secrets["email"]:
+                return str(st.secrets["email"][key])
     except Exception:
         pass
-    return os.getenv(key, default_val)
-
-SMTP_SERVER = get_config_val("SMTP_SERVER", "smtp.gmail.com")
-SMTP_PORT = int(get_config_val("SMTP_PORT", "587"))
-SMTP_EMAIL = get_config_val("SMTP_EMAIL", "")
-SMTP_PASSWORD = get_config_val("SMTP_PASSWORD", "")
+    
+    # 2. Try OS environment
+    return os.getenv(key, os.getenv(key.lower(), default_val))
 
 class EmailAuthManager:
     """
@@ -59,11 +66,34 @@ class EmailAuthManager:
         """
         return f"{random.randint(100000, 999999)}"
 
+    def get_smtp_config(self) -> dict:
+        """
+        Dynamically fetches and cleans SMTP credentials at runtime.
+        """
+        server = get_config_val("SMTP_SERVER", "smtp.gmail.com").strip()
+        port_str = get_config_val("SMTP_PORT", "587").strip()
+        try:
+            port = int(port_str)
+        except ValueError:
+            port = 587
+        email = get_config_val("SMTP_EMAIL", "").strip()
+        password = get_config_val("SMTP_PASSWORD", "").strip()
+        # Clean app password: remove spaces if present (Google gives 'abcd efgh ijkl mnop')
+        clean_password = password.replace(" ", "")
+
+        return {
+            "server": server,
+            "port": port,
+            "email": email,
+            "password": clean_password,
+            "is_configured": bool(email and clean_password)
+        }
+
     def is_smtp_configured(self) -> bool:
         """
         Checks if SMTP credentials are provided.
         """
-        return bool(SMTP_EMAIL.strip() and SMTP_PASSWORD.strip())
+        return self.get_smtp_config()["is_configured"]
 
     def send_otp_email(self, recipient_email: str, recipient_name: str, otp: str) -> tuple[bool, str]:
         """
@@ -73,14 +103,21 @@ class EmailAuthManager:
         if not self.is_valid_email(recipient_email):
             return False, "Invalid email address format."
 
-        if not self.is_smtp_configured():
+        smtp_cfg = self.get_smtp_config()
+
+        if not smtp_cfg["is_configured"]:
             # Demo / Local fallback mode
             return True, "DEMO_MODE"
+
+        smtp_email = smtp_cfg["email"]
+        smtp_pass = smtp_cfg["password"]
+        smtp_server = smtp_cfg["server"]
+        smtp_port = smtp_cfg["port"]
 
         try:
             msg = MIMEMultipart("alternative")
             msg["Subject"] = f"Your Login Verification Code: {otp} | Career Navigator"
-            msg["From"] = f"Career Navigator <{SMTP_EMAIL}>"
+            msg["From"] = f"Career Navigator <{smtp_email}>"
             msg["To"] = recipient_email
 
             html_content = f"""
@@ -112,15 +149,19 @@ class EmailAuthManager:
             part = MIMEText(html_content, "html")
             msg.attach(part)
 
-            server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=10)
-            server.starttls()
-            server.login(SMTP_EMAIL, SMTP_PASSWORD)
-            server.sendmail(SMTP_EMAIL, recipient_email, msg.as_string())
+            if smtp_port == 465:
+                server = smtplib.SMTP_SSL(smtp_server, smtp_port, timeout=12)
+            else:
+                server = smtplib.SMTP(smtp_server, smtp_port, timeout=12)
+                server.starttls()
+
+            server.login(smtp_email, smtp_pass)
+            server.sendmail(smtp_email, recipient_email, msg.as_string())
             server.quit()
 
             return True, "Verification email sent successfully."
         except Exception as e:
-            return False, f"Failed to send email: {str(e)}"
+            return False, f"Email delivery error: {str(e)}"
 
     def verify_otp(self, entered_otp: str, actual_otp: str, timestamp: datetime) -> tuple[bool, str]:
         """
