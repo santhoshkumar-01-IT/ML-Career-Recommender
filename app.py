@@ -216,13 +216,13 @@ if nav_choice == "LOGIN_GATEWAY":
         
         if not st.session_state.otp_sent:
             with st.form("otp_request_form"):
-                name_val = st.text_input("Full Name", value=st.session_state.user_name, placeholder="e.g. Santhosh Kumar")
+                name_val = st.text_input("Student / User Name", value=st.session_state.user_name, placeholder="e.g. Santhosh Kumar")
                 email_val = st.text_input("Email Address", value=st.session_state.user_email, placeholder="e.g. student@gmail.com")
                 submit_otp = st.form_submit_button("📩 Send Verification Code (OTP)", type="primary", use_container_width=True)
                 
             if submit_otp:
                 if not name_val.strip():
-                    st.error("❌ Please enter your Full Name.")
+                    st.error("❌ Please enter your Student / User Name.")
                 elif not auth_manager.is_valid_email(email_val.strip()):
                     st.error("❌ Please enter a valid email address (e.g. name@domain.com).")
                 else:
@@ -381,7 +381,7 @@ elif nav_choice == PAGE_ASSESSMENT:
         with tab1:
             col_a1, col_a2 = st.columns(2)
             default_user_name = preset.get("name", st.session_state.get("user_name") or "Ananya Sharma")
-            student_name = col_a1.text_input("Full Name", value=default_user_name)
+            student_name = col_a1.text_input("Student / User Name", value=default_user_name)
             student_id = col_a2.text_input("Student / User ID", value="USR" + str(np.random.randint(1000, 9999)))
             
             col_a3, col_a4, col_a5 = st.columns(3)
