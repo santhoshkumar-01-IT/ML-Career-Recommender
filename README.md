@@ -45,13 +45,19 @@ This system solves these challenges by combining **multi-class supervised Machin
 
 ##  Key Objectives & Features
 
-1. **Student Assessment Module**:
+1. **User Authentication with Email OTP**:
+   - Frictionless password-free login utilizing 6-digit numeric One-Time Passwords (OTP).
+   - Real-time email dispatch via TLS SMTP (Gmail, Outlook, custom mail servers).
+   - Smart local/demo fallback for instant testing without mandatory SMTP configuration.
+   - Profile management and persistent assessment linkage.
+
+2. **Student Assessment Module**:
    - Captures Degree, Specialization, CGPA (0-10.0), and Academic Standing.
    - Collects 0-5 integer ratings across 15 Technical Skills and 5 Soft Skills.
    - Captures multi-select domain interests.
    - Real-time client-side validation and quick-demo preset profiles.
 
-2. **Ranked Multi-Class Career Prediction**:
+3. **Ranked Multi-Class Career Prediction**:
    - Predicts and ranks the **Top 3 suitable IT careers** with true probability percentages.
    - Evaluates across 8 core career paths:
      1. Data Analyst

@@ -22,11 +22,13 @@ st.set_page_config(
 # Add src to sys.path
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 
+from datetime import datetime
 from data_generator import TECHNICAL_SKILLS, SOFT_SKILLS, INTERESTS, CAREERS, get_academic_performance
 from prediction import CareerPredictor
 from skill_gap import SkillGapAnalyzer
 from learning_recommendation import LearningRoadmapEngine
 from database import db_manager
+from email_auth import auth_manager
 
 # Custom CSS for Modern, Premium Academic UI
 st.markdown("""
@@ -58,13 +60,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Navigation Page Constants
-PAGE_HOME = "\U0001F3E0 Home & Overview"
-PAGE_ASSESSMENT = "\U0001F4DD Student Assessment"
-PAGE_RECOMMENDATIONS = "\U0001F3AF Career Recommendations"
-PAGE_SKILL_GAP = "\U0001F4CA Skill Gap Analysis"
-PAGE_LEARNING_PATH = "\U0001F680 Personalized Learning Path"
-PAGE_MODEL_PERF = "\U0001F9E0 Model Performance & Evaluation"
-PAGE_ADMIN_DB = "\U0001F512 Admin Dashboard & DB Explorer"
+PAGE_HOME = "🏠 Home & Overview"
+PAGE_ASSESSMENT = "📝 Student Assessment"
+PAGE_RECOMMENDATIONS = "🎯 Career Recommendations"
+PAGE_SKILL_GAP = "📊 Skill Gap Analysis"
+PAGE_LEARNING_PATH = "🚀 Personalized Learning Path"
+PAGE_MODEL_PERF = "🧠 Model Performance & Evaluation"
+PAGE_ADMIN_DB = "🔒 Admin Dashboard & DB Explorer"
 
 # Initialize Session State
 if "predictor" not in st.session_state:
@@ -86,6 +88,28 @@ if "prediction_result" not in st.session_state:
 if "admin_authenticated" not in st.session_state:
     st.session_state.admin_authenticated = False
 
+# User Email OTP Authentication State
+if "user_authenticated" not in st.session_state:
+    st.session_state.user_authenticated = False
+
+if "user_name" not in st.session_state:
+    st.session_state.user_name = ""
+
+if "user_email" not in st.session_state:
+    st.session_state.user_email = ""
+
+if "otp_sent" not in st.session_state:
+    st.session_state.otp_sent = False
+
+if "otp_code" not in st.session_state:
+    st.session_state.otp_code = None
+
+if "otp_timestamp" not in st.session_state:
+    st.session_state.otp_timestamp = None
+
+if "otp_demo_msg" not in st.session_state:
+    st.session_state.otp_demo_msg = False
+
 # Retrieve Admin Password from Streamlit Secrets or Environment (Default: admin123)
 ADMIN_PASSWORD = "admin123"
 try:
@@ -101,8 +125,9 @@ query_params = getattr(st, "query_params", {})
 role_param = str(query_params.get("role", "")).lower()
 admin_param = str(query_params.get("admin", "")).lower()
 is_admin_query = (role_param == "admin") or (admin_param in ["1", "true"])
+is_admin_portal = (is_admin_query or st.session_state.get("show_admin_login", False))
 
-# Role-Based Page List: Regular Students NEVER see Admin menu item
+# Role-Based Page List
 if st.session_state.admin_authenticated:
     PAGES_LIST = [
         PAGE_ADMIN_DB,
@@ -128,35 +153,145 @@ st.sidebar.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=7
 st.sidebar.title("🎓 Career Navigator")
 st.sidebar.markdown("**All B.Sc. & Tech Undergraduates**\nDecision Support & Skill Gap Engine")
 
-# If accessed via Admin URL or button click, route to Admin Gate
-if (is_admin_query or st.session_state.get("show_admin_login", False)) and not st.session_state.admin_authenticated:
+# Show Authenticated User Badge in Sidebar
+if st.session_state.user_authenticated:
+    st.sidebar.markdown(f"👤 **User:** {st.session_state.user_name}")
+    st.sidebar.caption(f"📧 {st.session_state.user_email}")
+
+# Navigation Selection
+if is_admin_portal and not st.session_state.admin_authenticated:
     nav_choice = PAGE_ADMIN_DB
+elif not st.session_state.user_authenticated and not st.session_state.admin_authenticated:
+    nav_choice = "LOGIN_GATEWAY"
 else:
     nav_choice = st.sidebar.radio("Navigation Menu", PAGES_LIST)
 
 st.sidebar.divider()
 
-# Sidebar Footer & Discreet Admin Gateway
+# Sidebar Footer & Gateway
 if st.session_state.admin_authenticated:
     st.sidebar.success("🟢 **Mode:** Administrator Active")
     if st.sidebar.button("🔒 Log Out (Admin)", use_container_width=True):
         st.session_state.admin_authenticated = False
+        st.session_state["show_admin_login"] = False
         if hasattr(st, "query_params") and "role" in st.query_params:
             del st.query_params["role"]
         if hasattr(st, "query_params") and "admin" in st.query_params:
             del st.query_params["admin"]
         st.rerun()
+elif st.session_state.user_authenticated:
+    if st.sidebar.button("🚪 Log Out", use_container_width=True):
+        st.session_state.user_authenticated = False
+        st.session_state.user_name = ""
+        st.session_state.user_email = ""
+        st.session_state.otp_sent = False
+        st.session_state.otp_code = None
+        st.rerun()
 else:
-    # Student View: Clean footer with unobtrusive Faculty/Admin login button
     col_f1, col_f2 = st.sidebar.columns([3, 2])
     with col_f1:
-        st.caption("v1.0.0 | Academic 2026")
+        st.caption("v1.0.0 | 2026")
     with col_f2:
-        if st.button("🔐 Faculty/Admin", key="faculty_login_btn", help="Faculty & Administrator Portal"):
+        if st.button("🔐 Admin", key="faculty_login_btn", help="Faculty & Administrator Portal"):
             st.session_state["show_admin_login"] = True
             if hasattr(st, "query_params"):
                 st.query_params["role"] = "admin"
             st.rerun()
+
+# ==============================================================================
+# USER LOGIN GATEWAY WITH EMAIL OTP
+# ==============================================================================
+if nav_choice == "LOGIN_GATEWAY":
+    st.markdown('<div class="main-header">🎓 Student & User Sign In</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Sign in with your Email and One-Time Password (OTP) to access your AI Career Guidance Portal.</div>', unsafe_allow_html=True)
+    
+    col_l1, col_l2, col_l3 = st.columns([1, 2, 1])
+    with col_l2:
+        st.markdown("""
+        <div class="highlight-card">
+            <h3 style="margin-top:0; color:#1E3A8A;">🔐 Fast & Secure Email OTP Login</h3>
+            <p style="color:#4B5563; margin-bottom:0;">Enter your name and email. We'll generate a 6-digit verification code to sign you in seamlessly.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        if not st.session_state.otp_sent:
+            with st.form("otp_request_form"):
+                name_val = st.text_input("Full Name", value=st.session_state.user_name, placeholder="e.g. Santhosh Kumar")
+                email_val = st.text_input("Email Address", value=st.session_state.user_email, placeholder="e.g. student@gmail.com")
+                submit_otp = st.form_submit_button("📩 Send Verification Code (OTP)", type="primary", use_container_width=True)
+                
+            if submit_otp:
+                if not name_val.strip():
+                    st.error("❌ Please enter your Full Name.")
+                elif not auth_manager.is_valid_email(email_val.strip()):
+                    st.error("❌ Please enter a valid email address (e.g. name@domain.com).")
+                else:
+                    with st.spinner("Generating verification code..."):
+                        otp = auth_manager.generate_otp()
+                        success, msg = auth_manager.send_otp_email(email_val.strip(), name_val.strip(), otp)
+                        if success:
+                            st.session_state.user_name = name_val.strip()
+                            st.session_state.user_email = email_val.strip()
+                            st.session_state.otp_code = otp
+                            st.session_state.otp_timestamp = datetime.now()
+                            st.session_state.otp_sent = True
+                            st.session_state.otp_demo_msg = (msg == "DEMO_MODE")
+                            st.success("✅ Verification code ready!")
+                            st.rerun()
+                        else:
+                            st.error(f"❌ {msg}")
+                            
+            st.divider()
+            col_g1, col_g2 = st.columns(2)
+            with col_g1:
+                if st.button("⚡ Instant Guest Access", use_container_width=True, help="Skip email verification for quick demo"):
+                    st.session_state.user_authenticated = True
+                    st.session_state.user_name = "Guest Student"
+                    st.session_state.user_email = "guest@demo.local"
+                    st.rerun()
+            with col_g2:
+                if st.button("🔐 Faculty/Admin Portal", use_container_width=True):
+                    st.session_state["show_admin_login"] = True
+                    if hasattr(st, "query_params"):
+                        st.query_params["role"] = "admin"
+                    st.rerun()
+        else:
+            if st.session_state.get("otp_demo_msg"):
+                st.info(f"🔔 **Demo Mode (SMTP Not Set):** Your 6-digit OTP code is: **`{st.session_state.otp_code}`**\n\n*(To send live emails, add `SMTP_EMAIL` and `SMTP_PASSWORD` to `.env` or Streamlit Secrets)*")
+            else:
+                st.info(f"📧 A 6-digit verification code has been sent to **{st.session_state.user_email}** (valid for 5 minutes).")
+                
+            with st.form("otp_verify_form"):
+                entered_otp = st.text_input("Enter 6-Digit OTP Code", max_chars=6, placeholder="e.g. 123456")
+                verify_btn = st.form_submit_button("✅ Verify & Enter Portal", type="primary", use_container_width=True)
+                
+            if verify_btn:
+                is_valid, msg = auth_manager.verify_otp(entered_otp, st.session_state.otp_code, st.session_state.otp_timestamp)
+                if is_valid:
+                    st.session_state.user_authenticated = True
+                    st.session_state.otp_sent = False
+                    st.session_state.otp_code = None
+                    st.success(f"🎉 Authentication successful! Welcome, {st.session_state.user_name}.")
+                    st.balloons()
+                    st.rerun()
+                else:
+                    st.error(f"❌ {msg}")
+                    
+            col_r1, col_r2 = st.columns(2)
+            with col_r1:
+                if st.button("🔁 Resend Code", use_container_width=True):
+                    new_otp = auth_manager.generate_otp()
+                    success, msg = auth_manager.send_otp_email(st.session_state.user_email, st.session_state.user_name, new_otp)
+                    st.session_state.otp_code = new_otp
+                    st.session_state.otp_timestamp = datetime.now()
+                    st.session_state.otp_demo_msg = (msg == "DEMO_MODE")
+                    st.success("A new verification code has been generated.")
+                    st.rerun()
+            with col_r2:
+                if st.button("✏️ Change Email", use_container_width=True):
+                    st.session_state.otp_sent = False
+                    st.session_state.otp_code = None
+                    st.rerun()
 
 # ==============================================================================
 # PAGE 1: HOME & OVERVIEW
@@ -245,7 +380,8 @@ elif nav_choice == PAGE_ASSESSMENT:
         tab1, tab2, tab3, tab4 = st.tabs(["🎓 Academic / Education Profile", "💻 Technical Skills (0-5)", "🤝 Soft Skills (0-5)", "🎯 Interests & Focus"])
         with tab1:
             col_a1, col_a2 = st.columns(2)
-            student_name = col_a1.text_input("Full Name", value=preset.get("name", "Ananya Sharma"))
+            default_user_name = preset.get("name", st.session_state.get("user_name") or "Ananya Sharma")
+            student_name = col_a1.text_input("Full Name", value=default_user_name)
             student_id = col_a2.text_input("Student / User ID", value="USR" + str(np.random.randint(1000, 9999)))
             
             col_a3, col_a4, col_a5 = st.columns(3)
